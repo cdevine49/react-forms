@@ -13,7 +13,8 @@ export default class Form extends React.Component {
   componentDidMount() {
   }
 
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
     this.setState({displayErrors: true})
     this.props.onSubmit()
   }
@@ -23,7 +24,7 @@ export default class Form extends React.Component {
     return (
       <form
         className={(defaultStyle ? setClassName('react-form', className) : className)}
-        onSubmit={() => this.handleSubmit()}
+        onSubmit={this.handleSubmit}
         { ...props }>
         {this.props.children}
       </form>
@@ -33,5 +34,6 @@ export default class Form extends React.Component {
 
 Form.defaultProps = {
   noValidate: true,
-  defaultStyle: true
+  defaultStyle: true,
+  onSubmit: () => {}
 }
