@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Form , Submit, InputContainer } from '../src'
-import '../src/style.css'
+import { Form, Submit, InputContainer } from '../src'
+// import '../src/style.css'
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
