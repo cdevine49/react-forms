@@ -1,4 +1,6 @@
 import React from 'react'
+import Form from './components/form'
+import Submit from './components/submit'
 
 const MyComponent = () => {
   return (
@@ -6,4 +8,4 @@ const MyComponent = () => {
   )
 }
 
-export default MyComponent
+export { Form, Submit }
