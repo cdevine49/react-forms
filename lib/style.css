@@ -1,4 +1,147 @@
+html, body, header, nav, h1, a, ul, li,
+strong, main, section, img, div, span, h2,
+h3, h4, h5, h6, p, form, fieldset, label, input, textarea,
+button, article, footer, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  box-sizing: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  color: inherit;
+  background: transparent;
+  line-height: inherit; }
+
+html {
+  line-height: 1.5; }
+
+body {
+  box-sizing: content-box;
+  color: #333;
+  font-size: 14px;
+  font-family: sans-serif;
+  background-color: #f9f9f9; }
+
+input {
+  background: #FFFFFF; }
+
+label {
+  color: #222;
+  font-weight: bold; }
+
+ul {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 24px;
+  color: #333;
+  font-weight: normal; }
+
+a {
+  color: #4078c0; }
+
+.hidden {
+  display: none; }
+
+input:focus, .focus {
+  border-color: #4d90fe !important; }
+
+.error {
+  border-color: #dd4b39 !important; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
 .react-form {
   display: flex;
   flex-direction: column;
-  width: 400px; }
+  width: 400px;
+  padding: 20px; }
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px; }
+
+.one-line {
+  width: 75%; }
+
+fieldset > legend {
+  font-weight: bold; }
+
+.one-line > div {
+  display: flex;
+  flex-direction: row; }
+.phone-input-container {
+  margin: 0; }
+
+.text-input-container > input {
+  background-color: #fff;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 6px 8px;
+  color: #222;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 3px 3px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  outline: none; }
+
+.text-input-container > input:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0; }
+
+.text-input-container > label {
+  margin-bottom: 3px; }
+
+.text-input-container > p {
+  min-height: 17px;
+  margin: 4px 0 2px;
+  font-size: 12px;
+  color: #767676; }
+
+.one-line > div > .text-input-container {
+  flex: 1; }
+
+.one-line > div > .text-input-container:not(:first-child) {
+  margin-left: 10px; }
+.radio-container > h3 {
+  font-weight: bold; }
+
+.radio-button {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end; }
+
+.radio-button:not(:first-child) {
+  margin-left: 10px; }
+
+.radio-button > .radio-input {
+  margin-bottom: 3px;
+  margin-right: 5px; }
+
+.radio-button > .radio-label {
+  font-weight: normal; }
+.react-form-submit {
+  align-self: flex-start;
+  padding: 6px 12px;
+  line-height: 20px;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
+  background-color: #6cc644;
+  background-image: linear-gradient(#91dd70, #55ae2e);
+  border: 1px solid #5aad35;
+  border-radius: 3px; }
+.error-message {
+  margin-top: 6.5px;
+  color: #dd4b39; }

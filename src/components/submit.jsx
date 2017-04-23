@@ -12,7 +12,7 @@ const Submit = ({...props}) => {
 }
 
 Submit.defaultProps = {
-  className: 'submit',
+  className: 'react-form-submit',
   value: 'Submit'
 }
 

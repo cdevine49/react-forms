@@ -1,0 +1,19 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.one-line {
+  width: 75%;
+}
+
+fieldset > legend {
+  font-weight: bold;
+}
+
+.one-line > div {
+  display: flex;
+  flex-direction: row;
+}

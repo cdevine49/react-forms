@@ -1,7 +1,8 @@
 import React from 'react';
 import Error from './error';
+import { setClassName } from '../helpers'
 
-export default class InputContainer extends React.Component {
+export default class TextInput extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -11,7 +12,7 @@ export default class InputContainer extends React.Component {
   }
 
   componentDidMount() {
-    this.props.validate({[this.props.id]: !this.props.required})
+    // this.props.validate({[this.props.id]: !this.props.required})
     this._handleErrors()
   }
 
@@ -45,7 +46,7 @@ export default class InputContainer extends React.Component {
     const { type, length, containerClass, labelText, labelClass, id, placeholder, inputClass, value, underline } = this.props;
     const { displayErrors, errorMessage } = this.state;
     return (
-      <div className={'input-container' + (containerClass ? (" " + containerClass) : "")}>
+      <div className={setClassName('input-container text-input-container', containerClass)}>
         <label htmlFor={id} className={labelClass}>{labelText}</label>
         <input
           type={type}
@@ -64,7 +65,7 @@ export default class InputContainer extends React.Component {
   }
 }
 
-InputContainer.defaultProps = {
+TextInput.defaultProps = {
   type: 'text',
   labelText: '',
   id: '',
