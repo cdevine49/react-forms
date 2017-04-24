@@ -67,19 +67,10 @@ input[type=number]::-webkit-outer-spin-button {
   width: 100%;
   margin-bottom: 15px; }
 
-.one-line {
-  width: 75%; }
+.input-container > label {
+  margin-bottom: 3px; }
 
-fieldset > legend {
-  font-weight: bold; }
-
-.one-line > div {
-  display: flex;
-  flex-direction: row; }
-.phone-input-container {
-  margin: 0; }
-
-.text-input-container > input {
+.input-container > input {
   background-color: #fff;
   line-height: 20px;
   vertical-align: middle;
@@ -93,24 +84,31 @@ fieldset > legend {
   background-position: right 8px center;
   outline: none; }
 
-.text-input-container > input:hover {
+.input-container > input:hover {
   border: 1px solid #b9b9b9;
   border-top: 1px solid #a0a0a0; }
 
-.text-input-container > label {
-  margin-bottom: 3px; }
-
-.text-input-container > p {
+.input-container > p {
   min-height: 17px;
   margin: 4px 0 2px;
   font-size: 12px;
   color: #767676; }
 
-.one-line > div > .text-input-container {
+.one-line > div > .input-container {
   flex: 1; }
 
-.one-line > div > .text-input-container:not(:first-child) {
+.one-line {
+  width: 75%; }
+
+.one-line > div > .input-container:not(:first-child) {
   margin-left: 10px; }
+
+fieldset > legend {
+  font-weight: bold; }
+
+.one-line > div {
+  display: flex;
+  flex-direction: row; }
 .radio-container > h3 {
   font-weight: bold; }
 

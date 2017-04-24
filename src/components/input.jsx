@@ -2,7 +2,7 @@ import React from 'react';
 import Error from './error';
 import { setClassName } from '../helpers'
 
-export default class TextInput extends React.Component {
+export default class Input extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -53,7 +53,7 @@ export default class TextInput extends React.Component {
           } = this.props;
     const { displayErrors, errorMessage } = this.state;
     return (
-      <div className={setClassName('input-container text-input-container', containerClass)}>
+      <div className={setClassName('input-container', containerClass)}>
         <label htmlFor={id} className={labelClass}>{labelText}</label>
         <input
           id={id}
@@ -71,7 +71,7 @@ export default class TextInput extends React.Component {
   }
 }
 
-TextInput.defaultProps = {
+Input.defaultProps = {
   type: 'text',
   labelText: '',
   id: '',
