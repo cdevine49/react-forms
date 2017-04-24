@@ -27,14 +27,15 @@ export default class Input extends React.Component {
     let errorMessage = false;
     if (this.props.required && !value) {
       errorMessage = "You can't leave this empty";
-    }
-
-    for (var i = 0; !errorMessage && i < this.props.errors.length; i++ ) {
-      var error = this.props.errors[i];
-      if (error._handle(value)) {
-        errorMessage = error.message;
+    } else if (value) {
+      for (var i = 0; i < this.props.errors.length; i++ ) {
+        var error = this.props.errors[i];
+        if (error._handle(value)) {
+          errorMessage = error.message;
+        }
       }
     }
+
 
     this.setState({ errorMessage });
     this.props.validate({[this.props.id]: !errorMessage})
