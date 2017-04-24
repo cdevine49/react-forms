@@ -24,7 +24,7 @@ class Demo extends React.Component {
     return (
       <Form>
         <Input onChange={inputValue => this.setState({ inputValue })} value={inputValue} labelText="Text Input" required={true} />
-        <Email onChange={emailValue => this.setState({ emailValue })} value={emailValue} />
+        <Email onChange={emailValue => this.setState({ emailValue })} value={emailValue} underline="The email input component passes an 'errors' prop to the default input that triggers if the value doesn't include a '@'" />
         <Submit></Submit>
       </Form>
     )
