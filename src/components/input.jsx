@@ -9,11 +9,14 @@ export default class Input extends React.Component {
       errorMessage: false,
       displayErrors: false
     }
+    this._onChange = this._onChange.bind(this);
+    this._hideErrors = this._hideErrors.bind(this);
+    this._displayErrors = this._displayErrors.bind(this);
   }
 
   componentDidMount() {
-    this.props.validate({[this.props.id]: !this.props.required})
-    this._handleErrors()
+    this.props.validate({[this.props.id]: !this.props.required});
+    this._handleErrors(this.props.value);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -27,7 +30,7 @@ export default class Input extends React.Component {
     }
 
     for (var i = 0; !errorMessage && i < this.props.errors.length; i++ ) {
-      var error = this.props.errors.extra[i];
+      var error = this.props.errors[i];
       if (error._handle(value)) {
         errorMessage = error.message;
       }
@@ -38,9 +41,17 @@ export default class Input extends React.Component {
   }
 
   _onChange(e) {
-    value = e.currentTarget.value
+    const value = e.currentTarget.value;
     this._handleErrors(value);
     this.props.onChange(value);
+  }
+
+  _displayErrors() {
+    this.setState({ displayErrors: true });
+  }
+
+  _hideErrors() {
+    this.setState({ displayErrors: false });
   }
 
   render() {
@@ -48,7 +59,7 @@ export default class Input extends React.Component {
             labelText, labelClass,
             id, type, inputClass,
             underline,
-            validate, required, errors,
+            validate, required, errors, onChange,
             ...props
           } = this.props;
     const { displayErrors, errorMessage } = this.state;
@@ -60,8 +71,8 @@ export default class Input extends React.Component {
           type={type}
           className={inputClass + ((errorMessage && displayErrors) ? ' error' : '')}
           onChange={ this._onChange }
-          onFocus={ () => this.setState({ displayErrors: false }) }
-          onBlur={ () => this.setState({ displayErrors: true }) }
+          onFocus={ this._hideErrors }
+          onBlur={ this._displayErrors }
           {...props}
           />
         <Error { ...this.state } />
@@ -75,16 +86,13 @@ Input.defaultProps = {
   type: 'text',
   labelText: '',
   id: '',
+  value: '',
   placeholder: '',
   labelClass: '',
   inputClass: '',
   containerClass: '',
   required: false,
-  errors: {
-    default: null,
-    extra: [],
-    match: false
-  },
+  errors: [],
   onChange: () => {},
   validate: () => {}
 }

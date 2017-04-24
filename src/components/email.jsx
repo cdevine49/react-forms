@@ -10,19 +10,7 @@ const Email = (props) => {
 
 Email.defaultProps = {
   labelText: 'Email',
-  id: '',
-  placeholder: '',
-  labelClass: '',
-  inputClass: '',
-  containerClass: '',
-  required: false,
-  errors: {
-    default: null,
-    extra: [],
-    match: false
-  },
-  validate: () => {},
-  regex: '/@/'
+  errors: [{_handle: (v) => v.match(/@/), message: "Not a valid email"}],
 }
 
 export default Email;
