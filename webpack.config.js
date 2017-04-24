@@ -36,6 +36,10 @@ module.exports = {
         })
   ],
   devtool: 'source-map',
+  devServer: {
+    contentBase: path.join(__dirname),
+    stats: "errors-only"
+  },
   resolve: {
     extensions: ['.js', '.jsx', '*']
   }
