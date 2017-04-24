@@ -12,7 +12,7 @@ export default class TextInput extends React.Component {
   }
 
   componentDidMount() {
-    // this.props.validate({[this.props.id]: !this.props.required})
+    this.props.validate({[this.props.id]: !this.props.required})
     this._handleErrors()
   }
 
@@ -43,20 +43,18 @@ export default class TextInput extends React.Component {
   }
 
   render() {
-    const { type, length, containerClass, labelText, labelClass, id, placeholder, inputClass, value, underline } = this.props;
+    const { type, containerClass, labelText, labelClass, inputClass, underline, id, validate, ...props } = this.props;
     const { displayErrors, errorMessage } = this.state;
     return (
       <div className={setClassName('input-container text-input-container', containerClass)}>
         <label htmlFor={id} className={labelClass}>{labelText}</label>
         <input
-          type={type}
           id={id}
-          value={value}
-          placeholder={placeholder}
           className={inputClass + ((errorMessage && displayErrors) ? ' error' : '')}
           onChange={ e => this._onChange(e.currentTarget.value) }
           onFocus={ () => this.setState({ displayErrors: false }) }
           onBlur={ () => this.setState({ displayErrors: true }) }
+          {...props}
           />
         <Error display={displayErrors} errorMessage={errorMessage} />
         {underline && <p>{underline}</p>}
