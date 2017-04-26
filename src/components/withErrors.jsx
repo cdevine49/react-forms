@@ -1,6 +1,6 @@
 import React from 'react';
 
-const withErrors = Input => class extends React.Component {
+const withErrors = Component => class extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -10,6 +10,7 @@ const withErrors = Input => class extends React.Component {
     this._hideErrors = this._hideErrors.bind(this);
     this._displayErrors = this._displayErrors.bind(this);
     this._handleErrors = this._handleErrors.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   componentDidMount() {
@@ -19,6 +20,12 @@ const withErrors = Input => class extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     !this.props.displayErrors && nextProps.displayErrors && this.setState({ displayErrors: true })
+  }
+
+  onChange(e) {
+    const value = e.currentTarget.value;
+    this._handleErrors(value);
+    this.props.onChange(value);
   }
 
   _handleErrors(value) {
@@ -34,7 +41,6 @@ const withErrors = Input => class extends React.Component {
       }
     }
 
-
     this.setState({ errorMessage });
     // this.props.validate({[this.props.id]: !errorMessage})
   }
@@ -48,7 +54,7 @@ const withErrors = Input => class extends React.Component {
   }
 
   render() {
-    return <Input handleErrors={this._handleErrors} onBlur={this._displayErrors} onFocus={this._hideErrors} {...this.props} {...this.state} />;
+    return <Component onBlur={this._displayErrors} onFocus={this._hideErrors} {...this.props} {...this.state} onChange={this.onChange} />;
   }
 }
 
