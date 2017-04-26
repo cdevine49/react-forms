@@ -48,7 +48,7 @@ const withErrors = Input => class extends React.Component {
   }
 
   render() {
-    return <Input handleErrors={this._handleErrors} _displayErrors={this._displayErrors} _hideErrors={this._hideErrors} {...this.props} {...this.state} />;
+    return <Input handleErrors={this._handleErrors} onBlur={this._displayErrors} onFocus={this._hideErrors} {...this.props} {...this.state} />;
   }
 }
 

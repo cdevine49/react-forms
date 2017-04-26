@@ -1,10 +1,10 @@
 import React from 'react';
 import Error from './error';
-import Input from './input'
+import Container from './container'
 
 const Email = (props) => {
   return (
-    <Input {...props} />
+    <Container {...props} />
   )
 }
 
