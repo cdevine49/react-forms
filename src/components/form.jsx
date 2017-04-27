@@ -13,8 +13,7 @@ export default class Form extends React.Component {
   }
 
   renderChildren() {
-    let that = this;
-    return React.Children.map(this.props.children, function(child){ return that.mapChildren(child) } )
+    return React.Children.map(this.props.children, this.mapChildren)
   }
 
   mapChildren(child) {
