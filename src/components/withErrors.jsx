@@ -14,8 +14,7 @@ const withErrors = Component => class extends React.Component {
   }
 
   componentDidMount() {
-    // this.props.validate({[this.props.id]: !this.props.required});
-    this._handleErrors(this.props.value);
+    this.props.required && this.props.validate(false);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -42,7 +41,7 @@ const withErrors = Component => class extends React.Component {
     }
 
     this.setState({ errorMessage });
-    // this.props.validate({[this.props.id]: !errorMessage})
+    this.props.validate(!errorMessage);
   }
 
   _displayErrors() {
