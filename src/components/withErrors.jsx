@@ -4,12 +4,10 @@ const withErrors = Component => class extends React.Component {
   constructor() {
     super();
     this.state = {
-      errorMessage: '',
-      displayErrors: false
+      errorMessage: ''
     }
     this._hideErrors = this._hideErrors.bind(this);
     this._displayErrors = this._displayErrors.bind(this);
-    this._handleErrors = this._handleErrors.bind(this);
     this.onChange = this.onChange.bind(this);
   }
 
@@ -23,11 +21,11 @@ const withErrors = Component => class extends React.Component {
 
   onChange(e) {
     const value = e.currentTarget.value;
-    this._handleErrors(value);
     this.props.onChange(value);
   }
 
-  _handleErrors(value) {
+  _displayErrors() {
+    const { value } = this.props;
     let errorMessage = false;
     if (this.props.required && !value) {
       errorMessage = "You can't leave this empty";
@@ -40,21 +38,17 @@ const withErrors = Component => class extends React.Component {
       }
     }
 
-    this.setState({ errorMessage });
     this.props.validate(!errorMessage);
-  }
-
-  _displayErrors() {
-    this.setState({ displayErrors: true });
+    this.setState({ errorMessage });
   }
 
   _hideErrors() {
-    this.setState({ displayErrors: false });
+    this.setState({ errorMessage: false });
     this.props.displayErrors && this.props.hideErrors();
   }
 
   render() {
-    const { hideErrors, handleErrors, ...props } = this.props;
+    const { hideErrors, displayErrors, ...props } = this.props;
     return <Component onBlur={this._displayErrors} onFocus={this._hideErrors} {...props} {...this.state} onChange={this.onChange} />;
   }
 }

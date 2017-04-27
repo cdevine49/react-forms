@@ -3,13 +3,13 @@ import setClassName from '../helpers';
 import withErrors from '../withErrors'
 
 const Input = ({onFocus, onBlur, ...props}) => {
-  
+
   return (
     <input
-      className={setClassName(className, (props.errorMessage && props.displayErrors && 'error'))}
+      className={setClassName(className, (props.errorMessage && 'error'))}
       onChange={ onChange }
-      onFocus={ props.onFocus }
-      onBlur={ props.onBlur }
+      onFocus={ onFocus }
+      onBlur={ onBlur }
       {...props}
       />
   )

@@ -8,7 +8,7 @@ const Container = ({ containerClass,
                      id, inputClass,
                      underline,
                      validate, required, errors,
-                     errorMessage, displayErrors,
+                     errorMessage,
                      ...props
                    }) => {
   return (
@@ -16,10 +16,10 @@ const Container = ({ containerClass,
       {labelText && <label htmlFor={id} className={labelClass}>{labelText}</label>}
       <input
         id={id}
-        className={setClassName(inputClass, (errorMessage && displayErrors && 'error'))}
+        className={setClassName(inputClass, (errorMessage && 'error'))}
         {...props}
         />
-      <Error errorMessage={errorMessage} displayErrors={displayErrors} />
+      <Error errorMessage={errorMessage} />
       {underline && <p>{underline}</p>}
     </div>
   );
