@@ -8,15 +8,31 @@ export default class Form extends React.Component {
       displayErrors: false
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderChildren = this.renderChildren.bind(this);
+    this.mapChildren = this.mapChildren.bind(this);
   }
 
-  componentDidMount() {
+  renderChildren() {
+    let that = this;
+    return React.Children.map(this.props.children, function(child){ return that.mapChildren(child) } )
+  }
+
+  mapChildren(child) {
+    if (child.props.required || (child.props.errors && child.props.errors.length > 0)) {
+      return React.cloneElement(child, { displayErrors: this.state.displayErrors });
+    } else {
+      return child;
+    }
   }
 
   handleSubmit(e) {
     e.preventDefault();
     this.setState({displayErrors: true})
     this.props.onSubmit()
+  }
+
+  validate() {
+
   }
 
   render() {
@@ -26,7 +42,7 @@ export default class Form extends React.Component {
         className={(defaultStyle ? setClassName('react-form', className) : className)}
         onSubmit={this.handleSubmit}
         { ...props }>
-        {this.props.children}
+        {this.renderChildren()}
       </form>
     );
   }
