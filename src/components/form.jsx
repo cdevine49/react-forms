@@ -10,6 +10,7 @@ export default class Form extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderChildren = this.renderChildren.bind(this);
     this.mapChildren = this.mapChildren.bind(this);
+    this.hideErrors = this.hideErrors.bind(this);
   }
 
   renderChildren() {
@@ -18,15 +19,19 @@ export default class Form extends React.Component {
 
   mapChildren(child) {
     if (child.props.required || (child.props.errors && child.props.errors.length > 0)) {
-      return React.cloneElement(child, { displayErrors: this.state.displayErrors });
+      return React.cloneElement(child, { displayErrors: this.state.displayErrors, hideErrors: this.hideErrors });
     } else {
       return child;
     }
   }
 
+  hideErrors() {
+    this.setState({ displayErrors: false });
+  }
+
   handleSubmit(e) {
     e.preventDefault();
-    this.setState({displayErrors: true})
+    this.setState({displayErrors: true});
     this.props.onSubmit()
   }
 

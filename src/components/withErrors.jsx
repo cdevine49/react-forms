@@ -51,10 +51,12 @@ const withErrors = Component => class extends React.Component {
 
   _hideErrors() {
     this.setState({ displayErrors: false });
+    this.props.displayErrors && this.props.hideErrors();
   }
 
   render() {
-    return <Component onBlur={this._displayErrors} onFocus={this._hideErrors} {...this.props} {...this.state} onChange={this.onChange} />;
+    const { hideErrors, handleErrors, ...props } = this.props;
+    return <Component onBlur={this._displayErrors} onFocus={this._hideErrors} {...props} {...this.state} onChange={this.onChange} />;
   }
 }
 
