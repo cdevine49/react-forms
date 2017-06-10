@@ -9,7 +9,7 @@ const FlagInput = ({countryIndex, selectingCountry, ...props}) => {
         countryIndex={countryIndex}
         onClick={() => this.selectingCountry(!selectingCountry)}
         />
-      <Input {...props} />
+      <input {...props} />
     </div>
   );
 }
