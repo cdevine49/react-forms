@@ -5,7 +5,14 @@ const withFlag = (input) => class extends React.Component {
   }
 
   render() {
-    return <input {...this.props} {...this.state} />;
+    return (
+      <div>
+        <FlagBox
+          countryIndex={countryIndex}
+          onClick={() => this.setState({ selectingCountry: !selectingCountry })}
+          />
+        <input {...this.props} {...this.state} />
+      </div>)
   }
 }
 

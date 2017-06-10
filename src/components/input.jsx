@@ -1,12 +1,12 @@
 import React from 'react';
-import setClassName from '../helpers';
-import withErrors from '../withErrors'
+import setClassName from '../helpers/setClassName';
+import withErrors from './withErrors'
 
-const Input = ({onFocus, onBlur, ...props}) => {
+const Input = ({onChange, onFocus, onBlur, className, ...props}) => {
 
   return (
     <input
-      className={setClassName(className, (props.errorMessage && 'error'))}
+      className={() => setClassName(className, (props.errorMessage && 'error'))}
       onChange={ onChange }
       onFocus={ onFocus }
       onBlur={ onBlur }
@@ -18,6 +18,7 @@ const Input = ({onFocus, onBlur, ...props}) => {
 Input.defaultProps = {
   type: 'text',
   value: '',
+  className: '',
   required: false,
   errors: [],
   onChange: () => {},

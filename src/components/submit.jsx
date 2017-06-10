@@ -1,5 +1,5 @@
 import React from 'react';
-import { setClassName } from '../helpers'
+import { setClassName } from '../helpers/setClassName'
 
 const Submit = ({...props}) => {
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Form, Submit, Container, Email } from '../src'
+import { Form, Submit, Container, Email, FlagInput } from '../src'
 // import '../src/style.css'
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -25,6 +25,7 @@ class Demo extends React.Component {
       <Form>
         <Container onChange={inputValue => this.setState({ inputValue })} value={inputValue} labelText="Text Input" required={true} />
         <Email onChange={emailValue => this.setState({ emailValue })} value={emailValue} underline="The email input component passes an 'errors' prop to the default input that triggers if the value doesn't include an '@'" />
+        <FlagInput />
         <Submit></Submit>
       </Form>
     )

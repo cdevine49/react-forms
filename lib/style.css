@@ -127,6 +127,41 @@ fieldset > legend {
 
 .radio-button > .radio-label {
   font-weight: normal; }
+.flagbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-right: 0;
+  border-radius: 3px 0 0 3px; }
+
+.select-box-button {
+  margin: 0 2px; }
+
+.flag {
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 11px;
+  overflow: hidden;
+  margin-left: 8px; }
+.flag-input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); }
+
+.input-container.flag-input-container > input {
+  border-radius: 0 3px 3px 0;
+  border-left: 0;
+  background-color: transparent;
+  box-shadow: none;
+  width: 100%; }
+
+.input-container.flag-input-container > input:hover {
+  border: 1px solid #b9b9b9; }
 .react-form-submit {
   align-self: flex-start;
   padding: 6px 12px;
