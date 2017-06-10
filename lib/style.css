@@ -140,7 +140,8 @@ fieldset > legend {
   background-color: #eee; }
 
 .select-box-button {
-  margin: 0 2px; }
+  margin-left: 4px;
+  margin-right: 2px; }
 
 .flag {
   background-repeat: no-repeat;
