@@ -1,7 +1,7 @@
 import React from 'react';
 import withErrors from './withErrors';
 import Error from './error';
-import { setClassName } from '../helpers/setClassName';
+import setClassName from '../helpers/setClassName';
 
 const Container = ({ containerClass,
                      labelText, labelClass,

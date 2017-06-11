@@ -6,7 +6,7 @@ const Input = ({onChange, onFocus, onBlur, className, ...props}) => {
 
   return (
     <input
-      className={() => setClassName(className, (props.errorMessage && 'error'))}
+      className={setClassName(className, (props.errorMessage && 'error'))}
       onChange={ onChange }
       onFocus={ onFocus }
       onBlur={ onBlur }
