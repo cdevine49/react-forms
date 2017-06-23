@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import setClassName from '../helpers/setClassName';
 
 var cancelScrollEvent = function(e) {
   e.stopImmediatePropagation();
@@ -16,7 +17,7 @@ var removeScrollEventListener = function(node, handler) {
   node.removeEventListener('wheel', handler, false);
 };
 
-export default class ScrollList extends React.Component {
+export default class ScrollView extends React.Component {
 
   constructor() {
     super();
@@ -67,6 +68,11 @@ export default class ScrollList extends React.Component {
   }
 
   render() {
-    return ({this.props.children});
+    const { className, children, index, ...props } = this.props;
+    return (
+      <div className={setClassName("scroll-view", className)} {...props}>
+        {children}
+      </div>
+    );
   }
 }
