@@ -40,9 +40,9 @@ class Countries extends React.Component {
     let bottom, height;
     if (countries.length > 5) {
       bottom = 151;
-      height = 124;
+      height = 125;
     } else {
-      height = countries.length * 24;
+      height = countries.length * 24 + 1;
       bottom = countries.length * 24 + 27;
     }
     return (
