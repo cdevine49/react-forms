@@ -39,11 +39,11 @@ class Countries extends React.Component {
     const countries = this._countries();
     let bottom, height;
     if (countries.length > 5) {
-      bottom = 151;
+      bottom = 166;
       height = 125;
     } else {
       height = countries.length * 24 + 1;
-      bottom = countries.length * 24 + 27;
+      bottom = countries.length * 24 + 42;
     }
     return (
       <div className='countries-container' style={{bottom: `-${bottom}px`}}>
