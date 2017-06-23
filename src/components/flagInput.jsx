@@ -2,21 +2,21 @@ import React from 'react';
 import FlagBox from './flagBox';
 import Input from './input';
 
-const FlagInput = ({countryIndex, selectingCountry, ...props}) => {
+const FlagInput = ({countryIndex, flag, name, code, onChangeText, onClick, ...props}) => {
   return (
     <div className="input-container flag-input-container">
       <FlagBox
         countryIndex={countryIndex}
-        onClick={() => this.selectingCountry(!selectingCountry)}
+        onClick={onClick}
         />
-      <input {...props} />
+      <input onChange={onChangeText} {...props} />
     </div>
   );
 }
 
 FlagInput.defaultProps = {
   countryIndex: 0,
-  selectingCountry: false
+  onClick: () => {}
 }
 
 export default FlagInput;
