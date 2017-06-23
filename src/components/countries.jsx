@@ -14,11 +14,11 @@ class Countries extends React.Component {
 
   _countries() {
     const query = this.state.query.toLowerCase();
-    return CountriesArray.map((flag, i) => {
+    return CountriesArray.reduce((acc, flag, i) => {
       const [offset, name, code] = flag;
       const start = name.slice(0, query.length).toLowerCase();
       if (start === query || query.length < 1) {
-        return (
+        acc.push(
           <Country key={i}
             className={i === this.props.countryIndex && !this.state.hovered ? 'hover-style' : ''}
             offset={this.props.flag && offset}
@@ -31,12 +31,22 @@ class Countries extends React.Component {
             } />
         );
       }
-    });
+      return acc;
+    }, []);
   }
 
   render() {
+    const countries = this._countries();
+    let bottom, height;
+    if (countries.length > 5) {
+      bottom = 151;
+      height = 124;
+    } else {
+      height = countries.length * 24;
+      bottom = countries.length * 24 + 27;
+    }
     return (
-      <div className='countries-container'>
+      <div className='countries-container' style={{bottom: `-${bottom}px`}}>
         <input type='text'
           ref={(input) => this.searchInput = input}
           onClick={ () => this.setState({ hovered: true }) }
@@ -46,8 +56,12 @@ class Countries extends React.Component {
           value={this.state.query}
           />
         <div className='separator'></div>
-        <ScrollView index={this.props.countryIndex} className="countries" onMouseOver={ () => this.setState({ hovered: true }) }>
-          {this._countries()}
+        <ScrollView
+          index={this.props.countryIndex}
+          className="countries"
+          onMouseOver={ () => this.setState({ hovered: true }) }
+          style={{height: `${height}px`}}>
+          {countries}
         </ScrollView>
         </div>
     );

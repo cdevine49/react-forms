@@ -1,7 +1,6 @@
 .countries-container {
   position: absolute;
   width: 100%;
-  bottom: -151px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   transition: opacity 0.218s;
   background: #fff;
@@ -20,7 +19,6 @@
 }
 
 .countries {
-  height: 125px;
   overflow-x: hidden;
   overflow-y: auto;
   padding: 0 0 6px;
