@@ -22,22 +22,24 @@ class FlagContainer extends React.Component {
     } = this.props;
     const { displayErrors, errorMessage, countryIndex, entered, selectingCountry } = this.state;
     return(
-      <div className={setClassName('flag-container', containerClass)}>
+      <div className={setClassName('input-container flag-container', containerClass)}>
         {labelText && <label htmlFor={id} className={labelClass}>{labelText}</label>}
-        <FlagInput
-          countryIndex={countryIndex}
-          onChangeText={onChangeText}
-          onClick={() => this.setState({ selectingCountry: !selectingCountry })} />
-        {this.state.selectingCountry && <Countries
-            flag={flag}
-            name={name}
-            code={code}
-            selectingCountry={selectingCountry}
+        <div style={{position: 'relative'}}>
+          <FlagInput
             countryIndex={countryIndex}
-            onClick={(i) => {
-              this.setState({ countryIndex: i, selectingCountry: false })
-              this.props.onChangeCountry(i);
-            }} />}
+            onChangeText={onChangeText}
+            onClick={() => this.setState({ selectingCountry: !selectingCountry })} />
+          {this.state.selectingCountry && <Countries
+              flag={flag}
+              name={name}
+              code={code}
+              selectingCountry={selectingCountry}
+              countryIndex={countryIndex}
+              onClick={(i) => {
+                this.setState({ countryIndex: i, selectingCountry: false })
+                this.props.onChangeCountry(i);
+              }} />}
+        </div>
         <Error errorMessage={errorMessage} />
         {underline && <p>{underline}</p>}
       </div>
