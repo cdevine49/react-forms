@@ -223,7 +223,6 @@ const flags = [
   ["-2002px", "Ukraine (Україна)", "+380"],
   ["-2223px", "United Arab Emirates (‫الإمارات العربية المتحدة‬‎)", "+971"],
   ["-55px", "United Kingdom", "+44"],
-  ["-44px", "United States", "+1"],
   ["-2608px", "Uruguay", "+598"],
   ["-1001px", "Uzbekistan (Oʻzbekiston)", "+998"],
   ["-1265px", "Vanuatu", "+678"],
