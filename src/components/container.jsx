@@ -8,7 +8,7 @@ const Container = ({ containerClass,
                      id, inputClass,
                      underline,
                      validate, required, errors,
-                     errorMessage,
+                     displayErrors, errorMessage,
                      ...props
                    }) => {
   return (

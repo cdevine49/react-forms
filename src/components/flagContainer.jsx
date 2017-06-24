@@ -17,7 +17,7 @@ class FlagContainer extends React.Component {
   render() {
     const {
       labelText, type, id, country, placeholder, labelClass,
-      inputClass, onChangeCountry, onChangeText, underline, containerClass,
+      inputClass, onChangeCountry, onChange, textValue, underline, containerClass,
       flag, name, code
     } = this.props;
     const { displayErrors, errorMessage, countryIndex, entered, selectingCountry } = this.state;
@@ -27,7 +27,8 @@ class FlagContainer extends React.Component {
         <div style={{position: 'relative'}}>
           <FlagInput
             countryIndex={countryIndex}
-            onChangeText={onChangeText}
+            onChange={onChange}
+            value={textValue}
             onClick={() => this.setState({ selectingCountry: !selectingCountry })} />
           {this.state.selectingCountry && <Countries
               flag={flag}
