@@ -10,6 +10,15 @@ class Countries extends React.Component {
       query: '',
       hovered: false
     };
+    this.selectCountry = this.selectCountry.bind(this);
+  }
+
+  selectCountry(i) {
+    let that = this;
+    return function(i) {
+      that.props.onClick(i);
+      that.setState({ hovered: false });
+    }
   }
 
   _countries() {
@@ -24,11 +33,7 @@ class Countries extends React.Component {
             offset={this.props.flag && offset}
             name={this.props.name && name}
             code={this.props.code && code}
-            onClick={() => {
-                this.props.onClick(i);
-                this.setState({ hovered: false });
-              }
-            } />
+            onClick={this.selectCountry(i)} />
         );
       }
       return acc;

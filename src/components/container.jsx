@@ -29,8 +29,8 @@ Container.defaultProps = {
   type: 'text',
   value: '',
   errors: [],
-  onChange: () => {},
-  validate: () => {}
+  onChange: function(){},
+  validate: function(){}
 }
 
 export default withErrors(Container);
