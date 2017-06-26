@@ -11,14 +11,16 @@ class Countries extends React.Component {
       hovered: false
     };
     this.selectCountry = this.selectCountry.bind(this);
+    this.update = this.update.bind(this);
   }
 
   selectCountry(i) {
     let that = this;
-    return function(i) {
+    const onClick = function() {
       that.props.onClick(i);
       that.setState({ hovered: false });
-    }
+    };
+    return onClick;
   }
 
   _countries() {
@@ -40,6 +42,16 @@ class Countries extends React.Component {
     }, []);
   }
 
+  update(field) {
+    let that = this;
+    return function(e) { that.setState({ [field]: e.currentTarget.value }) };
+  }
+
+  hoverState(bool) {
+    let that = this;
+    return function(e) { that.setState({ hovered: bool }) };
+  }
+
   render() {
     const countries = this._countries();
     let bottom, height;
@@ -54,17 +66,17 @@ class Countries extends React.Component {
       <div className='countries-container' style={{bottom: `-${bottom}px`}}>
         <input type='text'
           ref={(input) => this.searchInput = input}
-          onClick={ () => this.setState({ hovered: true }) }
+          onClick={ this.hoverState(true) }
           placeholder='Search Countries'
           className='country-search'
-          onChange={(e) => this.setState({ query: e.currentTarget.value })}
+          onChange={ this.update("query") }
           value={this.state.query}
           />
         <div className='separator'></div>
         <ScrollView
           index={this.props.countryIndex}
           className="countries"
-          onMouseOver={ () => this.setState({ hovered: true }) }
+          onMouseOver={ this.hoverState(true) }
           style={{height: `${height}px`}}>
           {countries}
         </ScrollView>
