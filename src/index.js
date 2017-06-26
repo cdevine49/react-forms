@@ -9,6 +9,7 @@ const input = require('./styles/inputs/container.scss');
 const radio = require('./styles/inputs/radio.scss');
 const flagbox = require('./styles/inputs/flagbox.scss');
 const flagInput = require('./styles/inputs/flagInput.scss');
+const countries = require('./styles/inputs/countries.scss');
 const submit = require('./styles/submit.scss');
 const error = require('./styles/error.scss');
 
