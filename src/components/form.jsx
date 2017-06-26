@@ -62,5 +62,5 @@ export default class Form extends React.Component {
 Form.defaultProps = {
   noValidate: true,
   defaultStyle: true,
-  onSubmit: () => {}
+  onSubmit: function(){}
 }

@@ -21,10 +21,10 @@ Input.defaultProps = {
   className: '',
   required: false,
   errors: [],
-  onChange: () => {},
-  onFocus: () => {},
-  onFocus: () => {},
-  validate: () => {}
+  onChange: function(){},
+  onFocus: function(){},
+  onFocus: function(){},
+  validate: function(){}
 }
 
 export default withErrors(Input);

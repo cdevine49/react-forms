@@ -16,7 +16,7 @@ const FlagInput = ({countryIndex, flag, name, code, onClick, ...props}) => {
 
 FlagInput.defaultProps = {
   countryIndex: 0,
-  onClick: () => {}
+  onClick: function(){}
 }
 
 export default FlagInput;

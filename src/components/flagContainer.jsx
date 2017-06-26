@@ -14,6 +14,10 @@ class FlagContainer extends React.Component {
     };
   }
 
+  toggleSelecting() {
+    this.setState({ selectCountry: !this.state.selectCountry });
+  }
+
   render() {
     const {
       labelText, type, id, country, placeholder, labelClass,
@@ -29,7 +33,7 @@ class FlagContainer extends React.Component {
             countryIndex={countryIndex}
             onChange={onChange}
             value={textValue}
-            onClick={() => this.setState({ selectingCountry: !selectingCountry })} />
+            onClick={this.toggleSelecting} />
           {this.state.selectingCountry && <Countries
               flag={flag}
               name={name}
@@ -49,7 +53,7 @@ class FlagContainer extends React.Component {
 }
 
 FlagContainer.defaultProps = {
-  onChangeCountry: () => {}
+  onChangeCountry: function(){}
 }
 
 export default withErrors(FlagContainer);

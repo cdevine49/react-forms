@@ -13,7 +13,7 @@ const Country = ({offset, name, code, onClick, className}) => {
 };
 
 Country.defaultProps = {
-  onClick: () => {}
+  onClick: function(){}
 }
 
 export default Country;
