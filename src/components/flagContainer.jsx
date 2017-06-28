@@ -12,10 +12,17 @@ class FlagContainer extends React.Component {
       countryIndex: 0,
       selectingCountry: false
     };
+    this.toggleSelecting = this.toggleSelecting.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   toggleSelecting() {
     this.setState({ selectCountry: !this.state.selectCountry });
+  }
+
+  onChange(e) {
+    const value = e.currentTarget.value;
+    this.props.onChange(value)
   }
 
   render() {
@@ -31,7 +38,7 @@ class FlagContainer extends React.Component {
         <div style={{position: 'relative'}}>
           <FlagInput
             countryIndex={countryIndex}
-            onChange={onChange}
+            onChange={this.onChange}
             value={textValue}
             onClick={this.toggleSelecting} />
           {this.state.selectingCountry && <Countries

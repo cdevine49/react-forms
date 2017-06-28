@@ -34,7 +34,7 @@ class Countries extends React.Component {
             className={i === this.props.countryIndex && !this.state.hovered ? 'hover-style' : ''}
             offset={this.props.flag && offset}
             name={this.props.name && name}
-            code={this.props.code && code}
+            code={this.props.code !== false && code}
             onClick={this.selectCountry(i)} />
         );
       }

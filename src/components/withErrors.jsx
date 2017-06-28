@@ -8,7 +8,6 @@ const withErrors = Component => class extends React.Component {
     }
     this._hideErrors = this._hideErrors.bind(this);
     this._displayErrors = this._displayErrors.bind(this);
-    this.onChange = this.onChange.bind(this);
   }
 
   componentDidMount() {
@@ -17,11 +16,6 @@ const withErrors = Component => class extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     !this.props.displayErrors && nextProps.displayErrors && this.setState({ displayErrors: true })
-  }
-
-  onChange(e) {
-    const value = e.currentTarget.value;
-    this.props.onChange(value);
   }
 
   _displayErrors() {
@@ -49,7 +43,7 @@ const withErrors = Component => class extends React.Component {
 
   render() {
     const { hideErrors, displayErrors, ...props } = this.props;
-    return <Component onBlur={this._displayErrors} onFocus={this._hideErrors} {...props} {...this.state} onChange={this.onChange} />;
+    return <Component onBlur={this._displayErrors} onFocus={this._hideErrors} {...props} {...this.state} />;
   }
 }
 

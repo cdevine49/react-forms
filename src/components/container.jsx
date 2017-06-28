@@ -6,7 +6,7 @@ import setClassName from '../helpers/setClassName';
 const Container = ({ containerClass,
                      labelText, labelClass,
                      id, inputClass,
-                     underline,
+                     underline, onChange,
                      validate, required, errors,
                      displayErrors, errorMessage,
                      ...props
@@ -17,6 +17,7 @@ const Container = ({ containerClass,
       <input
         id={id}
         className={setClassName(inputClass, (errorMessage && 'error'))}
+        onChange={function(e){onChange(e.currentTarget.value)}}
         {...props}
         />
       <Error errorMessage={errorMessage} />
