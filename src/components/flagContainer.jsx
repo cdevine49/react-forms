@@ -7,9 +7,10 @@ import setClassName from '../helpers/setClassName';
 
 class FlagContainer extends React.Component {
   constructor(props){
-  	super();
+  	super(props);
   	this.state = {
-      countryIndex: 0,
+      countryIndex: this.props.countryIndex,
+      textValue: this.props.textValue,
       selectingCountry: false
     };
     this.toggleSelecting = this.toggleSelecting.bind(this);
@@ -17,21 +18,21 @@ class FlagContainer extends React.Component {
   }
 
   toggleSelecting() {
-    this.setState({ selectCountry: !this.state.selectCountry });
+    this.setState({ selectingCountry: !this.state.selectingCountry });
   }
 
   onChange(e) {
-    const value = e.currentTarget.value;
-    this.props.onChange(value)
+    const textValue = e.currentTarget.value;
+    this.setState({ textValue }, () => this.props.onChange(textValue))
   }
 
   render() {
     const {
       labelText, type, id, country, placeholder, labelClass,
-      inputClass, onChangeCountry, onChange, textValue, underline, containerClass,
+      inputClass, onChangeCountry, onChange, underline, containerClass,
       flag, name, code
     } = this.props;
-    const { displayErrors, errorMessage, countryIndex, entered, selectingCountry } = this.state;
+    const { displayErrors, errorMessage, countryIndex, entered, selectingCountry, textValue } = this.state;
     return(
       <div className={setClassName('input-container flag-container', containerClass)}>
         {labelText && <label htmlFor={id} className={labelClass}>{labelText}</label>}
@@ -60,7 +61,10 @@ class FlagContainer extends React.Component {
 }
 
 FlagContainer.defaultProps = {
-  onChangeCountry: function(){}
+  countryIndex: 0,
+  onChange: function(){},
+  onChangeCountry: function(){},
+  textValue: ''
 }
 
 export default withErrors(FlagContainer);

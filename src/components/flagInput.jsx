@@ -2,7 +2,7 @@ import React from 'react';
 import FlagBox from './flagBox';
 import Input from './input';
 
-const FlagInput = ({countryIndex, flag, name, code, onClick, ...props}) => {
+const FlagInput = ({countryIndex, onClick, ...props}) => {
   return (
     <div className="input-container flag-input-container">
       <FlagBox
