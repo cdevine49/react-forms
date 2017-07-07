@@ -20,7 +20,7 @@ export default class Form extends React.Component {
   }
 
   mapChildren(child, idx) {
-    if (child.props.required || (child.props.errors && child.props.errors.length > 0)) {
+    if (child.props.required || child.props.match || (child.props.errors && child.props.errors.length > 0)) {
       return React.cloneElement(child, { displayErrors: this.state.displayErrors, hideErrors: this.hideErrors, validate: this.validate(idx) });
     } else {
       return child;
