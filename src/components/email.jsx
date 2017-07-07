@@ -10,7 +10,7 @@ const Email = (props) => {
 
 Email.defaultProps = {
   labelText: 'Email',
-  errors: [{_handle: (v) => !v.match(/@/), message: "Not a valid email"}],
+  errors: [{_handle: (v) => !v.match(/@/), message: "Not a valid email"}]
 }
 
 export default Email;
