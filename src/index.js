@@ -2,6 +2,8 @@ import Form from './components/form';
 import Submit from './components/submit';
 import Container from './components/container';
 import Email from './components/email';
+import Password from './components/password';
+import Confirmation from './components/confirmation';
 import FlagContainer from './components/flagContainer';
 import Phone from './components/phone';
 const application = require('./styles/application.scss');
@@ -14,4 +16,4 @@ const countries = require('./styles/inputs/countries.scss');
 const submit = require('./styles/submit.scss');
 const error = require('./styles/error.scss');
 
-export { Form, Submit, Container, Email, FlagContainer, Phone };
+export { Form, Submit, Container, Email, FlagContainer, Phone, Password, Confirmation };
