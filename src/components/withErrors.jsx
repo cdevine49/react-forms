@@ -19,15 +19,16 @@ const withErrors = Component => class extends React.Component {
   }
 
   _displayErrors() {
-    const { value } = this.props;
+    const { errors, required, value } = this.props;
     let errorMessage = false;
-    if (this.props.required && !value) {
+    if (required && !value) {
       errorMessage = "You can't leave this empty";
-    } else if (value && this.props.errors) {
-      for (var i = 0; i < this.props.errors.length; i++ ) {
-        var error = this.props.errors[i];
+    } else if (value && errors) {
+      for (var i = 0; i < errors.length; i++ ) {
+        var error = errors[i];
         if (error._handle(value)) {
           errorMessage = error.message;
+          break;
         }
       }
     }
