@@ -50,7 +50,7 @@ export default class Form extends React.Component {
     const { className, defaultStyle, onSubmit, ...props } = this.props;
     return (
       <form
-        className={(defaultStyle ? setClassName('react-form', className) : className)}
+        className={(defaultStyle ? setClassName(['react-form', className]) : className)}
         onSubmit={this.handleSubmit}
         { ...props }>
         {this.renderChildren()}
