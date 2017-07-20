@@ -37,6 +37,7 @@ Container.defaultProps = {
   value: '',
   onChange: function(){},
   containerProps: {},
+  errorProps: {},
   labelProps: {}
 }
 
