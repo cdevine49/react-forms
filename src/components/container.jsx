@@ -3,25 +3,31 @@ import withErrors from './withErrors';
 import Error from './error';
 import setClassName from '../helpers/setClassName';
 
-const Container = ({ containerClass,
-                     labelText, labelClass,
-                     id, inputClass,
-                     underline, onChange,
-                     validate, required, errors,
-                     displayErrors, errorMessage,
-                     ...props
+const Container = ({
+                      containerProps: {
+                        className: containerClass,
+                        ...containerProps
+                      },
+                      label,
+                      labelProps,
+                      id, className,
+                      onChange,
+                      errorMessage,
+                      errorProps,
+                      underline,
+                      ...props
                    }) => {
   return (
-    <div className={setClassName('input-container', containerClass)}>
-      {labelText && <label htmlFor={id} className={labelClass}>{labelText}</label>}
+    <div className={ setClassName(['input-container', containerClass]) } { ...containerProps }>
+      {label && <label htmlFor={id} { ...labelProps }>{ label }</label>}
       <input
-        id={id}
-        className={setClassName(inputClass, (errorMessage && 'error'))}
-        onChange={function(e){onChange(e.currentTarget.value)}}
-        {...props}
+        id={ id }
+        className={ setClassName([className, (errorMessage && 'error')]) }
+        onChange={ function(e){ onChange(e.currentTarget.value) } }
+        { ...props }
         />
-      <Error errorMessage={errorMessage} />
-      {underline && <p>{underline}</p>}
+      <Error errorMessage={ errorMessage } { ...errorProps } />
+      { underline && <p>{ underline }</p> }
     </div>
   );
 }
@@ -29,9 +35,9 @@ const Container = ({ containerClass,
 Container.defaultProps = {
   type: 'text',
   value: '',
-  errors: [],
   onChange: function(){},
-  validate: function(){}
+  containerProps: {},
+  labelProps: {}
 }
 
 export default withErrors(Container);
