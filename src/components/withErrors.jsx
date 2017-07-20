@@ -11,7 +11,7 @@ const withErrors = Component => class extends React.Component {
   }
 
   componentDidMount() {
-    this.props.required && this.props.validate(false);
+    this.props.validate && this.props.validate(false);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -23,7 +23,7 @@ const withErrors = Component => class extends React.Component {
     let errorMessage = false;
     if (required && !value) {
       errorMessage = "You can't leave this empty";
-    } else if (value && errors) {
+    } else if (errors) {
       for (var i = 0; i < errors.length; i++ ) {
         var error = errors[i];
         if (error._handle(value)) {
@@ -33,7 +33,7 @@ const withErrors = Component => class extends React.Component {
       }
     }
 
-    this.props.validate(!errorMessage);
+    this.props.validate && this.props.validate(!errorMessage);
     this.setState({ errorMessage });
   }
 
@@ -43,9 +43,13 @@ const withErrors = Component => class extends React.Component {
   }
 
   render() {
-    const { hideErrors, displayErrors, ...props } = this.props;
+    const { hideErrors, displayErrors, validate, required, errors, ...props } = this.props;
     return <Component onBlur={this._displayErrors} onFocus={this._hideErrors} {...props} {...this.state} />;
   }
 }
 
 export default withErrors;
+
+withErrors.defaultProps = {
+  validate: function(){}
+}
