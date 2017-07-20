@@ -1,8 +1,7 @@
-const setClassName = (defaultClass, propClasses) => {
-  if (!propClasses) {
-    return defaultClass
-  } else {
-    return defaultClass + " " + propClasses
+const setClassName = (classArray) => {
+  const filtered =  classArray.filter((argument) => argument);
+  if (filtered.length > 0) {
+    return filtered.join(" ");
   }
 }
 
