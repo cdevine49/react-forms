@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label Label does not render if label prop is falsey 1`] = `
+<div
+  className="input-container"
+>
+  <input
+    className={undefined}
+    id={undefined}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`Label Label prop on container becomes label text 1`] = `
+<div
+  className="input-container"
+>
+  <label
+    htmlFor={undefined}
+  >
+    Test Label
+  </label>
+  <input
+    className={undefined}
+    id={undefined}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`Label Label receives props from container's labelProps prop 1`] = `
+<div
+  className="input-container"
+>
+  <label
+    className="label-class test"
+    htmlFor={undefined}
+    id="labelId"
+  >
+    Test Label
+  </label>
+  <input
+    className={undefined}
+    id={undefined}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`Props on container populate the input tag 1`] = `
+<div
+  className="input-container"
+>
+  <input
+    className="test-class another class"
+    id="test-input"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="email"
+    value="Can set a default value"
+  />
+</div>
+`;
+
+exports[`Renders with default props 1`] = `
+<div
+  className="input-container"
+>
+  <input
+    className={undefined}
+    id={undefined}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value=""
+  />
+</div>
+`;
