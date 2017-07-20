@@ -15,6 +15,7 @@ const Container = ({
                       errorMessage,
                       errorProps,
                       underline,
+                      underlineProps,
                       ...props
                    }) => {
   return (
@@ -27,7 +28,7 @@ const Container = ({
         { ...props }
         />
       <Error errorMessage={ errorMessage } { ...errorProps } />
-      { underline && <p>{ underline }</p> }
+      { underline && <p { ...underlineProps }>{ underline }</p> }
     </div>
   );
 }
@@ -38,7 +39,8 @@ Container.defaultProps = {
   onChange: function(){},
   containerProps: {},
   errorProps: {},
-  labelProps: {}
+  labelProps: {},
+  underlineProps: {}
 }
 
 export default withErrors(Container);
