@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from '../src/components/container';
 import renderer from 'react-test-renderer';
+import { shallow, mount } from 'enzyme';
 
 describe("Container", () => {
   test('renders with default props', () => {
@@ -40,6 +41,56 @@ describe("Container", () => {
     ).toJSON();
 
     expect(tree).toMatchSnapshot();
+  });
+  describe("errorMessage prop", () => {
+    const message = "Shock horror";
+
+    describe("when error handler return true", () => {
+      const container = shallow(
+        <Container
+          errors={[{ _handle: () => true, message }]}
+          />
+      );
+      const input = container.first().shallow().find('input');
+
+      test("initializes as empty string", () => {
+        expect(container.props().errorMessage).toBe('');
+      });
+
+      test("equals message on input blur", () => {
+        input.simulate('blur');
+        expect(container.props().errorMessage).toBe(message);
+      });
+
+      test("is empty string on input focused", () => {
+        input.simulate('focus');
+        expect(container.props().errorMessage).toBe('');
+      });
+    })
+
+    describe("when error handler returns false", () => {
+      const container = shallow(
+        <Container
+          errors={[{ _handle: () => false, message }]}
+          />
+      );
+      const input = container.first().shallow().find('input');
+
+      test("initializes as empty string", () => {
+        expect(container.props().errorMessage).toBe('');
+      });
+
+      test("stays empty string on blur", () => {
+        input.simulate('blur');
+        expect(container.props().errorMessage).toBe('');
+      });
+
+      test("stays empty string on input focus", () => {
+        input.simulate('focus');
+        expect(container.props().errorMessage).toBe('');
+      });
+    });
+
   });
 });
 
