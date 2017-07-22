@@ -1,5 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Container Renders with props from containerProps 1`] = `
+<div
+  className="input-container classy react"
+  id="container"
+  style={
+    Object {
+      "margin": "10px",
+    }
+  }
+>
+  <input
+    className={undefined}
+    id={undefined}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`Container props populate the input tag 1`] = `
+<div
+  className="input-container"
+>
+  <input
+    className="test-class another class"
+    id="test-input"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="email"
+    value="Can set a default value"
+  />
+</div>
+`;
+
+exports[`Container renders with default props 1`] = `
+<div
+  className="input-container"
+>
+  <input
+    className={undefined}
+    id={undefined}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`Container renders with props from containerProps object 1`] = `
+<div
+  className="input-container classy react"
+  id="container"
+  style={
+    Object {
+      "margin": "10px",
+    }
+  }
+>
+  <input
+    className={undefined}
+    id={undefined}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
 exports[`Label Label does not render if label prop is falsey 1`] = `
 <div
   className="input-container"

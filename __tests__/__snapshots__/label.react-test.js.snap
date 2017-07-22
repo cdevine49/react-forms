@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label accepts props 1`] = `
+<label
+  className="label-class test"
+  htmlFor="htmlFor"
+  id="labelId"
+  label="Test Label"
+>
+  Test Input
+</label>
+`;
+
+exports[`Label does not render without child 1`] = `null`;
+
+exports[`Label renders with child 1`] = `
+<label>
+  Test Label
+</label>
+`;
