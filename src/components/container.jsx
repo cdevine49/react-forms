@@ -1,6 +1,7 @@
 import React from 'react';
 import withErrors from './withErrors';
 import Error from './error';
+import Label from './label';
 import setClassName from '../helpers/setClassName';
 
 const Container = ({
@@ -20,7 +21,7 @@ const Container = ({
                    }) => {
   return (
     <div className={ setClassName(['input-container', containerClass]) } { ...containerProps }>
-      {label && <label htmlFor={id} { ...labelProps }>{ label }</label>}
+      <Label htmlFor={id} { ...labelProps }>{ label }</Label>
       <input
         id={ id }
         className={ setClassName([className, (errorMessage && 'error')]) }
