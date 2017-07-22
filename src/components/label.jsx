@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Label = ({id, children, ...props}) => {
+const Label = ({children, ...props}) => {
   if (children) {
-    return ( <label htmlFor={id} {...props}>{children}</label> );
+    return ( <label {...props}>{children}</label> );
   } else {
     return null;
   }
