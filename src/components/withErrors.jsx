@@ -20,7 +20,7 @@ const withErrors = Component => class extends React.Component {
 
   _displayErrors() {
     const { errors, required, value } = this.props;
-    let errorMessage = false;
+    let errorMessage = '';
     if (required && !value) {
       errorMessage = "You can't leave this empty";
     } else if (errors) {
@@ -38,7 +38,7 @@ const withErrors = Component => class extends React.Component {
   }
 
   _hideErrors() {
-    this.setState({ errorMessage: false });
+    this.setState({ errorMessage: '' });
     this.props.displayErrors && this.props.hideErrors();
   }
 
