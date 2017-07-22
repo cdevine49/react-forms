@@ -31,11 +31,23 @@ test('Props on container populate the input tag', () => {
 });
 
 describe("Container", () => {
+  test("Renders with props from containerProps", () => {
+    let tree = renderer.create(
+      <Container
+        containerProps={{
+          id: 'container',
+          className: 'classy react',
+          style: { margin: "10px" }
+        }}
+        />
+    ).toJSON();
 
+    expect(tree).toMatchSnapshot();
+  });
 })
 
 describe("Label", () => {
-  test("Label does not render if label prop is falsey", () => {
+  test("does not render if label prop is falsey", () => {
     const tree = renderer.create(
       <Container
         />
@@ -44,7 +56,7 @@ describe("Label", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test("Label prop on container becomes label text", () => {
+  test("prop on container becomes label text", () => {
     const tree = renderer.create(
       <Container
         label="Test Label"
@@ -54,7 +66,7 @@ describe("Label", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test("Label receives props from container's labelProps prop", () => {
+  test("receives props from container's labelProps prop", () => {
     const tree = renderer.create(
       <Container
         label="Test Label"
