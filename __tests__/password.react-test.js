@@ -40,28 +40,13 @@ describe("Password", () => {
     test("Must be less than 100 characters long", () => {
       expect(errors.some(error => error._handle(tooLong))).toBe(true);
     });
-    //
-    // test("must have at least 8 charcters", () => {
-    //   expect(error._handle("@")).toBe(false);
-    //   expect(error._handle("as@asf")).toBe(false);
-    //   expect(error._handle("me@gmail.com")).toBe(false);
-    // });
-    //
-    // test("Error prop's handle function returns true when value does not include @", () => {
-    //   expect(error._handle("")).toBe(true);
-    //   expect(error._handle("megmail.com")).toBe(true);
-    // });
-    //
-    // test("Error prop's has message", () => {
-    //   expect(error.message).toBe("Not a valid pasword");
-    // });
-    //
-    // test("has correct label", () => {
-    //   const tree = renderer.create(
-    //     <Password />
-    //   ).toJSON();
-    //
-    //   expect(tree).toMatchSnapshot();
-    // });
+
+    test("has correct props", () => {
+      const tree = renderer.create(
+        <Password />
+      ).toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
   });
 });
