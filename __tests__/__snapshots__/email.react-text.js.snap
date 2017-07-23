@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Email Default has correct label 1`] = `
+<div
+  className="input-container"
+>
+  <label
+    htmlFor={undefined}
+  >
+    Email
+  </label>
+  <input
+    className={undefined}
+    id={undefined}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value=""
+  />
+</div>
+`;
