@@ -20,10 +20,9 @@ describe("Label", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test("accepts props", () => {
+  test.only("accepts props", () => {
     const tree = renderer.create(
       <Label
-        label="Test Label"
         htmlFor="htmlFor"
         id="labelId"
         className="label-class test"
