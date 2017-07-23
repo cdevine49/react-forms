@@ -2,6 +2,7 @@ import React from 'react';
 import withErrors from './withErrors';
 import Error from './error';
 import Label from './label';
+import Underline from './underline'
 import setClassName from '../helpers/setClassName';
 
 const Container = ({
@@ -29,7 +30,7 @@ const Container = ({
         { ...props }
         />
       <Error { ...errorProps }>{errorMessage}</Error>
-      { underline && <p { ...underlineProps }>{ underline }</p> }
+      <Underline { ...underlineProps }>{underline}</Underline>
     </div>
   );
 }
