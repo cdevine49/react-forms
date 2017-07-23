@@ -26,7 +26,7 @@ describe("Errors", () => {
         id="errorId"
         className="error-class test"
         >
-        Test Input
+        Test Error
       </Error>
     ).toJSON();
 
