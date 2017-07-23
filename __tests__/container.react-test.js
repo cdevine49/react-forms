@@ -42,6 +42,42 @@ describe("Container", () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  test("label prop acts as Label component's child", () => {
+    const tree = renderer.create(
+      <Container
+        label="Input"
+        />
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  test("id prop becomes htmlFor", () => {
+    const tree = renderer.create(
+      <Container
+        id="htmlFor"
+        label="Input"
+        />
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  test("labelProps populate label tag", () => {
+    const tree = renderer.create(
+      <Container
+        label="Input"
+        labelProps={{
+          id: 'label-test',
+          className: 'classy react'
+        }}
+        />
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
   describe("errorMessage prop", () => {
     const message = "Shock horror";
 
