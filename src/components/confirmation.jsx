@@ -1,10 +1,10 @@
 import React from 'react';
 import Error from './error';
-import Container from './container'
+import TextInput from './textInput'
 
 const Confirmation = ({match, message, ...props}) => {
   return (
-    <Container {...props} errors={[{ _handle: (v) => v !== match, message: message }]} />
+    <TextInput {...props} errors={[{ _handle: (v) => v !== match, message: message }]} />
   )
 }
 

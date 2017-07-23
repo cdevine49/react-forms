@@ -5,7 +5,7 @@ import Label from './label';
 import Underline from './underline'
 import setClassName from '../helpers/setClassName';
 
-const Container = ({
+const TextInput = ({
                       containerProps: {
                         className: containerClass,
                         ...containerProps
@@ -35,7 +35,7 @@ const Container = ({
   );
 }
 
-Container.defaultProps = {
+TextInput.defaultProps = {
   type: 'text',
   value: '',
   onChange: function(){},
@@ -45,4 +45,4 @@ Container.defaultProps = {
   underlineProps: {}
 }
 
-export default withErrors(Container);
+export default withErrors(TextInput);

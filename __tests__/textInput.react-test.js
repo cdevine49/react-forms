@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '../src/components/container';
+import Container from '../src/components/textInput';
 import renderer from 'react-test-renderer';
 import { shallow, mount } from 'enzyme';
 

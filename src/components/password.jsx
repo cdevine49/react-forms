@@ -1,10 +1,10 @@
 import React from 'react';
 import Error from './error';
-import Container from './container'
+import TextInput from './textInput'
 
 const Password = (props) => {
   return (
-    <Container {...props} />
+    <TextInput {...props} />
   )
 }
 

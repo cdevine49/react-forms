@@ -1,6 +1,6 @@
 import Form from './components/form';
 import Submit from './components/submit';
-import Container from './components/container';
+import Container from './components/textInput';
 import Email from './components/email';
 import Password from './components/password';
 import Confirmation from './components/confirmation';
@@ -8,7 +8,7 @@ import FlagContainer from './components/flagContainer';
 import Phone from './components/phone';
 const application = require('./styles/application.scss');
 const form = require('./styles/form.scss');
-const input = require('./styles/inputs/container.scss');
+const input = require('./styles/inputs/textInput.scss');
 const radio = require('./styles/inputs/radio.scss');
 const flagbox = require('./styles/inputs/flagbox.scss');
 const flagInput = require('./styles/inputs/flagInput.scss');
