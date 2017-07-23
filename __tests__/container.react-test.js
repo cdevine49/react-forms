@@ -43,39 +43,41 @@ describe("Container", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test("label prop acts as Label component's child", () => {
-    const tree = renderer.create(
-      <Container
-        label="Input"
-        />
-    ).toJSON();
+  describe("Label", () => {
+    test("label prop acts as Label component's child", () => {
+      const tree = renderer.create(
+        <Container
+          label="Input"
+          />
+      ).toJSON();
 
-    expect(tree).toMatchSnapshot();
-  });
+      expect(tree).toMatchSnapshot();
+    });
 
-  test("id prop becomes htmlFor", () => {
-    const tree = renderer.create(
-      <Container
-        id="htmlFor"
-        label="Input"
-        />
-    ).toJSON();
+    test("id prop becomes htmlFor", () => {
+      const tree = renderer.create(
+        <Container
+          id="htmlFor"
+          label="Input"
+          />
+      ).toJSON();
 
-    expect(tree).toMatchSnapshot();
-  });
+      expect(tree).toMatchSnapshot();
+    });
 
-  test("labelProps populate label tag", () => {
-    const tree = renderer.create(
-      <Container
-        label="Input"
-        labelProps={{
-          id: 'label-test',
-          className: 'classy react'
-        }}
-        />
-    ).toJSON();
+    test("labelProps populate label tag", () => {
+      const tree = renderer.create(
+        <Container
+          label="Input"
+          labelProps={{
+            id: 'label-test',
+            className: 'classy react'
+          }}
+          />
+      ).toJSON();
 
-    expect(tree).toMatchSnapshot();
+      expect(tree).toMatchSnapshot();
+    });
   });
 
   describe("errorMessage prop", () => {
@@ -126,7 +128,32 @@ describe("Container", () => {
         expect(container.props().errorMessage).toBe('');
       });
     });
+  });
 
+  describe("Underline", () => {
+    test("renders when passed as prop", () => {
+      const tree = renderer.create(
+        <Container
+          underline="More info about input"
+          />
+      ).toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("accepts underlineProps", () => {
+      const tree = renderer.create(
+        <Container
+          underline="More info about input"
+          underlineProps={{
+            id: "underline",
+            className: "new-class test"
+          }}
+          />
+      ).toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
   });
 });
 

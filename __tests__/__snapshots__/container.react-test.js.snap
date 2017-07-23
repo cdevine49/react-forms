@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Container id prop becomes htmlFor 1`] = `
+exports[`Container Label id prop becomes htmlFor 1`] = `
 <div
   className="input-container"
 >
@@ -21,7 +21,7 @@ exports[`Container id prop becomes htmlFor 1`] = `
 </div>
 `;
 
-exports[`Container label prop acts as Label component's child 1`] = `
+exports[`Container Label label prop acts as Label component's child 1`] = `
 <div
   className="input-container"
 >
@@ -42,7 +42,7 @@ exports[`Container label prop acts as Label component's child 1`] = `
 </div>
 `;
 
-exports[`Container labelProps populate label tag 1`] = `
+exports[`Container Label labelProps populate label tag 1`] = `
 <div
   className="input-container"
 >
@@ -62,6 +62,47 @@ exports[`Container labelProps populate label tag 1`] = `
     type="text"
     value=""
   />
+</div>
+`;
+
+exports[`Container Underline accepts underlineProps 1`] = `
+<div
+  className="input-container"
+>
+  <input
+    className={undefined}
+    id={undefined}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value=""
+  />
+  <p
+    className="new-class test"
+    id="underline"
+  >
+    More info about input
+  </p>
+</div>
+`;
+
+exports[`Container Underline renders when passed as prop 1`] = `
+<div
+  className="input-container"
+>
+  <input
+    className={undefined}
+    id={undefined}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value=""
+  />
+  <p>
+    More info about input
+  </p>
 </div>
 `;
 
