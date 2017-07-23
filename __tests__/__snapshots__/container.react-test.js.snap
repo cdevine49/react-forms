@@ -79,7 +79,7 @@ exports[`Container Underline accepts underlineProps 1`] = `
     value=""
   />
   <p
-    className="new-class test"
+    className="underline new-class test"
     id="underline"
   >
     More info about input
@@ -100,7 +100,9 @@ exports[`Container Underline renders when passed as prop 1`] = `
     type="text"
     value=""
   />
-  <p>
+  <p
+    className="underline"
+  >
     More info about input
   </p>
 </div>

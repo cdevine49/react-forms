@@ -3,7 +3,7 @@ import setClassName from '../helpers/setClassName';
 
 const Error = ({children, className, ...props}) => {
   if (children) {
-    return ( <span className={setClassName(['error-message', className])} { ...props }>{children}</span> );
+    return ( <p className={setClassName(['error-message', className])} { ...props }>{children}</p> );
   } else {
     return null;
   }

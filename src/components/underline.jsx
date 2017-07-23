@@ -1,8 +1,9 @@
 import React from 'react';
+import setClassName from '../helpers/setClassName';
 
-const Underline = ({children, ...props}) => {
+const Underline = ({children, className, ...props}) => {
   if (children) {
-    return ( <p { ...props }>{children}</p> );
+    return ( <p className={setClassName(['underline', className])} { ...props }>{children}</p> );
   } else {
     return null;
   }
