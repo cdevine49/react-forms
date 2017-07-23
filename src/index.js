@@ -15,5 +15,6 @@ const flagInput = require('./styles/inputs/flagInput.scss');
 const countries = require('./styles/inputs/countries.scss');
 const submit = require('./styles/submit.scss');
 const error = require('./styles/error.scss');
+const underline = require('./styles/underline.scss');
 
 export { Form, Submit, Container, Email, FlagContainer, Phone, Password, Confirmation };
