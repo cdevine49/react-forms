@@ -23,8 +23,8 @@ describe("Errors", () => {
   test("accepts props", () => {
     const tree = renderer.create(
       <Error
-        id="labelId"
-        className="label-class test"
+        id="errorId"
+        className="error-class test"
         >
         Test Input
       </Error>

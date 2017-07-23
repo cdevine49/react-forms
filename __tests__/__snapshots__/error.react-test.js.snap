@@ -2,8 +2,8 @@
 
 exports[`Errors accepts props 1`] = `
 <p
-  className="error-message label-class test"
-  id="labelId"
+  className="error-message error-class test"
+  id="errorId"
 >
   Test Input
 </p>
