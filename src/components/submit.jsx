@@ -1,18 +1,18 @@
 import React from 'react';
 import setClassName from '../helpers/setClassName'
 
-const Submit = ({...props}) => {
+const Submit = ({className, ...props}) => {
 
   return (
     <input
       type='submit'
+      className={setClassName(['react-form-submit', className])}
       {...props}
       />
   )
 }
 
 Submit.defaultProps = {
-  className: 'react-form-submit',
   value: 'Submit'
 }
 
