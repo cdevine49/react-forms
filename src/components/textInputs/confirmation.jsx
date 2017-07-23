@@ -1,6 +1,5 @@
 import React from 'react';
-import Error from './error';
-import TextInput from './textInput'
+import TextInput from '../textInput'
 
 const Confirmation = ({match, message, ...props}) => {
   return (

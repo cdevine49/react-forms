@@ -1,5 +1,5 @@
 import React from 'react';
-import Confirmation from '../src/components/confirmation';
+import Confirmation from '../src/components/textInputs/confirmation';
 import { shallow } from 'enzyme';
 
 describe("Confirmation", () => {
