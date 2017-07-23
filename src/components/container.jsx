@@ -28,7 +28,7 @@ const Container = ({
         onChange={ function(e){ onChange(e.currentTarget.value) } }
         { ...props }
         />
-      <Error errorMessage={ errorMessage } { ...errorProps } />
+      <Error { ...errorProps }>{errorMessage}</Error>
       { underline && <p { ...underlineProps }>{ underline }</p> }
     </div>
   );

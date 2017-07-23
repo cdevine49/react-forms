@@ -1,8 +1,9 @@
 import React from 'react';
+import setClassName from '../helpers/setClassName';
 
-const Error = ({errorMessage}) => {
-  if (errorMessage) {
-    return ( <span className='error-message'>{errorMessage}</span> );
+const Error = ({children, className, ...props}) => {
+  if (children) {
+    return ( <span className={setClassName(['error-message', className])} { ...props }>{children}</span> );
   } else {
     return null;
   }
