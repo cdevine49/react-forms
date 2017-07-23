@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Submit accepts new props 1`] = `
+<input
+  className="react-form-submit classy submit"
+  id="submitId"
+  type="submit"
+  value="Submit"
+/>
+`;
+
+exports[`Submit renders with default props 1`] = `
+<input
+  className="react-form-submit"
+  type="submit"
+  value="Submit"
+/>
+`;
