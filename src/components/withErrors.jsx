@@ -11,14 +11,14 @@ const withErrors = Component => class extends React.Component {
   }
 
   componentDidMount() {
-    this.props.validate && this.props.validate(false);
+    this.props.validate && this.props.validate(!this._getErrorMessage());
   }
 
   componentWillReceiveProps(nextProps) {
-    !this.props.displayErrors && nextProps.displayErrors && this.setState({ displayErrors: true })
+    !this.props.displayErrors && nextProps.displayErrors && this._displayErrors();
   }
 
-  _displayErrors() {
+  _getErrorMessage() {
     const { errors, required, value } = this.props;
     let errorMessage = '';
     if (required && !value) {
@@ -32,7 +32,11 @@ const withErrors = Component => class extends React.Component {
         }
       }
     }
+    return errorMessage;
+  }
 
+  _displayErrors() {
+    const errorMessage = this._getErrorMessage();
     this.props.validate && this.props.validate(!errorMessage);
     this.setState({ errorMessage });
   }
