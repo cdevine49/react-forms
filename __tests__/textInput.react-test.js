@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from '../src/components/textInput';
 import renderer from 'react-test-renderer';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe("Container", () => {
   test('renders with default props', () => {
