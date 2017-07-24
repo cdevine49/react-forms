@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form Default renders with default props 1`] = `
+<form
+  className="react-form"
+  noValidate={true}
+  onSubmit={[Function]}
+/>
+`;
+
+exports[`Form accepts props 1`] = `
+<form
+  className="react-form new-class"
+  id="formId"
+  noValidate={false}
+  onSubmit={[Function]}
+/>
+`;
