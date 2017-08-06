@@ -43,7 +43,6 @@ const withErrors = Component => class extends React.Component {
 
   _hideErrors() {
     this.setState({ errorMessage: '' });
-    this.props.displayErrors && this.props.hideErrors();
   }
 
   render() {
@@ -53,7 +52,3 @@ const withErrors = Component => class extends React.Component {
 }
 
 export default withErrors;
-
-withErrors.defaultProps = {
-  validate: function(){}
-}
