@@ -1,6 +1,6 @@
 import React from 'react';
 import Flag from './flag';
-import setClassName from '../helpers/setClassName';
+import setClassName from '../../helpers/setClassName';
 
 const Country = ({offset, name, code, onClick, className}) => {
   return (

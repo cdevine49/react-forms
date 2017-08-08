@@ -1,6 +1,6 @@
 import React from 'react';
 import Flag from './flag';
-import FlagArray from '../helpers/countries';
+import FlagArray from '../../helpers/countries';
 
 const Flagbox = ({onClick, countryIndex, errors, focus}) => {
   const [offset, name, code] = FlagArray[countryIndex];

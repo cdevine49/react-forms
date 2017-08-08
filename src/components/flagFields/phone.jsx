@@ -1,6 +1,6 @@
 import React from 'react';
-import FlagFieldContainer from './flagFieldContainer';
-import FlagArray from '../helpers/countries';
+import FlagFieldContainer from '../flagFieldContainer';
+import FlagArray from '../../helpers/countries';
 
 const Phone = (props) => {
   const onChangeCountry = idx => {

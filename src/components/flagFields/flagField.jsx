@@ -1,6 +1,5 @@
 import React from 'react';
 import FlagBox from './flagBox';
-import Input from './input';
 
 const FlagField = ({countryIndex, onClick, ...props}) => {
   return (

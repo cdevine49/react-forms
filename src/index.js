@@ -5,7 +5,7 @@ import Email from './components/textFields/email';
 import Password from './components/textFields/password';
 import Confirmation from './components/textFields/confirmation';
 import FlagFieldContainer from './components/flagFieldContainer';
-import Phone from './components/phone';
+import Phone from './components/flagFields/phone';
 const application = require('./styles/application.scss');
 const form = require('./styles/form.scss');
 const input = require('./styles/inputs/textField.scss');
