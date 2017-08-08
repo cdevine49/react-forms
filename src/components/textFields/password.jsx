@@ -1,9 +1,9 @@
 import React from 'react';
-import TextInput from '../textInput'
+import TextField from '../textField'
 
 const Password = (props) => {
   return (
-    <TextInput {...props} />
+    <TextField {...props} />
   )
 }
 

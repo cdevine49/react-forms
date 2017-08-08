@@ -1,9 +1,9 @@
 import React from 'react';
-import TextInput from '../textInput'
+import TextField from '../textField'
 
 const Email = (props) => {
   return (
-    <TextInput {...props} />
+    <TextField {...props} />
   )
 }
 

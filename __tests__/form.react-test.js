@@ -1,6 +1,6 @@
 import React from 'react';
 import Form from '../src/components/form';
-import TextInput from '../src/components/textInput';
+import textField from '../src/components/textField';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 

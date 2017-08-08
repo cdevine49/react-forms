@@ -1,5 +1,5 @@
 import React from 'react';
-import Email from '../src/components/textInputs/email';
+import Email from '../src/components/textFields/email';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 

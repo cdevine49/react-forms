@@ -1,9 +1,9 @@
 import React from 'react';
-import TextInput from '../textInput'
+import TextField from '../textField'
 
 const Confirmation = ({match, message, ...props}) => {
   return (
-    <TextInput {...props} errors={[{ _handle: (v) => v !== match, message: message }]} />
+    <TextField {...props} errors={[{ _handle: (v) => v !== match, message: message }]} />
   )
 }
 

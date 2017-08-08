@@ -1,14 +1,14 @@
 import Form from './components/form';
 import Submit from './components/submit';
-import TextInput from './components/textInput';
-import Email from './components/textInputs/email';
-import Password from './components/textInputs/password';
-import Confirmation from './components/textInputs/confirmation';
+import textField from './components/textField';
+import Email from './components/textFields/email';
+import Password from './components/textFields/password';
+import Confirmation from './components/textFields/confirmation';
 import FlagContainer from './components/flagContainer';
 import Phone from './components/phone';
 const application = require('./styles/application.scss');
 const form = require('./styles/form.scss');
-const input = require('./styles/inputs/textInput.scss');
+const input = require('./styles/inputs/textField.scss');
 const radio = require('./styles/inputs/radio.scss');
 const flagbox = require('./styles/inputs/flagbox.scss');
 const flagInput = require('./styles/inputs/flagInput.scss');
@@ -17,4 +17,4 @@ const submit = require('./styles/submit.scss');
 const error = require('./styles/error.scss');
 const underline = require('./styles/underline.scss');
 
-export { Form, Submit, TextInput, Email, FlagContainer, Phone, Password, Confirmation };
+export { Form, Submit, textField, Email, FlagContainer, Phone, Password, Confirmation };
