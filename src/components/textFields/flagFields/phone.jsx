@@ -1,6 +1,5 @@
 import React from 'react';
-import FlagFieldContainer from '../flagFieldContainer';
-import FlagArray from '../../helpers/countries';
+import FlagField from './index';
 
 const Phone = (props) => {
   const onChangeCountry = idx => {
@@ -8,7 +7,7 @@ const Phone = (props) => {
   };
 
   return (
-    <FlagFieldContainer {...props} onChangeCountry={onChangeCountry} />
+    <FlagField {...props} onChangeCountry={onChangeCountry} />
   )
 };
 

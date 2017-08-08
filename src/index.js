@@ -4,8 +4,8 @@ import textField from './components/textField';
 import Email from './components/textFields/email';
 import Password from './components/textFields/password';
 import Confirmation from './components/textFields/confirmation';
-import FlagFieldContainer from './components/flagFieldContainer';
-import Phone from './components/flagFields/phone';
+import FlagField from './components/textFields/flagFields';
+import Phone from './components/textFields/flagFields/phone';
 const application = require('./styles/application.scss');
 const form = require('./styles/form.scss');
 const input = require('./styles/inputs/textField.scss');
@@ -17,4 +17,4 @@ const submit = require('./styles/submit.scss');
 const error = require('./styles/error.scss');
 const underline = require('./styles/underline.scss');
 
-export { Form, Submit, textField, Email, FlagFieldContainer, Phone, Password, Confirmation };
+export { Form, Submit, textField, Email, FlagField, Phone, Password, Confirmation };

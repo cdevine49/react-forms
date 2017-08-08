@@ -1,7 +1,7 @@
 import React from 'react';
 import Country from './country';
-import CountriesArray from '../../helpers/countries';
-import ScrollView from '../scrollView';
+import CountriesArray from '../shared/countries';
+import ScrollView from '../../../scrollView';
 
 class Countries extends React.Component {
   constructor() {

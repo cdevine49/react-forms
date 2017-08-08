@@ -1,7 +1,7 @@
 import React from 'react';
 import FlagBox from './flagBox';
 
-const FlagField = ({countryIndex, onClick, ...props}) => {
+const FlagInput = ({countryIndex, onClick, ...props}) => {
   return (
     <div className="input-container flag-input-container">
       <FlagBox
@@ -13,9 +13,9 @@ const FlagField = ({countryIndex, onClick, ...props}) => {
   );
 }
 
-FlagField.defaultProps = {
+FlagInput.defaultProps = {
   countryIndex: 0,
   onClick: function(){}
 }
 
-export default FlagField;
+export default FlagInput;

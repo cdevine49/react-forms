@@ -1,11 +1,11 @@
 import React from 'react';
-import FlagField from './flagFields/flagField';
-import Countries from './flagFields/countries';
-import Error from './error';
-import withErrors from './withErrors';
-import setClassName from '../helpers/setClassName';
+import FlagInput from './flagInput';
+import Countries from './countries';
+import Error from '../../error';
+import withErrors from '../../withErrors';
+import setClassName from '../../../helpers/setClassName';
 
-class FlagFieldContainer extends React.Component {
+class FlagField extends React.Component {
   constructor(props){
   	super(props);
   	this.state = {
@@ -37,7 +37,7 @@ class FlagFieldContainer extends React.Component {
       <div className={setClassName('input-container flag-container', containerClass)}>
         {labelText && <label htmlFor={id} className={labelClass}>{labelText}</label>}
         <div style={{position: 'relative'}}>
-          <FlagField
+          <FlagInput
             countryIndex={countryIndex}
             onChange={this.onChange}
             value={textValue}
@@ -60,11 +60,11 @@ class FlagFieldContainer extends React.Component {
   }
 }
 
-FlagFieldContainer.defaultProps = {
+FlagField.defaultProps = {
   countryIndex: 0,
   onChange: function(){},
   onChangeCountry: function(){},
   textValue: ''
 }
 
-export default withErrors(FlagFieldContainer);
+export default withErrors(FlagField);
