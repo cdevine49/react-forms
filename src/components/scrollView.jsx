@@ -70,7 +70,7 @@ export default class ScrollView extends React.Component {
   render() {
     const { className, children, index, ...props } = this.props;
     return (
-      <div className={setClassName("scroll-view", className)} {...props}>
+      <div className={setClassName(["scroll-view", className])} {...props}>
         {children}
       </div>
     );
