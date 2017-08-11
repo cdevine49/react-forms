@@ -34,7 +34,7 @@ class FlagField extends React.Component {
     } = this.props;
     const { displayErrors, errorMessage, countryIndex, entered, selectingCountry, textValue } = this.state;
     return(
-      <div className={setClassName('input-container flag-container', containerClass)}>
+      <div className={setClassName(['input-container flag-container', containerClass])}>
         {labelText && <label htmlFor={id} className={labelClass}>{labelText}</label>}
         <div style={{position: 'relative'}}>
           <FlagInput
