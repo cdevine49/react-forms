@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Country Without Props renders empty list 1`] = `
+<li
+  className="country"
+  onClick={[Function]}
+/>
+`;
