@@ -32,7 +32,7 @@ export default class ScrollView extends React.Component {
   }
 
   scrollLock(node) {
-    node = node || ReactDOM.findDOMNode(this);
+    node = node || ReactDOM.findDOMNode(this.scrollView);
     this._setScrollTop(node);
     this.scrollNode = node;
     addScrollEventListener(node, this.onScrollHandler);
@@ -70,7 +70,11 @@ export default class ScrollView extends React.Component {
   render() {
     const { className, children, index, ...props } = this.props;
     return (
-      <div className={setClassName(["scroll-view", className])} {...props}>
+      <div
+        className={setClassName(["scroll-view", className])}
+        ref={scrollView => this.scrollView = scrollView}
+        {...props}
+        >
         {children}
       </div>
     );
