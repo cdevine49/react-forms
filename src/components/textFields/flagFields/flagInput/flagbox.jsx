@@ -2,13 +2,13 @@ import React from 'react';
 import Flag from '../shared/flag';
 import FlagArray from '../shared/countries';
 
-const Flagbox = ({onClick, countryIndex, errors, focus}) => {
+const Flagbox = ({onClick, countryIndex}) => {
   const [offset, name, code] = FlagArray[countryIndex];
   return (
-    <div className={'flagbox' + (focus ? ' focus' : '') + ( errors ? ' error' : '')} onClick={onClick} onMouseDown={ e => focus && e.preventDefault()}>
-      <Flag name={name} code={code} offset={offset} />
+    <button type="button" className={'flagbox'} onClick={onClick}>
+      <Flag offset={offset} />
       <img src="/images/select-box-button.png" className='select-box-button' />
-    </div>
+    </button>
   );
 };
 
