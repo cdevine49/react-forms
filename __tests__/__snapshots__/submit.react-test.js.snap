@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Submit accepts new props 1`] = `
-<input
+<button
   className="react-form-submit classy submit"
   id="submitId"
   type="submit"
@@ -10,7 +10,7 @@ exports[`Submit accepts new props 1`] = `
 `;
 
 exports[`Submit renders with default props 1`] = `
-<input
+<button
   className="react-form-submit"
   type="submit"
   value="Submit"

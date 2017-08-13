@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Country With Props className 1`] = `
+<div
+  className="flag test"
+  style={Object {}}
+/>
+`;
+
+exports[`Country With Props offset 1`] = `
+<div
+  className="flag"
+  style={
+    Object {
+      "backgroundImage": "url(/images/flags.png)",
+      "backgroundPositionX": "0px",
+      "backgroundPositionY": "-44px",
+    }
+  }
+/>
+`;
+
+exports[`Country Without Props 1`] = `
+<div
+  className="flag"
+  style={Object {}}
+/>
+`;

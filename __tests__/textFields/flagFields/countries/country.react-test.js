@@ -5,7 +5,7 @@ import { mount } from 'enzyme';
 
 describe("Country", () => {
   describe("Without Props", () => {
-    test("renders empty list", () => {
+    test("renders empty flag", () => {
       const tree = renderer.create(
         <Country />
       ).toJSON();
