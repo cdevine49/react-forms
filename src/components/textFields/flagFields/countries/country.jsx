@@ -6,7 +6,7 @@ const Country = ({offset, name, code, onClick, className}) => {
   return (
     <li className={setClassName(['country', className])}>
       <button onClick={onClick}>
-        {offset && <Flag name={name} code={code} offset={offset} />}
+        <Flag offset={offset} />
         {name && <span className='name'>{name}</span>}
         {code && <span className='code'>{code}</span>}
       </button>
