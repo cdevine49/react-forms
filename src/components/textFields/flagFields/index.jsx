@@ -17,7 +17,7 @@ class FlagField extends React.Component {
     this.onChange = this.onChange.bind(this);
   }
 
-  toggleSelecting() {
+  toggleSelecting() { 
     this.setState({ selectingCountry: !this.state.selectingCountry });
   }
 
