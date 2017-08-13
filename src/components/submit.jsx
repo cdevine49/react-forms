@@ -4,7 +4,7 @@ import setClassName from '../helpers/setClassName'
 const Submit = ({className, ...props}) => {
 
   return (
-    <input
+    <button
       type='submit'
       className={setClassName(['react-form-submit', className])}
       {...props}
