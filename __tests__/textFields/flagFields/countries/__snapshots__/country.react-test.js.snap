@@ -1,8 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Country With Props className 1`] = `
+<li
+  className="country test"
+>
+  <button
+    onClick={[Function]}
+  />
+</li>
+`;
+
+exports[`Country With Props code 1`] = `
+<li
+  className="country"
+>
+  <button
+    onClick={[Function]}
+  >
+    <span
+      className="code"
+    >
+      +1
+    </span>
+  </button>
+</li>
+`;
+
+exports[`Country With Props name 1`] = `
+<li
+  className="country"
+>
+  <button
+    onClick={[Function]}
+  >
+    <span
+      className="name"
+    >
+      United States
+    </span>
+  </button>
+</li>
+`;
+
+exports[`Country With Props offset 1`] = `
+<li
+  className="country"
+>
+  <button
+    onClick={[Function]}
+  >
+    <div
+      className="flag"
+      style={
+        Object {
+          "backgroundImage": "url(/images/flags.png)",
+          "backgroundPositionX": "0px",
+          "backgroundPositionY": "-44px",
+        }
+      }
+    />
+  </button>
+</li>
+`;
+
 exports[`Country Without Props renders empty list 1`] = `
 <li
   className="country"
-  onClick={[Function]}
-/>
+>
+  <button
+    onClick={[Function]}
+  />
+</li>
 `;
