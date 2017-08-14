@@ -2,13 +2,13 @@ import React from 'react';
 import Flag from '../shared/flag';
 import setClassName from '../../../../helpers/setClassName';
 
-const Country = ({offset, name, code, onClick, className}) => {
+const Country = ({offset, name, value, onClick, className}) => {
   return (
     <li className={setClassName(['country', className])}>
       <button onClick={onClick}>
         <Flag offset={offset} />
         {name && <span className='name'>{name}</span>}
-        {code && <span className='code'>{code}</span>}
+        {value && <span className='value'>{value}</span>}
       </button>
     </li>
   );
