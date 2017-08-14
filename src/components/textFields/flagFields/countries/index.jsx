@@ -15,18 +15,17 @@ class Countries extends React.Component {
   }
 
   selectCountry(i) {
-    let that = this;
-    const onClick = function() {
-      that.props.onClick(i);
-      that.setState({ hovered: false });
+    return () => {
+      this.props.onClick(i);
+      this.setState({ hovered: false });
     };
-    return onClick;
   }
 
   _countries() {
     const query = this.state.query.toLowerCase();
     return CountriesArray.reduce((acc, flag, i) => {
-      const [offset, name, code] = flag;
+      const [offset, name] = flag;
+      const value = flag[this.props.countryInfoIndex];
       const start = name.slice(0, query.length).toLowerCase();
       if (start === query || query.length < 1) {
         acc.push(
@@ -34,7 +33,7 @@ class Countries extends React.Component {
             className={i === this.props.countryIndex && !this.state.hovered ? 'hover-style' : ''}
             offset={this.props.flag && offset}
             name={this.props.name && name}
-            code={this.props.code !== false && code}
+            value={value}
             onClick={this.selectCountry(i)} />
         );
       }
