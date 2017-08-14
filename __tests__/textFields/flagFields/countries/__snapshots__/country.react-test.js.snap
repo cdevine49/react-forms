@@ -15,26 +15,6 @@ exports[`Country With Props className 1`] = `
 </li>
 `;
 
-exports[`Country With Props code 1`] = `
-<li
-  className="country"
->
-  <button
-    onClick={[Function]}
-  >
-    <div
-      className="flag"
-      style={Object {}}
-    />
-    <span
-      className="code"
-    >
-      +1
-    </span>
-  </button>
-</li>
-`;
-
 exports[`Country With Props name 1`] = `
 <li
   className="country"
@@ -72,6 +52,26 @@ exports[`Country With Props offset 1`] = `
         }
       }
     />
+  </button>
+</li>
+`;
+
+exports[`Country With Props value 1`] = `
+<li
+  className="country"
+>
+  <button
+    onClick={[Function]}
+  >
+    <div
+      className="flag"
+      style={Object {}}
+    />
+    <span
+      className="value"
+    >
+      +1
+    </span>
   </button>
 </li>
 `;

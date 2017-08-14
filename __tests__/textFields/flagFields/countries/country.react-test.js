@@ -31,9 +31,9 @@ describe("Country", () => {
       expect(tree).toMatchSnapshot();
     });
 
-    test("code", () => {
+    test("value", () => {
       const tree = renderer.create(
-        <Country code="+1" />
+        <Country value="+1" />
       ).toJSON();
 
       expect(tree).toMatchSnapshot();
