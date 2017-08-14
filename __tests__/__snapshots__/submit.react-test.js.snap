@@ -5,14 +5,16 @@ exports[`Submit accepts new props 1`] = `
   className="react-form-submit classy submit"
   id="submitId"
   type="submit"
-  value="Submit"
-/>
+>
+  Submit
+</button>
 `;
 
 exports[`Submit renders with default props 1`] = `
 <button
   className="react-form-submit"
   type="submit"
-  value="Submit"
-/>
+>
+  Submit
+</button>
 `;
