@@ -1,60 +1,62 @@
 import React from 'react';
-import FlagInput from './flagInput';
-import Countries from './countries';
+import FlagBox from './flagInput/flagbox';
 import Error from '../../error';
+import Label from '../../label';
+import Underline from '../../underline'
 import withErrors from '../../withErrors';
 import setClassName from '../../../helpers/setClassName';
 
 class FlagField extends React.Component {
-  constructor(props){
-  	super(props);
-  	this.state = {
-      countryIndex: this.props.countryIndex,
-      textValue: this.props.textValue,
-      selectingCountry: false
-    };
-    this.toggleSelecting = this.toggleSelecting.bind(this);
+  constructor(){
+  	super();
     this.onChange = this.onChange.bind(this);
-  }
-
-  toggleSelecting() { 
-    this.setState({ selectingCountry: !this.state.selectingCountry });
+    this.onChangeCountry = this.onChangeCountry.bind(this);
   }
 
   onChange(e) {
-    const textValue = e.currentTarget.value;
-    this.setState({ textValue }, () => this.props.onChange(textValue))
+    const value = e.currentTarget.value;
+    this.props.onChange(value);
+  }
+
+  onChangeCountry() {
+    return countryIndex => {
+      this.props.onChangeCountry(countryIndex);
+    }
   }
 
   render() {
     const {
-      labelText, type, id, country, placeholder, labelClass,
-      inputClass, onChangeCountry, onChange, underline, containerClass,
-      flag, name, code
+      fieldProps: {
+        className: fieldClass,
+        ...fieldProps
+      },
+      inputContainerProps,
+      label,
+      labelProps,
+      errorMessage,
+      errorProps,
+      inputProps,
+      underline,
+      underlineProps,
+      id,
+      countryInfoIndex,
+      countryIndex,
+      onChangeCountry, onChange,
+      ...props
     } = this.props;
-    const { displayErrors, errorMessage, countryIndex, entered, selectingCountry, textValue } = this.state;
     return(
-      <div className={setClassName(['input-container flag-container', containerClass])}>
-        {labelText && <label htmlFor={id} className={labelClass}>{labelText}</label>}
-        <div style={{position: 'relative'}}>
-          <FlagInput
-            countryIndex={countryIndex}
+      <div className={ setClassName(['input-container flag-container', fieldClass]) } { ...fieldProps }>
+        <Label htmlFor={ id } { ...labelProps }>{ label }</Label>
+        <div className="input-container flag-input-container" style={{position: 'relative'}} { ...inputContainerProps }>
+          <FlagBox countryIndex={countryIndex} countryInfoIndex={countryInfoIndex} onChange={this.onChangeCountry()} />
+          <input
+            id={id}
             onChange={this.onChange}
-            value={textValue}
-            onClick={this.toggleSelecting} />
-          {this.state.selectingCountry && <Countries
-              flag={flag}
-              name={name}
-              code={code}
-              selectingCountry={selectingCountry}
-              countryIndex={countryIndex}
-              onClick={(i) => {
-                this.setState({ countryIndex: i, selectingCountry: false })
-                this.props.onChangeCountry(i);
-              }} />}
+            { ...props }
+            />
         </div>
-        <Error errorMessage={errorMessage} />
-        {underline && <p>{underline}</p>}
+        <Error { ...errorProps }>{errorMessage}</Error>
+        <Underline { ...underlineProps }>{underline}</Underline>
       </div>
     );
   }
@@ -64,7 +66,12 @@ FlagField.defaultProps = {
   countryIndex: 0,
   onChange: function(){},
   onChangeCountry: function(){},
-  textValue: ''
+  value: '',
+  errorProps: {},
+  fieldProps: {},
+  inputContainerProps: {},
+  labelProps: {},
+  underlineProps: {}
 }
 
 export default withErrors(FlagField);
