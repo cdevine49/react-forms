@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flagbox Without Props 1`] = `
+<div
+  className="flagbox-container"
+>
+  <button
+    aria-pressed={false}
+    className="flagbox"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="flag"
+      style={
+        Object {
+          "backgroundImage": "url(/images/flags.png)",
+          "backgroundPositionX": "0px",
+          "backgroundPositionY": "-44px",
+        }
+      }
+    />
+    <img
+      className="select-box-button"
+      src="/images/select-box-button.png"
+    />
+  </button>
+</div>
+`;
