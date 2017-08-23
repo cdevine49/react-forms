@@ -23,6 +23,9 @@ describe("Countries", () => {
           }
           return obj
         }
+        return {
+          focus() {}
+        }
       };
 
       const tree = renderer.create(
