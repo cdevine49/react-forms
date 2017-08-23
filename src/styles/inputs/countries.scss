@@ -35,7 +35,7 @@
   width: 100%;
 }
 
-.country:hover, .country.hover-style {
+.country:hover, .country:focus, .country.hover-style {
   background-color: #eee;
   border-color: #eee;
   border-style: dotted;
