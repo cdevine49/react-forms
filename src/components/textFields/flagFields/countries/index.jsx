@@ -14,6 +14,10 @@ class Countries extends React.Component {
     this.update = this.update.bind(this);
   }
 
+  componentDidMount() {
+    this.searchInput.focus()
+  }
+
   selectCountry(i) {
     return () => {
       this.props.onClick(i);
@@ -30,6 +34,7 @@ class Countries extends React.Component {
       if (start === query || query.length < 1) {
         acc.push(
           <Country key={i}
+            focus={i === this.props.countryIndex}
             className={i === this.props.countryIndex && !this.state.hovered ? 'hover-style' : ''}
             offset={this.props.flag && offset}
             name={this.props.name && name}
@@ -69,6 +74,7 @@ class Countries extends React.Component {
           placeholder='Search Countries'
           className='country-search'
           onChange={ this.update("query") }
+          ref={input => { this.searchInput = input; }}
           value={this.state.query}
           />
         <div className='separator'></div>
