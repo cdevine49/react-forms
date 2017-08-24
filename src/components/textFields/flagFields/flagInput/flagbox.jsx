@@ -21,7 +21,7 @@ export default class FlagBox extends React.Component {
   selectCountry() {
     return i => {
       this.setState({ selectingCountry: false }, () => {
-        this.flagButton.focus();
+        this.flagButton && this.flagButton.focus();
         this.props.onChange(i);
       });
     }
