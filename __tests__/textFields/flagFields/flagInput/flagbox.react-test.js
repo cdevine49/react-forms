@@ -1,5 +1,6 @@
 import React from 'react';
 import Flagbox from '../../../../src/components/textFields/flagFields/flagInput/flagbox';
+import Countries from '../../../../src/components/textFields/flagFields/countries';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 
@@ -42,11 +43,11 @@ describe("Flagbox", () => {
   });
 
   describe("Countries", () => {
-    test('Only renders when selecting country', () => {
-      const component = shallow(
-        <Flagbox />
-      );
+    const component = shallow(
+      <Flagbox />
+    );
 
+    test.only('Only renders when selecting country', () => {
       expect(component.children().length).toBe(1);
       component.setState({ selectingCountry: true });
       expect(component.children().length).toBe(2);
@@ -54,13 +55,31 @@ describe("Flagbox", () => {
       expect(component.children().length).toBe(1);
     });
 
-    describe("Selecting country", () => {
-      test("Sets selectingCountry to false", () => {
+    describe("OnClick Prop", () => {
+      const component = shallow(
+        <Flagbox />
+      );
+      component.setState({ selectingCountry: true });
 
+      test("Sets selectingCountry to false", () => {
+        const countries = component.find(Countries);
+        countries.props().onClick();
+        expect(component.state('selectingCountry')).toBe(false);
       });
 
       test("Calls onChange prop with the country index", () => {
+        const onChange = jest.fn();
+        component.setProps({ onChange });
+        const countries = component.find(Countries);
+        expect(onChange).not.toHaveBeenCalled()
 
+        countries.props().onClick(10);
+        expect(onChange).toHaveBeenCalledTimes(1)
+        expect(onChange).toHaveBeenCalledWith(10)
+
+        countries.props().onClick(23);
+        expect(onChange).toHaveBeenCalledTimes(2)
+        expect(onChange).toHaveBeenCalledWith(23)
       });
     })
   });
