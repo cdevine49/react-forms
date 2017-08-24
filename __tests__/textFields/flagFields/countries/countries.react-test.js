@@ -43,13 +43,40 @@ describe("Countries", () => {
         <Countries />
       );
       component.setState({ query: 'united states'});
-      expect(component.find('.countries').props().children.length).toBe(1);
+      expect(component.find('.countries').children().length).toBe(1);
 
       component.setState({ query: 'united states USA USA USA'});
-      expect(component.find('.countries').props().children.length).toBe(0);
+      expect(component.find('.countries').children().length).toBe(0);
 
       component.setState({ query: 'al'});
-      expect(component.find('.countries').props().children.length).toBe(2);
+      expect(component.find('.countries').children().length).toBe(2);
+    });
+  });
+  describe("Country list elements", () => {
+    const component = shallow(
+      <Countries />
+    );
+
+    describe("Clicking", () => {
+      test("Calls the onClick prop with countries index", () => {
+        const onClick = jest.fn();
+        component.setProps({ onClick });
+        expect(onClick).not.toHaveBeenCalled();
+
+        component.find('.countries').childAt(5).simulate('click');
+        expect(onClick).toHaveBeenCalledTimes(1);
+        expect(onClick).toHaveBeenCalledWith(5);
+
+        component.find('.countries').childAt(12).simulate('click');
+        expect(onClick).toHaveBeenCalledTimes(2);
+        expect(onClick).toHaveBeenCalledWith(12);
+      });
+
+      test("Sets hovered state to false", () => {
+        component.setState({ hovered: true })
+        component.find('.countries').childAt(0).simulate('click');
+        expect(component.state('hovered')).toBe(false);
+      });
     });
   });
 });
