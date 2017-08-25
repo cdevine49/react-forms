@@ -47,7 +47,7 @@ describe("Flagbox", () => {
       <Flagbox />
     );
 
-    test.only('Only renders when selecting country', () => {
+    test('Only renders when selecting country', () => {
       expect(component.children().length).toBe(1);
       component.setState({ selectingCountry: true });
       expect(component.children().length).toBe(2);
@@ -59,15 +59,16 @@ describe("Flagbox", () => {
       const component = shallow(
         <Flagbox />
       );
-      component.setState({ selectingCountry: true });
 
       test("Sets selectingCountry to false", () => {
+        component.setState({ selectingCountry: true });
         const countries = component.find(Countries);
         countries.props().onClick();
         expect(component.state('selectingCountry')).toBe(false);
       });
 
       test("Calls onChange prop with the country index", () => {
+        component.setState({ selectingCountry: true });
         const onChange = jest.fn();
         component.setProps({ onChange });
         const countries = component.find(Countries);
