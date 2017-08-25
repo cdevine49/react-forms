@@ -48,6 +48,267 @@ exports[`FlagField Default 1`] = `
 </div>
 `;
 
+exports[`FlagField FieldProps 1`] = `
+<div
+  className="input-container flag-container field-class hey what-it-is"
+  id="test-field"
+  onClick={[Function]}
+>
+  <div
+    className="input-container flag-input-container"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="flagbox-container"
+    >
+      <button
+        aria-pressed={false}
+        className="flagbox"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="flag"
+          style={
+            Object {
+              "backgroundImage": "url(/images/flags.png)",
+              "backgroundPositionX": "0px",
+              "backgroundPositionY": "-44px",
+            }
+          }
+        />
+        <img
+          className="select-box-button"
+          src="/images/select-box-button.png"
+        />
+      </button>
+    </div>
+    <input
+      id={undefined}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`FlagField Label 'label' prop passed to Label as child 1`] = `
+<div
+  className="input-container flag-container"
+>
+  <label
+    htmlFor={undefined}
+  >
+    I exist
+  </label>
+  <div
+    className="input-container flag-input-container"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="flagbox-container"
+    >
+      <button
+        aria-pressed={false}
+        className="flagbox"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="flag"
+          style={
+            Object {
+              "backgroundImage": "url(/images/flags.png)",
+              "backgroundPositionX": "0px",
+              "backgroundPositionY": "-44px",
+            }
+          }
+        />
+        <img
+          className="select-box-button"
+          src="/images/select-box-button.png"
+        />
+      </button>
+    </div>
+    <input
+      id={undefined}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`FlagField Label LabelProps 1`] = `
+<div
+  className="input-container flag-container"
+>
+  <label
+    className="i am a label"
+    htmlFor={undefined}
+    id="test-label"
+  >
+    I exist
+  </label>
+  <div
+    className="input-container flag-input-container"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="flagbox-container"
+    >
+      <button
+        aria-pressed={false}
+        className="flagbox"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="flag"
+          style={
+            Object {
+              "backgroundImage": "url(/images/flags.png)",
+              "backgroundPositionX": "0px",
+              "backgroundPositionY": "-44px",
+            }
+          }
+        />
+        <img
+          className="select-box-button"
+          src="/images/select-box-button.png"
+        />
+      </button>
+    </div>
+    <input
+      id={undefined}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`FlagField Label id prop becomes htmlFor 1`] = `
+<div
+  className="input-container flag-container"
+>
+  <label
+    htmlFor="connects input and label"
+  >
+    Hi
+  </label>
+  <div
+    className="input-container flag-input-container"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="flagbox-container"
+    >
+      <button
+        aria-pressed={false}
+        className="flagbox"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="flag"
+          style={
+            Object {
+              "backgroundImage": "url(/images/flags.png)",
+              "backgroundPositionX": "0px",
+              "backgroundPositionY": "-44px",
+            }
+          }
+        />
+        <img
+          className="select-box-button"
+          src="/images/select-box-button.png"
+        />
+      </button>
+    </div>
+    <input
+      id="connects input and label"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`FlagField inputContainerProps 1`] = `
+<div
+  className="input-container flag-container"
+>
+  <div
+    className="test-class another class"
+    id="test-input"
+    onMouseDown={[Function]}
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="flagbox-container"
+    >
+      <button
+        aria-pressed={false}
+        className="flagbox"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="flag"
+          style={
+            Object {
+              "backgroundImage": "url(/images/flags.png)",
+              "backgroundPositionX": "0px",
+              "backgroundPositionY": "-44px",
+            }
+          }
+        />
+        <img
+          className="select-box-button"
+          src="/images/select-box-button.png"
+        />
+      </button>
+    </div>
+    <input
+      id={undefined}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      value=""
+    />
+  </div>
+</div>
+`;
+
 exports[`FlagField props populate the input tag 1`] = `
 <div
   className="input-container flag-container"
