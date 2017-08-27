@@ -9,13 +9,7 @@ import setClassName from '../../../helpers/setClassName';
 class FlagField extends React.Component {
   constructor(){
   	super();
-    this.onChange = this.onChange.bind(this);
     this.onChangeCountry = this.onChangeCountry.bind(this);
-  }
-
-  onChange(e) {
-    const value = e.currentTarget.value;
-    this.props.onChange(value);
   }
 
   onChangeCountry() {
@@ -41,7 +35,7 @@ class FlagField extends React.Component {
       id,
       countryInfoIndex,
       countryIndex,
-      onChangeCountry, onChange,
+      onChangeCountry,
       ...props
     } = this.props;
     return(
@@ -51,7 +45,6 @@ class FlagField extends React.Component {
           <FlagBox countryIndex={countryIndex} countryInfoIndex={countryInfoIndex} onChange={this.onChangeCountry()} />
           <input
             id={id}
-            onChange={this.onChange}
             { ...props }
             />
         </div>

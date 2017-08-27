@@ -13,7 +13,6 @@ const TextField = ({
                       label,
                       labelProps,
                       id, className,
-                      onChange,
                       errorMessage,
                       errorProps,
                       underline,
@@ -26,7 +25,6 @@ const TextField = ({
       <input
         id={ id }
         className={ setClassName([className, (errorMessage && 'error')]) }
-        onChange={ function(e){ onChange(e.currentTarget.value) } }
         { ...props }
         />
       <Error { ...errorProps }>{errorMessage}</Error>
