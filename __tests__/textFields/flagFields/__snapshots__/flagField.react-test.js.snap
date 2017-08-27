@@ -98,6 +98,106 @@ exports[`FlagField FieldProps 1`] = `
 </div>
 `;
 
+exports[`FlagField FlagInput inputContainerProps 1`] = `
+<div
+  className="input-container flag-container"
+>
+  <div
+    className="test-class another class"
+    id="test-input"
+    onMouseDown={[Function]}
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="flagbox-container"
+    >
+      <button
+        aria-pressed={false}
+        className="flagbox"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="flag"
+          style={
+            Object {
+              "backgroundImage": "url(/images/flags.png)",
+              "backgroundPositionX": "0px",
+              "backgroundPositionY": "-44px",
+            }
+          }
+        />
+        <img
+          className="select-box-button"
+          src="/images/select-box-button.png"
+        />
+      </button>
+    </div>
+    <input
+      id={undefined}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`FlagField FlagInput props populate the input tag 1`] = `
+<div
+  className="input-container flag-container"
+>
+  <div
+    className="input-container flag-input-container"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="flagbox-container"
+    >
+      <button
+        aria-pressed={false}
+        className="flagbox"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="flag"
+          style={
+            Object {
+              "backgroundImage": "url(/images/flags.png)",
+              "backgroundPositionX": "0px",
+              "backgroundPositionY": "-44px",
+            }
+          }
+        />
+        <img
+          className="select-box-button"
+          src="/images/select-box-button.png"
+        />
+      </button>
+    </div>
+    <input
+      className="test-class another class"
+      id="test-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      type="email"
+      value="Can set a default value"
+    />
+  </div>
+</div>
+`;
+
 exports[`FlagField Label 'label' prop passed to Label as child 1`] = `
 <div
   className="input-container flag-container"
@@ -254,106 +354,6 @@ exports[`FlagField Label id prop becomes htmlFor 1`] = `
       onChange={[Function]}
       onFocus={[Function]}
       value=""
-    />
-  </div>
-</div>
-`;
-
-exports[`FlagField inputContainerProps 1`] = `
-<div
-  className="input-container flag-container"
->
-  <div
-    className="test-class another class"
-    id="test-input"
-    onMouseDown={[Function]}
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-  >
-    <div
-      className="flagbox-container"
-    >
-      <button
-        aria-pressed={false}
-        className="flagbox"
-        onClick={[Function]}
-        type="button"
-      >
-        <div
-          className="flag"
-          style={
-            Object {
-              "backgroundImage": "url(/images/flags.png)",
-              "backgroundPositionX": "0px",
-              "backgroundPositionY": "-44px",
-            }
-          }
-        />
-        <img
-          className="select-box-button"
-          src="/images/select-box-button.png"
-        />
-      </button>
-    </div>
-    <input
-      id={undefined}
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      value=""
-    />
-  </div>
-</div>
-`;
-
-exports[`FlagField props populate the input tag 1`] = `
-<div
-  className="input-container flag-container"
->
-  <div
-    className="input-container flag-input-container"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-  >
-    <div
-      className="flagbox-container"
-    >
-      <button
-        aria-pressed={false}
-        className="flagbox"
-        onClick={[Function]}
-        type="button"
-      >
-        <div
-          className="flag"
-          style={
-            Object {
-              "backgroundImage": "url(/images/flags.png)",
-              "backgroundPositionX": "0px",
-              "backgroundPositionY": "-44px",
-            }
-          }
-        />
-        <img
-          className="select-box-button"
-          src="/images/select-box-button.png"
-        />
-      </button>
-    </div>
-    <input
-      className="test-class another class"
-      id="test-input"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      type="email"
-      value="Can set a default value"
     />
   </div>
 </div>
