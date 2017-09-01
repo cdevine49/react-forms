@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Legend accepts props 1`] = `
+<legend
+  className="legend-class test"
+  id="legendId"
+>
+  Label Fieldset
+</legend>
+`;
+
+exports[`Legend renders with child 1`] = `
+<legend>
+  Test Legend
+</legend>
+`;
+
+exports[`Legend without child renders null 1`] = `null`;
