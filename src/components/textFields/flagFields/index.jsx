@@ -29,7 +29,6 @@ class FlagField extends React.Component {
       labelProps,
       errorMessage,
       errorProps,
-      inputProps,
       underline,
       underlineProps,
       id,
