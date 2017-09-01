@@ -79,6 +79,30 @@ describe("FlagField", () => {
       expect(tree).toMatchSnapshot();
     });
 
+    describe('Flagbox', () => {
+      const onChangeCountry = jest.fn();
+      const flagfield = shallow(
+        <FlagField />
+      );
+
+      test('onChange prop calls onChangeCountry prop with argument', () => {
+        flagfield.setProps({ onChangeCountry });
+        const root = flagfield.first().shallow();
+        const flagbox = root.childAt(1).childAt(0);
+
+        expect(onChangeCountry).not.toHaveBeenCalled();
+
+        flagbox.props().onChange(1);
+        expect(onChangeCountry).toHaveBeenCalledWith(1);
+
+        flagbox.props().onChange(12);
+        expect(onChangeCountry).toHaveBeenCalledWith(12);
+      });
+
+      test('receives countryIndex and countryInfoIndex', () => {
+
+      });
+    });
 
     describe("Text Input", () => {
       test('receives props by default', () => {
