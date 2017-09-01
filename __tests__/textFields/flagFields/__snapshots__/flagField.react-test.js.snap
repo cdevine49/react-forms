@@ -358,3 +358,163 @@ exports[`FlagField Label id prop becomes htmlFor 1`] = `
   </div>
 </div>
 `;
+
+exports[`FlagField Underline Given underline prop accepts underlineProps 1`] = `
+<div
+  className="input-container flag-container"
+>
+  <div
+    className="input-container flag-input-container"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="flagbox-container"
+    >
+      <button
+        aria-pressed={false}
+        className="flagbox"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="flag"
+          style={
+            Object {
+              "backgroundImage": "url(/images/flags.png)",
+              "backgroundPositionX": "0px",
+              "backgroundPositionY": "-44px",
+            }
+          }
+        />
+        <img
+          className="select-box-button"
+          src="/images/select-box-button.png"
+        />
+      </button>
+    </div>
+    <input
+      id={undefined}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      value=""
+    />
+  </div>
+  <p
+    className="underline"
+    id="under-the-input"
+    style={
+      Object {
+        "display": "flex",
+      }
+    }
+  >
+    Show me
+  </p>
+</div>
+`;
+
+exports[`FlagField Underline Given underline prop renders with underline prop as child 1`] = `
+<div
+  className="input-container flag-container"
+>
+  <div
+    className="input-container flag-input-container"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="flagbox-container"
+    >
+      <button
+        aria-pressed={false}
+        className="flagbox"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="flag"
+          style={
+            Object {
+              "backgroundImage": "url(/images/flags.png)",
+              "backgroundPositionX": "0px",
+              "backgroundPositionY": "-44px",
+            }
+          }
+        />
+        <img
+          className="select-box-button"
+          src="/images/select-box-button.png"
+        />
+      </button>
+    </div>
+    <input
+      id={undefined}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      value=""
+    />
+  </div>
+  <p
+    className="underline"
+  >
+    Show me
+  </p>
+</div>
+`;
+
+exports[`FlagField Underline does not render without underline prop 1`] = `
+<div
+  className="input-container flag-container"
+>
+  <div
+    className="input-container flag-input-container"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="flagbox-container"
+    >
+      <button
+        aria-pressed={false}
+        className="flagbox"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="flag"
+          style={
+            Object {
+              "backgroundImage": "url(/images/flags.png)",
+              "backgroundPositionX": "0px",
+              "backgroundPositionY": "-44px",
+            }
+          }
+        />
+        <img
+          className="select-box-button"
+          src="/images/select-box-button.png"
+        />
+      </button>
+    </div>
+    <input
+      id={undefined}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      value=""
+    />
+  </div>
+</div>
+`;

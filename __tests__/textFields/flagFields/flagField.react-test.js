@@ -145,7 +145,41 @@ describe("FlagField", () => {
   });
 
   describe('Underline', () => {
+    test('does not render without underline prop', () => {
+      const tree = renderer.create(
+        <FlagField
+          />
+      ).toJSON();
 
+      expect(tree).toMatchSnapshot();
+    });
+
+    describe('Given underline prop', () => {
+      test('renders with underline prop as child', () => {
+        const tree = renderer.create(
+          <FlagField
+            underline="Show me"
+            />
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+      });
+
+      test('accepts underlineProps', () => {
+        const tree = renderer.create(
+          <FlagField
+            underline="Show me"
+            underlineProps={{
+              id: 'under-the-input',
+              style: { display: 'flex' }
+            }}
+            />
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+      });
+
+    });
   });
   //
   // test('UnderlineProps', () => {
