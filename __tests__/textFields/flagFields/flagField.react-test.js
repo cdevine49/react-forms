@@ -100,7 +100,21 @@ describe("FlagField", () => {
       });
 
       test('receives countryIndex and countryInfoIndex', () => {
+        let countryIndex = 25, countryInfoIndex = 2;
+        flagfield.setProps({ countryIndex, countryInfoIndex });
+        let root = flagfield.first().shallow();
+        let flagbox = root.childAt(1).childAt(0);
 
+        expect(flagbox.props().countryIndex).toBe(countryIndex);
+        expect(flagbox.props().countryInfoIndex).toBe(countryInfoIndex);
+
+        countryIndex = 34, countryInfoIndex = 1;
+        flagfield.setProps({ countryIndex, countryInfoIndex });
+        root = flagfield.first().shallow();
+        flagbox = root.childAt(1).childAt(0);
+
+        expect(flagbox.props().countryIndex).toBe(countryIndex);
+        expect(flagbox.props().countryInfoIndex).toBe(countryInfoIndex);
       });
     });
 
