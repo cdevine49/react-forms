@@ -135,12 +135,28 @@ describe("FlagField", () => {
     );
 
     const root = flagfield.first().shallow();
-    const errorMessage = "Whoopsie"
-    root.setProps({ errorMessage });
+    const errorMessage = "Whoopsie", id = 'my-error', dataKey = 12
+    const errorProps = {id, 'data-key': dataKey}
 
-    test('receives errorMessage prop as child', () => {
-      const error = root.childAt(2);
-      expect(error.props().children).toBe(errorMessage);
+    const error = root.childAt(2);
+    test('does not render without errorMessage prop', () => {
+      expect(error.props().children).toBe('');
+    });
+
+    describe('Given errorMessage prop', () => {
+      root.setProps({ errorMessage });
+      test('receives errorMessage prop as child', () => {
+        const error = root.childAt(2);
+        expect(error.props().children).toBe(errorMessage);
+      });
+
+      test('accepts errorProps', () => {
+        root.setProps({ errorProps });
+
+        const error = root.childAt(2);
+        expect(error.props().id).toBe(id);
+        expect(error.props()['data-key']).toBe(dataKey);
+      });
     });
   });
 
