@@ -130,6 +130,7 @@ describe("FlagField", () => {
 
 
   describe('Errors', () => {
+    // Have to use enzyme because errorMessage is part of withErrors state
     const flagfield = shallow(
       <FlagField />
     );
