@@ -79,21 +79,22 @@ describe("FlagField", () => {
       expect(tree).toMatchSnapshot();
     });
 
-    test('props populate the input tag', () => {
-      const tree = renderer.create(
-        <FlagField
-          id="test-input"
-          className="test-class another class"
-          value="Can set a default value"
-          type="email"
-          onChange={jest.fn()}
-          />
-      ).toJSON();
-
-      expect(tree).toMatchSnapshot();
-    });
 
     describe("Text Input", () => {
+      test('receives props by default', () => {
+        const tree = renderer.create(
+          <FlagField
+            id="test-input"
+            className="test-class another class"
+            value="Can set a default value"
+            type="email"
+            onChange={jest.fn()}
+            />
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+      });
+
       const flagfield = shallow(
         <FlagField />
       );
