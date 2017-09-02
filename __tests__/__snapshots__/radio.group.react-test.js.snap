@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioGroup Default 1`] = `
+<fieldset
+  className="radio-button-container"
+/>
+`;
