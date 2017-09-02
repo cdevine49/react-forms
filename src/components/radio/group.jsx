@@ -7,18 +7,21 @@ import setClassName from '../../helpers/setClassName';
 const RadioGroup = (
   {
     children,
+    className,
     currentValue,
     errorMessage,
     errorProps: {
-      className,
+      errorClass,
       ...errorProps
     },
+    hideErrors,
     legend,
     legendProps: {
       className: legendClass,
       ...legendProps
     },
     onChange,
+    underline,
     underlineProps: {
       underlineClass,
       ...underlineProps
@@ -28,7 +31,7 @@ const RadioGroup = (
 ) => {
 
   return (
-    <fieldset className={ setClassName(['radio-button-container', setClassName]) } { ...props }>
+    <fieldset className={ setClassName(['radio-button-container', className]) } { ...props }>
       <Legend className={ setClassName(['radio-group-legend', legendClass]) } { ...legendProps }>{ legend }</Legend>
       {children.map((child, index) =>
         React.cloneElement(child,
@@ -43,6 +46,13 @@ const RadioGroup = (
       <Underline className={ setClassName(['radio-group-underline', underlineClass]) } { ...underlineProps } >{ underline }</Underline>
     </fieldset>
   );
+}
+
+RadioGroup.defaultProps = {
+  children: [],
+  errorProps: {},
+  legendProps: {},
+  underlineProps: {}
 }
 
 export default RadioGroup;
