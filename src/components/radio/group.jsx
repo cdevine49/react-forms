@@ -1,17 +1,28 @@
 import React from 'react';
 import Legend from '../legend';
-import setClassName from '../helpers/setClassName';
+import Error from '../error';
+import Underline from '../underline';
+import setClassName from '../../helpers/setClassName';
 
 const RadioGroup = (
   {
     children,
     currentValue,
+    errorMessage,
+    errorProps: {
+      className,
+      ...errorProps
+    },
     legend,
     legendProps: {
       className: legendClass,
-      ...labelProps
+      ...legendProps
     },
     onChange,
+    underlineProps: {
+      underlineClass,
+      ...underlineProps
+    },
     ...props
   }
 ) => {
@@ -28,13 +39,10 @@ const RadioGroup = (
           })
         )
       }
+      <Error className={ setClassName(['radio-group-error', errorClass]) } { ...errorProps } >{ errorMessage }</Error>
+      <Underline className={ setClassName(['radio-group-underline', underlineClass]) } { ...underlineProps } >{ underline }</Underline>
     </fieldset>
   );
-}
-RadioGroup.defaultProps = {
-  options: {},
-  required: true,
-  header: null
 }
 
 export default RadioGroup;
