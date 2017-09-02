@@ -29,6 +29,8 @@ class FlagField extends React.Component {
       labelProps,
       errorMessage,
       errorProps,
+      displayErrors,
+      hideErrors,
       underline,
       underlineProps,
       id,
@@ -44,6 +46,8 @@ class FlagField extends React.Component {
           <FlagBox countryIndex={countryIndex} countryInfoIndex={countryInfoIndex} onChange={this.onChangeCountry()} />
           <input
             id={id}
+            onFocus={hideErrors}
+            onBlur={displayErrors}
             { ...props }
             />
         </div>

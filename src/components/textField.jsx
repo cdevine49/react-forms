@@ -13,6 +13,8 @@ const TextField = ({
                       label,
                       labelProps,
                       id, className,
+                      hideErrors,
+                      displayErrors,
                       errorMessage,
                       errorProps,
                       underline,
@@ -25,6 +27,8 @@ const TextField = ({
       <input
         id={ id }
         className={ setClassName([className, (errorMessage && 'error')]) }
+        onFocus={hideErrors}
+        onBlur={displayErrors}
         { ...props }
         />
       <Error { ...errorProps }>{errorMessage}</Error>

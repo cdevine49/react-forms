@@ -31,19 +31,19 @@ describe('WithErrors', () => {
     expect(wrapper.first().props().errorMessage).toBe(message);
   });
 
-  it('passes onFocus and onBlur functions as props to its root element', () => {
-    expect(typeof wrapper.first().props().onFocus).toBe('function');
-    expect(typeof wrapper.first().props().onBlur).toBe('function');
+  it('passes hideErrors and displayErrors functions as props to its root element', () => {
+    expect(typeof wrapper.first().props().hideErrors).toBe('function');
+    expect(typeof wrapper.first().props().displayErrors).toBe('function');
   });
 
   it('sets errorMessage to message of error that needs handing onBlur', () => {
-    wrapper.first().props().onBlur();
+    wrapper.first().props().displayErrors();
     expect(wrapper.first().props().errorMessage).toBe(message);
   });
 
   it('sets errorMessage to empty onFocus', () => {
     wrapper.setState({ errorMessage: message });
-    wrapper.first().props().onFocus();
+    wrapper.first().props().hideErrors();
     expect(wrapper.first().props().errorMessage).toBe('');
   });
 });
