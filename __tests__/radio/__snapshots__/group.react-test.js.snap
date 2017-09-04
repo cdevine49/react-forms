@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioGroup Default 1`] = `
+<fieldset
+  className="radio-button-container"
+/>
+`;
+
+exports[`RadioGroup Fieldset accepts props by default 1`] = `
+<fieldset
+  className="radio-button-container add-me"
+  data-test="some data"
+  id="field-radio"
+/>
+`;

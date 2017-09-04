@@ -1,5 +1,5 @@
 import React from 'react';
-import RadioGroup from '../src/components/radio/group';
+import RadioGroup from '../../src/components/radio/group';
 import renderer from 'react-test-renderer';
 
 describe('RadioGroup', () => {
@@ -12,5 +12,22 @@ describe('RadioGroup', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  describe('')
+  describe('Fieldset', () => {
+    test('accepts props by default', () => {
+      const tree = renderer.create(
+        <RadioGroup
+          id='field-radio'
+          className='add-me'
+          data-test='some data'
+          />
+      ).toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
+
+  });
+
+  describe('Legend', () => {
+
+  });
 });
