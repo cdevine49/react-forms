@@ -11,4 +11,6 @@ describe('RadioGroup', () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  describe('')
 });
