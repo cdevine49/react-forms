@@ -47,7 +47,7 @@ const withErrors = Component => class extends React.Component {
 
   render() {
     const { hideErrors, displayErrors, validate, required, errors, ...props } = this.props;
-    return <Component onBlur={this._displayErrors} onFocus={this._hideErrors} {...props} {...this.state} />;
+    return <Component displayErrors={this._displayErrors} hideErrors={this._hideErrors} {...props} {...this.state} />;
   }
 }
 
