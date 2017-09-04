@@ -30,6 +30,14 @@ const RadioGroup = (
   }
 ) => {
 
+  const onNext = e => {
+
+  };
+
+  const onPrev = e => {
+
+  };
+
   return (
     <fieldset className={ setClassName(['radio-button-container', className]) } { ...props }>
       <Legend className={ setClassName(['radio-group-legend', legendClass]) } { ...legendProps }>{ legend }</Legend>
@@ -38,7 +46,9 @@ const RadioGroup = (
           {
             key: ('radio-button-' +  index),
             checked: (currentValue === child.props.value),
-            onChange
+            onChange,
+            onNext,
+            onPrev
           })
         )
       }
