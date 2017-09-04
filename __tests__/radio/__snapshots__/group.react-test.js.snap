@@ -1,6 +1,143 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`RadioGroup Children Child with value prop equal to group's currentValue prop is checked 1`] = `
+<fieldset
+  className="radio-button-container"
+>
+  <child
+    checked={false}
+    onChange={undefined}
+    onNext={[Function]}
+    onPrev={[Function]}
+    value={0}
+  />
+  <child
+    checked={true}
+    onChange={undefined}
+    onNext={[Function]}
+    onPrev={[Function]}
+    value={1}
+  />
+  <child
+    checked={false}
+    onChange={undefined}
+    onNext={[Function]}
+    onPrev={[Function]}
+    value={2}
+  />
+</fieldset>
+`;
+
+exports[`RadioGroup Children Child with value prop equal to group's currentValue prop is checked 2`] = `
+<fieldset
+  className="radio-button-container"
+>
+  <child
+    checked={false}
+    onChange={undefined}
+    onNext={[Function]}
+    onPrev={[Function]}
+    value={0}
+  />
+  <child
+    checked={false}
+    onChange={undefined}
+    onNext={[Function]}
+    onPrev={[Function]}
+    value={1}
+  />
+  <child
+    checked={true}
+    onChange={undefined}
+    onNext={[Function]}
+    onPrev={[Function]}
+    value={2}
+  />
+</fieldset>
+`;
+
+exports[`RadioGroup Children default props 1`] = `
+<fieldset
+  className="radio-button-container"
+>
+  <child
+    checked={true}
+    onChange={undefined}
+    onNext={[Function]}
+    onPrev={[Function]}
+  />
+  <child
+    checked={true}
+    onChange={undefined}
+    onNext={[Function]}
+    onPrev={[Function]}
+  />
+  <child
+    checked={true}
+    onChange={undefined}
+    onNext={[Function]}
+    onPrev={[Function]}
+  />
+</fieldset>
+`;
+
+exports[`RadioGroup Children each child receives group's onChange prop 1`] = `
+<fieldset
+  className="radio-button-container"
+>
+  <child
+    checked={true}
+    onChange={[Function]}
+    onNext={[Function]}
+    onPrev={[Function]}
+  />
+  <child
+    checked={true}
+    onChange={[Function]}
+    onNext={[Function]}
+    onPrev={[Function]}
+  />
+  <child
+    checked={true}
+    onChange={[Function]}
+    onNext={[Function]}
+    onPrev={[Function]}
+  />
+</fieldset>
+`;
+
 exports[`RadioGroup Default 1`] = `
+<fieldset
+  className="radio-button-container"
+/>
+`;
+
+exports[`RadioGroup Error accepts errorMessage prop as child 1`] = `
+<fieldset
+  className="radio-button-container"
+>
+  <p
+    className="error-message radio-group-error"
+  >
+    Whoopsie
+  </p>
+</fieldset>
+`;
+
+exports[`RadioGroup Error accepts errorProps object as props 1`] = `
+<fieldset
+  className="radio-button-container"
+>
+  <p
+    className="error-message way to go buddy"
+    id="ya-dun-goofed"
+  >
+    Uh Oh
+  </p>
+</fieldset>
+`;
+
+exports[`RadioGroup Error doesn't render without errorMessage prop 1`] = `
 <fieldset
   className="radio-button-container"
 />
@@ -11,5 +148,67 @@ exports[`RadioGroup Fieldset accepts props by default 1`] = `
   className="radio-button-container add-me"
   data-test="some data"
   id="field-radio"
+/>
+`;
+
+exports[`RadioGroup Legend accepts legend prop as child 1`] = `
+<fieldset
+  className="radio-button-container"
+>
+  <legend
+    className="radio-group-legend"
+  >
+    Keep this short
+  </legend>
+</fieldset>
+`;
+
+exports[`RadioGroup Legend accepts legendProps object as props 1`] = `
+<fieldset
+  className="radio-button-container"
+>
+  <legend
+    className="radio-group-legend extra classes"
+    id="legend-id"
+  >
+    Legend name
+  </legend>
+</fieldset>
+`;
+
+exports[`RadioGroup Legend doesn't render without legend prop 1`] = `
+<fieldset
+  className="radio-button-container"
+/>
+`;
+
+exports[`RadioGroup Underline accepts underline prop as child 1`] = `
+<fieldset
+  className="radio-button-container"
+>
+  <p
+    className="underline radio-group-underline"
+  >
+    A bit of extra explanation
+  </p>
+</fieldset>
+`;
+
+exports[`RadioGroup Underline accepts underlineProps object as props 1`] = `
+<fieldset
+  className="radio-button-container"
+>
+  <p
+    className="underline i am here to help"
+    id="what-is-going-on"
+  >
+    More info
+  </p>
+</fieldset>
+`;
+
+exports[`RadioGroup Underline doesn't render without underline prop 1`] = `
+<fieldset
+  className="radio-button-container"
 />
 `;
