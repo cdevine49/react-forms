@@ -6,23 +6,20 @@ exports[`RadioGroup Children Child with value prop equal to group's currentValue
 >
   <child
     checked={false}
+    onArrow={[Function]}
     onChange={undefined}
-    onNext={[Function]}
-    onPrev={[Function]}
     value={0}
   />
   <child
     checked={true}
+    onArrow={[Function]}
     onChange={undefined}
-    onNext={[Function]}
-    onPrev={[Function]}
     value={1}
   />
   <child
     checked={false}
+    onArrow={[Function]}
     onChange={undefined}
-    onNext={[Function]}
-    onPrev={[Function]}
     value={2}
   />
 </fieldset>
@@ -34,24 +31,43 @@ exports[`RadioGroup Children Child with value prop equal to group's currentValue
 >
   <child
     checked={false}
+    onArrow={[Function]}
     onChange={undefined}
-    onNext={[Function]}
-    onPrev={[Function]}
     value={0}
   />
   <child
     checked={false}
+    onArrow={[Function]}
     onChange={undefined}
-    onNext={[Function]}
-    onPrev={[Function]}
     value={1}
   />
   <child
     checked={true}
+    onArrow={[Function]}
     onChange={undefined}
-    onNext={[Function]}
-    onPrev={[Function]}
     value={2}
+  />
+</fieldset>
+`;
+
+exports[`RadioGroup Children OnChange received by each child 1`] = `
+<fieldset
+  className="radio-button-container"
+>
+  <child
+    checked={true}
+    onArrow={[Function]}
+    onChange={[Function]}
+  />
+  <child
+    checked={true}
+    onArrow={[Function]}
+    onChange={[Function]}
+  />
+  <child
+    checked={true}
+    onArrow={[Function]}
+    onChange={[Function]}
   />
 </fieldset>
 `;
@@ -62,46 +78,18 @@ exports[`RadioGroup Children default props 1`] = `
 >
   <child
     checked={true}
+    onArrow={[Function]}
     onChange={undefined}
-    onNext={[Function]}
-    onPrev={[Function]}
   />
   <child
     checked={true}
+    onArrow={[Function]}
     onChange={undefined}
-    onNext={[Function]}
-    onPrev={[Function]}
   />
   <child
     checked={true}
+    onArrow={[Function]}
     onChange={undefined}
-    onNext={[Function]}
-    onPrev={[Function]}
-  />
-</fieldset>
-`;
-
-exports[`RadioGroup Children each child receives group's onChange prop 1`] = `
-<fieldset
-  className="radio-button-container"
->
-  <child
-    checked={true}
-    onChange={[Function]}
-    onNext={[Function]}
-    onPrev={[Function]}
-  />
-  <child
-    checked={true}
-    onChange={[Function]}
-    onNext={[Function]}
-    onPrev={[Function]}
-  />
-  <child
-    checked={true}
-    onChange={[Function]}
-    onNext={[Function]}
-    onPrev={[Function]}
   />
 </fieldset>
 `;

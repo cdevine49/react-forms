@@ -1,6 +1,7 @@
 import React from 'react';
 import RadioGroup from '../../src/components/radio/group';
 import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 
 describe('RadioGroup', () => {
   test('Default', () => {
@@ -64,7 +65,6 @@ describe('RadioGroup', () => {
 
   describe('Children', () => {
     const child = ({ props }) => <div { ...props }></div>;
-    const onChange = jest.fn();
 
     test('default props', () => {
       const tree = renderer.create(
@@ -99,16 +99,36 @@ describe('RadioGroup', () => {
       expect(tree).toMatchSnapshot();
     });
 
-    test('each child receives group\'s onChange prop', () => {
-      const tree = renderer.create(
-        <RadioGroup onChange={onChange}>
-          <child />
-          <child />
-          <child />
-        </RadioGroup>
-      ).toJSON();
+    describe('OnChange', () => {
+      const onChange = jest.fn();
+      test('received by each child', () => {
+        const tree = renderer.create(
+          <RadioGroup onChange={onChange}>
+            <child />
+            <child />
+            <child />
+          </RadioGroup>
+        ).toJSON();
 
-      expect(tree).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
+      });
+
+      const radioGroup = shallow(
+        <RadioGroup onChange={onChange}>
+          <child className="child" />
+          <child className="child" />
+          <child className="child" />
+        </RadioGroup>
+      );
+      let calledCount = 0;
+      radioGroup.find('.child').forEach(child => {
+        test('can be called by each child', () => {
+          expect(onChange).toHaveBeenCalledTimes(calledCount);
+          child.props().onChange();
+          calledCount++;
+          expect(onChange).toHaveBeenCalledTimes(calledCount);
+        });
+      });
     });
   });
 
