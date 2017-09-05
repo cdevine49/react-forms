@@ -30,12 +30,42 @@ const RadioGroup = (
   }
 ) => {
 
-  const onNext = e => {
+  const onArrow = (e, index) => {
+    switch (e.keyCode) {
+      case 37:
+        onPrev(index);
+        break;
+      case 38:
+        onPrev(index);
+      case 39:
+        onNext(index);
+      case 40:
+        onNext(index);
+        break;
+      default:
+        break;
+    }
+  }
 
+  const onNext = index => {
+    let nextIndex;
+    const lastIndex = children.length - 1;
+    if (index === lastIndex) {
+      nextIndex = 0;
+    } else {
+      nextIndex = index + 1;
+    }
+    onChange(children[nextIndex].props.value);
   };
 
-  const onPrev = e => {
-
+  const onPrev = index => {
+    let prevIndex;
+    if (index === 0) {
+      prevIndex = children.length - 1;
+    } else {
+      prevIndex = index - 1;
+    }
+    onChange(children[prevIndex].props.value);
   };
 
   return (
@@ -47,8 +77,7 @@ const RadioGroup = (
             key: ('radio-button-' +  index),
             checked: (currentValue === child.props.value),
             onChange,
-            onNext,
-            onPrev
+            onArrow: e => { onArrow(e, index) }
           })
         )
       }
