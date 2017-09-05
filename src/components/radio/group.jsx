@@ -30,7 +30,7 @@ const RadioGroup = (
   }
 ) => {
 
-  const onArrow = (e, index) => {
+  const onKeyPress = (e, index) => {
     switch (e.keyCode) {
       case 37:
         onPrev(index);
@@ -77,7 +77,7 @@ const RadioGroup = (
             key: ('radio-button-' +  index),
             checked: (currentValue === child.props.value),
             onChange,
-            onArrow: e => { onArrow(e, index) }
+            onKeyPress: e => { onKeyPress(e, index) }
           })
         )
       }
