@@ -6,20 +6,20 @@ exports[`RadioGroup Children Child with value prop equal to group's currentValue
 >
   <child
     checked={false}
-    onArrow={[Function]}
     onChange={undefined}
+    onKeyPress={[Function]}
     value={0}
   />
   <child
     checked={true}
-    onArrow={[Function]}
     onChange={undefined}
+    onKeyPress={[Function]}
     value={1}
   />
   <child
     checked={false}
-    onArrow={[Function]}
     onChange={undefined}
+    onKeyPress={[Function]}
     value={2}
   />
 </fieldset>
@@ -31,20 +31,20 @@ exports[`RadioGroup Children Child with value prop equal to group's currentValue
 >
   <child
     checked={false}
-    onArrow={[Function]}
     onChange={undefined}
+    onKeyPress={[Function]}
     value={0}
   />
   <child
     checked={false}
-    onArrow={[Function]}
     onChange={undefined}
+    onKeyPress={[Function]}
     value={1}
   />
   <child
     checked={true}
-    onArrow={[Function]}
     onChange={undefined}
+    onKeyPress={[Function]}
     value={2}
   />
 </fieldset>
@@ -56,18 +56,40 @@ exports[`RadioGroup Children OnChange received by each child 1`] = `
 >
   <child
     checked={true}
-    onArrow={[Function]}
     onChange={[Function]}
+    onKeyPress={[Function]}
   />
   <child
     checked={true}
-    onArrow={[Function]}
     onChange={[Function]}
+    onKeyPress={[Function]}
   />
   <child
     checked={true}
-    onArrow={[Function]}
     onChange={[Function]}
+    onKeyPress={[Function]}
+  />
+</fieldset>
+`;
+
+exports[`RadioGroup Children OnKeyPress received by each child 1`] = `
+<fieldset
+  className="radio-button-container"
+>
+  <child
+    checked={true}
+    onChange={undefined}
+    onKeyPress={[Function]}
+  />
+  <child
+    checked={true}
+    onChange={undefined}
+    onKeyPress={[Function]}
+  />
+  <child
+    checked={true}
+    onChange={undefined}
+    onKeyPress={[Function]}
   />
 </fieldset>
 `;
@@ -78,18 +100,18 @@ exports[`RadioGroup Children default props 1`] = `
 >
   <child
     checked={true}
-    onArrow={[Function]}
     onChange={undefined}
+    onKeyPress={[Function]}
   />
   <child
     checked={true}
-    onArrow={[Function]}
     onChange={undefined}
+    onKeyPress={[Function]}
   />
   <child
     checked={true}
-    onArrow={[Function]}
     onChange={undefined}
+    onKeyPress={[Function]}
   />
 </fieldset>
 `;

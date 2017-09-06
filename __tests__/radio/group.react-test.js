@@ -120,15 +120,70 @@ describe('RadioGroup', () => {
           <child className="child" />
         </RadioGroup>
       );
-      let calledCount = 0;
-      radioGroup.find('.child').forEach(child => {
-        test('can be called by each child', () => {
-          expect(onChange).toHaveBeenCalledTimes(calledCount);
+
+      radioGroup.find('.child').forEach((child, i) => {
+        test(`can be called by ${i}th child`, () => {
+          expect(onChange).toHaveBeenCalledTimes(i);
           child.props().onChange();
-          calledCount++;
-          expect(onChange).toHaveBeenCalledTimes(calledCount);
+          expect(onChange).toHaveBeenCalledTimes(i + 1);
         });
       });
+    });
+
+    describe('OnKeyPress', () => {
+      test('received by each child', () => {
+        const tree = renderer.create(
+          <RadioGroup>
+            <child />
+            <child />
+            <child />
+          </RadioGroup>
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+      });
+
+      const onChange = jest.fn();
+      const radioGroup = shallow(
+        <RadioGroup onChange={onChange}>
+          <child className="child" value="first" />
+          <child className="child" value="second" />
+          <child className="child" value="third" />
+        </RadioGroup>
+      );
+      const children = radioGroup.find('.child');
+      describe('Left Arrow', () => {
+        const e = { keyCode: 37 }
+        children.forEach((child, i) => {
+          switch (i) {
+            case 0:
+              test('OnChange prop called with last child\'s value', () => {
+                child.props().onKeyPress(e);
+                expect(onChange).toHaveBeenLastCalledWith(children.last().props().value);
+              });
+              break;
+            default:
+              test('OnChange called with previous child\'s value', () => {
+                child.props().onKeyPress(e);
+                expect(onChange).toHaveBeenLastCalledWith(children.at(i - 1).props().value);
+              });
+              break;
+          }
+        });
+      });
+
+      describe('Up Arrow', () => {
+
+      });
+
+      describe('Right Arrow', () => {
+
+      });
+
+      describe('Down Arrow', () => {
+
+      });
+
     });
   });
 
