@@ -33,21 +33,24 @@ const RadioGroup = (
   const onKeyPress = (e, index) => {
     switch (e.keyCode) {
       case 37:
-        onPrev(index);
+        _onPrev(index);
         break;
       case 38:
-        onPrev(index);
+        _onPrev(index);
+        break;
       case 39:
-        onNext(index);
+        console.log(39)
+        _onNext(index);
+        break;
       case 40:
-        onNext(index);
+        _onNext(index);
         break;
       default:
         break;
     }
   }
 
-  const onNext = index => {
+  const _onNext = index => {
     let nextIndex;
     const lastIndex = children.length - 1;
     if (index === lastIndex) {
@@ -58,7 +61,7 @@ const RadioGroup = (
     onChange(children[nextIndex].props.value);
   };
 
-  const onPrev = index => {
+  const _onPrev = index => {
     let prevIndex;
     if (index === 0) {
       prevIndex = children.length - 1;
