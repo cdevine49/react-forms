@@ -143,28 +143,32 @@ describe('RadioGroup', () => {
         expect(tree).toMatchSnapshot();
       });
 
-      const onChange = jest.fn();
-      const radioGroup = shallow(
-        <RadioGroup onChange={onChange}>
-          <child className="child" value="first" />
-          <child className="child" value="second" />
-          <child className="child" value="third" />
-        </RadioGroup>
-      );
-      const children = radioGroup.find('.child');
       describe('Left Arrow', () => {
+        const onChange = jest.fn();
+        const radioGroup = shallow(
+          <RadioGroup onChange={onChange}>
+            <child className="child" value="first" />
+            <child className="child" value="second" />
+            <child className="child" value="third" />
+          </RadioGroup>
+        );
+
+        const children = radioGroup.find('.child');
         const e = { keyCode: 37 }
+
         children.forEach((child, i) => {
           switch (i) {
             case 0:
               test('OnChange prop called with last child\'s value', () => {
                 child.props().onKeyPress(e);
+                expect(onChange).toHaveBeenCalledTimes(i + 1)
                 expect(onChange).toHaveBeenLastCalledWith(children.last().props().value);
               });
               break;
             default:
               test('OnChange called with previous child\'s value', () => {
                 child.props().onKeyPress(e);
+                expect(onChange).toHaveBeenCalledTimes(i + 1)
                 expect(onChange).toHaveBeenLastCalledWith(children.at(i - 1).props().value);
               });
               break;
@@ -173,7 +177,36 @@ describe('RadioGroup', () => {
       });
 
       describe('Up Arrow', () => {
+        const onChange = jest.fn();
+        const radioGroup = shallow(
+          <RadioGroup onChange={onChange}>
+            <child className="child" value="first" />
+            <child className="child" value="second" />
+            <child className="child" value="third" />
+          </RadioGroup>
+        );
 
+        const children = radioGroup.find('.child');
+        const e = { keyCode: 38 }
+
+        children.forEach((child, i) => {
+          switch (i) {
+            case 0:
+              test('OnChange prop called with last child\'s value', () => {
+                child.props().onKeyPress(e);
+                expect(onChange).toHaveBeenCalledTimes(i + 1)
+                expect(onChange).toHaveBeenLastCalledWith(children.last().props().value);
+              });
+              break;
+            default:
+              test('OnChange called with previous child\'s value', () => {
+                child.props().onKeyPress(e);
+                expect(onChange).toHaveBeenCalledTimes(i + 1)
+                expect(onChange).toHaveBeenLastCalledWith(children.at(i - 1).props().value);
+              });
+              break;
+          }
+        });
       });
 
       describe('Right Arrow', () => {
