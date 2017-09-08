@@ -210,11 +210,69 @@ describe('RadioGroup', () => {
       });
 
       describe('Right Arrow', () => {
+        const onChange = jest.fn();
+        const radioGroup = shallow(
+          <RadioGroup onChange={onChange}>
+            <child className="child" value="first" />
+            <child className="child" value="second" />
+            <child className="child" value="third" />
+          </RadioGroup>
+        );
 
+        const children = radioGroup.find('.child');
+        const e = { keyCode: 39 }
+
+        children.forEach((child, i) => {
+          switch (i) {
+            case (children.length - 1):
+              test('OnChange prop called with first child\'s value', () => {
+                child.props().onKeyPress(e);
+                expect(onChange).toHaveBeenCalledTimes(i + 1)
+                expect(onChange).toHaveBeenLastCalledWith(children.first().props().value);
+              });
+              break;
+            default:
+              test('OnChange called with previous child\'s value', () => {
+                child.props().onKeyPress(e);
+                expect(onChange).toHaveBeenCalledTimes(i + 1)
+                expect(onChange).toHaveBeenLastCalledWith(children.at(i + 1).props().value);
+              });
+              break;
+          }
+        });
       });
 
       describe('Down Arrow', () => {
+        const onChange = jest.fn();
+        const radioGroup = shallow(
+          <RadioGroup onChange={onChange}>
+            <child className="child" value="first" />
+            <child className="child" value="second" />
+            <child className="child" value="third" />
+          </RadioGroup>
+        );
 
+        const children = radioGroup.find('.child');
+        const e = { keyCode: 40 }
+
+        children.forEach((child, i) => {
+          switch (i) {
+            case (children.length - 1):
+              test('OnChange prop called with first child\'s value', () => {
+                child.props().onKeyPress(e);
+                expect(onChange).toHaveBeenCalledTimes(i + 1)
+                expect(onChange).toHaveBeenLastCalledWith(children.first().props().value);
+              });
+              break;
+            default:
+              test('OnChange called with previous child\'s value', () => {
+                child.props().onKeyPress(e);
+                expect(onChange).toHaveBeenCalledTimes(i + 1)
+                expect(onChange).toHaveBeenLastCalledWith(children.at(i + 1).props().value);
+              });
+              break;
+          }
+        });
       });
 
     });
