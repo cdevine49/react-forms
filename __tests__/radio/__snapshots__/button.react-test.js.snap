@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioButton Default 1`] = `
+<div
+  className="radio-button"
+  onClick={undefined}
+>
+  <input
+    className="radio-input"
+    id=""
+    onChange={undefined}
+    type="radio"
+    value={null}
+  />
+</div>
+`;
