@@ -25,7 +25,6 @@ describe('RadioGroup', () => {
 
       expect(tree).toMatchSnapshot();
     });
-
   });
 
   describe('Legend', () => {
@@ -115,17 +114,18 @@ describe('RadioGroup', () => {
 
       const radioGroup = shallow(
         <RadioGroup onChange={onChange}>
-          <child className="child" />
-          <child className="child" />
-          <child className="child" />
+          <child className="child" value="child0" />
+          <child className="child" value="child1" />
+          <child className="child" value="child2" />
         </RadioGroup>
       );
 
       radioGroup.find('.child').forEach((child, i) => {
-        test(`can be called by ${i}th child`, () => {
+        test(`can be called by ${i}th child with its prop value`, () => {
           expect(onChange).toHaveBeenCalledTimes(i);
           child.props().onChange();
           expect(onChange).toHaveBeenCalledTimes(i + 1);
+          expect(onChange).toHaveBeenLastCalledWith(child.props().value);
         });
       });
     });
