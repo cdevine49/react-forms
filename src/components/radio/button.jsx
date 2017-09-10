@@ -6,7 +6,7 @@ const RadioButton = (
   {
     className,
     containerProps: {
-      containerClass,
+      className: containerClass,
       ...containerProps
     },
     id,
