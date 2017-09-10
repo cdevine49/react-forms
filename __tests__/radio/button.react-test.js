@@ -1,5 +1,5 @@
 import React from 'react';
-import RadioGroup from '../../src/components/radio/group';
+import RadioButton from '../../src/components/radio/button';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 
