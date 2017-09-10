@@ -66,5 +66,18 @@ describe('RadioButton', () => {
       button.simulate('click');
       expect(onChange).toHaveBeenCalled();
     });
+
+    test('Accepts containerProps', () => {
+      const tree = renderer.create(
+        <RadioButton containerProps={{
+            id: 'div-id',
+            className: 'I get added to default classes',
+            onKeyUp: function(){}
+          }}
+        />
+      );
+
+      expect(tree).toMatchSnapshot();
+    });
   });
 });

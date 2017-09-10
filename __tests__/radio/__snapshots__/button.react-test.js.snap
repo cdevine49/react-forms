@@ -1,5 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`RadioButton Container Accepts containerProps 1`] = `
+<div
+  className="radio-button I get added to default classes"
+  id="div-id"
+  onClick={undefined}
+  onKeyUp={[Function]}
+>
+  <input
+    className="radio-input"
+    id=""
+    onChange={undefined}
+    type="radio"
+    value={null}
+  />
+</div>
+`;
+
 exports[`RadioButton Default 1`] = `
 <div
   className="radio-button"
