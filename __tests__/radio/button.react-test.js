@@ -2,7 +2,7 @@ import React from 'react';
 import RadioButton from '../../src/components/radio/button';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-
+console.warn = () => {}
 describe('RadioButton', () => {
   test('Default', () => {
     const tree = renderer.create(
@@ -14,7 +14,7 @@ describe('RadioButton', () => {
   });
 
   describe('Warnings', () => {
-
+    test('')
   });
 
   describe('Container', () => {
