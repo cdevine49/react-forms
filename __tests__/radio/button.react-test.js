@@ -93,6 +93,31 @@ describe('RadioButton', () => {
       );
 
       expect(tree).toMatchSnapshot();
-    })
+    });
+
+    test('OnChange calls onChange prop', () => {
+      const onChange = jest.fn();
+      const button = shallow(
+        <RadioButton onChange={ onChange } />
+      );
+
+      expect(onChange).not.toHaveBeenCalled();
+      button.find('input').simulate('change');
+      expect(onChange).toHaveBeenCalled();
+    });
   });
 });
+
+
+
+//
+
+
+
+
+//
+
+
+
+
+//
