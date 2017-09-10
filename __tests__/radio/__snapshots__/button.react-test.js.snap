@@ -31,3 +31,30 @@ exports[`RadioButton Default 1`] = `
   />
 </div>
 `;
+
+exports[`RadioButton Input Accepts props passed directly to component 1`] = `
+<div
+  className="radio-button"
+  onClick={undefined}
+>
+  <input
+    className="radio-input add me"
+    data-item={
+      Array [
+        "array",
+        1,
+      ]
+    }
+    id="my-id"
+    onChange={undefined}
+    type="radio"
+    value="I am the value"
+  />
+  <label
+    className="radio-label"
+    htmlFor="my-id"
+  >
+    I am the value
+  </label>
+</div>
+`;

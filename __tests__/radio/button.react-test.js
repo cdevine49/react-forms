@@ -80,4 +80,19 @@ describe('RadioButton', () => {
       expect(tree).toMatchSnapshot();
     });
   });
+
+  describe('Input', () => {
+    test('Accepts props passed directly to component', () => {
+      const tree = renderer.create(
+        <RadioButton
+          id='my-id'
+          className='add me'
+          value="I am the value"
+          data-item={['array', 1]}
+          />
+      );
+
+      expect(tree).toMatchSnapshot();
+    })
+  });
 });
