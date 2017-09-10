@@ -6,19 +6,19 @@ exports[`RadioGroup Children Child with value prop equal to group's currentValue
 >
   <child
     checked={false}
-    onChange={undefined}
+    onChange={[Function]}
     onKeyPress={[Function]}
     value={0}
   />
   <child
     checked={true}
-    onChange={undefined}
+    onChange={[Function]}
     onKeyPress={[Function]}
     value={1}
   />
   <child
     checked={false}
-    onChange={undefined}
+    onChange={[Function]}
     onKeyPress={[Function]}
     value={2}
   />
@@ -31,19 +31,19 @@ exports[`RadioGroup Children Child with value prop equal to group's currentValue
 >
   <child
     checked={false}
-    onChange={undefined}
+    onChange={[Function]}
     onKeyPress={[Function]}
     value={0}
   />
   <child
     checked={false}
-    onChange={undefined}
+    onChange={[Function]}
     onKeyPress={[Function]}
     value={1}
   />
   <child
     checked={true}
-    onChange={undefined}
+    onChange={[Function]}
     onKeyPress={[Function]}
     value={2}
   />
@@ -78,17 +78,17 @@ exports[`RadioGroup Children OnKeyPress received by each child 1`] = `
 >
   <child
     checked={true}
-    onChange={undefined}
+    onChange={[Function]}
     onKeyPress={[Function]}
   />
   <child
     checked={true}
-    onChange={undefined}
+    onChange={[Function]}
     onKeyPress={[Function]}
   />
   <child
     checked={true}
-    onChange={undefined}
+    onChange={[Function]}
     onKeyPress={[Function]}
   />
 </fieldset>
@@ -100,17 +100,17 @@ exports[`RadioGroup Children default props 1`] = `
 >
   <child
     checked={true}
-    onChange={undefined}
+    onChange={[Function]}
     onKeyPress={[Function]}
   />
   <child
     checked={true}
-    onChange={undefined}
+    onChange={[Function]}
     onKeyPress={[Function]}
   />
   <child
     checked={true}
-    onChange={undefined}
+    onChange={[Function]}
     onKeyPress={[Function]}
   />
 </fieldset>
