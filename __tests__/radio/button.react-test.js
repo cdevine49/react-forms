@@ -14,7 +14,25 @@ describe('RadioButton', () => {
   });
 
   describe('Warnings', () => {
-    test('')
+    test('Calls console.warn if not given an id prop', () => {
+      const warn = jest.fn();
+      const value = "Don't call my console warn";
+      console.warn = warn;
+
+      expect(warn).not.toHaveBeenCalled();
+
+      const button = shallow(
+        <RadioButton value={ value } />
+      );
+
+      expect(warn).toHaveBeenCalledTimes(1);
+
+      const buttonWithId = shallow(
+        <RadioButton id="I-exist" value={ value } />
+      );
+
+      expect(warn).toHaveBeenCalledTimes(1);
+    })
   });
 
   describe('Container', () => {
