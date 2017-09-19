@@ -15,13 +15,22 @@ const RadioButton = (
       className: labelClass,
       ...labelProps
     },
-    onChange,
+    onChange: onChangeCallback,
     value,
     ...props
   }
 ) => {
   !id && console.warn("RadioButton expects an id");
   !value && console.warn("RadioButton expects a value");
+
+  const onChange = e => {
+    e.stopPropagation();
+    onChangeCallback();
+  };
+
+  const onClick = e => {
+    e.stopPropagation();
+  };
 
   return (
     <div className={ setClassName(['radio-button', containerClass]) } onClick={ onChange } { ...containerProps }>
@@ -30,6 +39,7 @@ const RadioButton = (
         type='radio'
         className={ setClassName(['radio-input', className]) }
         onChange={ onChange }
+        onClick={ onClick }
         value={ value }
         { ...props }
         />
@@ -41,7 +51,7 @@ RadioButton.defaultProps = {
   containerProps: {},
   id: '',
   labelProps: {},
-  value: null
+  value: ''
 }
 
 export default RadioButton;
