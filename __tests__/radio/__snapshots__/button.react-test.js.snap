@@ -4,15 +4,16 @@ exports[`RadioButton Container Accepts containerProps 1`] = `
 <div
   className="radio-button I get added to default classes"
   id="div-id"
-  onClick={undefined}
+  onClick={[Function]}
   onKeyUp={[Function]}
 >
   <input
     className="radio-input"
     id=""
-    onChange={undefined}
+    onChange={[Function]}
+    onClick={[Function]}
     type="radio"
-    value={null}
+    value=""
   />
 </div>
 `;
@@ -20,14 +21,15 @@ exports[`RadioButton Container Accepts containerProps 1`] = `
 exports[`RadioButton Default 1`] = `
 <div
   className="radio-button"
-  onClick={undefined}
+  onClick={[Function]}
 >
   <input
     className="radio-input"
     id=""
-    onChange={undefined}
+    onChange={[Function]}
+    onClick={[Function]}
     type="radio"
-    value={null}
+    value=""
   />
 </div>
 `;
@@ -35,7 +37,7 @@ exports[`RadioButton Default 1`] = `
 exports[`RadioButton Input Accepts props passed directly to component 1`] = `
 <div
   className="radio-button"
-  onClick={undefined}
+  onClick={[Function]}
 >
   <input
     className="radio-input add me"
@@ -46,7 +48,8 @@ exports[`RadioButton Input Accepts props passed directly to component 1`] = `
       ]
     }
     id="my-id"
-    onChange={undefined}
+    onChange={[Function]}
+    onClick={[Function]}
     type="radio"
     value="I am the value"
   />

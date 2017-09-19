@@ -1,7 +1,7 @@
 import React from 'react';
 import RadioButton from '../../src/components/radio/button';
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 console.warn = () => {}
 describe('RadioButton', () => {
   test('Default', () => {
@@ -58,12 +58,14 @@ describe('RadioButton', () => {
   describe('Container', () => {
     test('OnClick calls the onChange prop', () => {
       const onChange = jest.fn();
+      const stopPropagation = jest.fn()
+      const e = { stopPropagation }
       const button = shallow(
         <RadioButton onChange={ onChange } />
       );
 
       expect(onChange).not.toHaveBeenCalled();
-      button.simulate('click');
+      button.simulate('click', e);
       expect(onChange).toHaveBeenCalled();
     });
 
@@ -97,13 +99,13 @@ describe('RadioButton', () => {
 
     test('OnChange calls onChange prop', () => {
       const onChange = jest.fn();
-      const button = shallow(
+      const button = mount(
         <RadioButton onChange={ onChange } />
       );
 
       expect(onChange).not.toHaveBeenCalled();
       button.find('input').simulate('change');
-      expect(onChange).toHaveBeenCalled();
+      expect(onChange).toHaveBeenCalledTimes(1);
     });
   });
 });
