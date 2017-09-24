@@ -15,7 +15,11 @@ const TextInput = ({
                       className,
                       errorProps,
                       underline,
-                      underlineProps,
+                      underlineProps: {
+                        id: underlineId,
+                        ...underlineProps
+                      },
+                      ariaDescribedby,
                       errorMessage,
                       ...props
                    }) => {
@@ -25,10 +29,11 @@ const TextInput = ({
       <input
         id={ id }
         className={ setClassName([className, (errorMessage && 'error')]) }
+        aria-describedby={ underlineId || ariaDescribedby  }
         { ...props }
         />
       <Error { ...errorProps }>{errorMessage}</Error>
-      <Underline { ...underlineProps }>{underline}</Underline>
+      <Underline id={ underlineId || ariaDescribedby  } { ...underlineProps }>{underline}</Underline>
     </div>
   );
 };
