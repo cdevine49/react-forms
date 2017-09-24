@@ -4,6 +4,7 @@ exports[`Errors accepts props 1`] = `
 <p
   className="error-message error-class test"
   id="errorId"
+  role="alert"
 >
   Test Error
 </p>
@@ -14,6 +15,7 @@ exports[`Errors does not render without child 1`] = `null`;
 exports[`Errors renders with child 1`] = `
 <p
   className="error-message"
+  role="alert"
 >
   Test Error
 </p>
