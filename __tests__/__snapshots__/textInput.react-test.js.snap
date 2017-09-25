@@ -44,6 +44,7 @@ exports[`TextInput Error errorMessage acts as child prop 1`] = `
   />
   <p
     className="error-message"
+    id={undefined}
     role="alert"
   >
     Uh oh
@@ -64,6 +65,7 @@ exports[`TextInput Error errorProps populate the error tag 1`] = `
   <p
     className="error-message more classes"
     data-message="hi there"
+    id="error-tag"
     role="alert"
   >
     Uh oh
@@ -109,6 +111,7 @@ exports[`TextInput Input receives 'error' class when errorMessage prop is truthy
   />
   <p
     className="error-message"
+    id={undefined}
     role="alert"
   />
 </div>
@@ -126,6 +129,7 @@ exports[`TextInput Input receives 'error' class when errorMessage prop is truthy
   />
   <p
     className="error-message"
+    id={undefined}
     role="alert"
   >
     Ya dun goofed
