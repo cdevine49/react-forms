@@ -34,7 +34,8 @@ const TextInput = ({
         id={ id }
         className={ setClassName([className, (errorMessage && 'error')]) }
         aria-describedby={ setClassName([errorId, underlineId]) }
-        aria-required={ required }
+        aria-required={ !!required }
+        aria-invalid={ !!errorMessage }
         { ...props }
         />
       <Error id={ errorId } { ...errorProps }>{ errorMessage }</Error>
