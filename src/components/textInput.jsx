@@ -37,7 +37,7 @@ const TextInput = ({
         aria-required={ required }
         { ...props }
         />
-      <Error { ...errorProps }>{ errorMessage }</Error>
+      <Error id={ errorId } { ...errorProps }>{ errorMessage }</Error>
       <Underline id={ underlineId } { ...underlineProps }>{ underline }</Underline>
     </div>
   );
