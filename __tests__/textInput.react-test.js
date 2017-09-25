@@ -90,7 +90,7 @@ describe('TextInput', () => {
       expect(tree).toMatchSnapshot();
     });
 
-    test('receives \'error\' class when errorMessage prop is truthy', () => {
+    test('receives \'error\' class and aria-invalid when errorMessage prop is truthy', () => {
       let tree = renderer.create(
         <TextInput
           errorMessage={true}
@@ -111,6 +111,16 @@ describe('TextInput', () => {
       tree = renderer.create(
         <TextInput
           errorMessage=""
+          />
+      ).toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
+
+    test('receives aria-required when required', () => {
+      const tree = renderer.create(
+        <TextInput
+          required={true}
           />
       ).toJSON();
 

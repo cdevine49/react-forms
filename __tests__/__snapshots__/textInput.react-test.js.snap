@@ -6,7 +6,8 @@ exports[`TextInput ContainerProps className added to container tag's default cla
 >
   <input
     aria-describedby={undefined}
-    aria-required={undefined}
+    aria-invalid={false}
+    aria-required={false}
     className={undefined}
     id={undefined}
   />
@@ -25,7 +26,8 @@ exports[`TextInput ContainerProps populate the container tag 1`] = `
 >
   <input
     aria-describedby={undefined}
-    aria-required={undefined}
+    aria-invalid={false}
+    aria-required={false}
     className={undefined}
     id={undefined}
   />
@@ -38,7 +40,8 @@ exports[`TextInput Error errorMessage acts as child prop 1`] = `
 >
   <input
     aria-describedby={undefined}
-    aria-required={undefined}
+    aria-invalid={true}
+    aria-required={false}
     className="error"
     id={undefined}
   />
@@ -58,7 +61,8 @@ exports[`TextInput Error errorProps populate the error tag 1`] = `
 >
   <input
     aria-describedby="error-tag"
-    aria-required={undefined}
+    aria-invalid={true}
+    aria-required={false}
     className="error"
     id={undefined}
   />
@@ -79,7 +83,8 @@ exports[`TextInput Input aria-describedby receives errorProps.id 1`] = `
 >
   <input
     aria-describedby="error-description"
-    aria-required={undefined}
+    aria-invalid={false}
+    aria-required={false}
     className={undefined}
     id={undefined}
   />
@@ -92,20 +97,22 @@ exports[`TextInput Input aria-describedby receives underlineProps.id 1`] = `
 >
   <input
     aria-describedby="descriptor"
-    aria-required={undefined}
+    aria-invalid={false}
+    aria-required={false}
     className={undefined}
     id={undefined}
   />
 </div>
 `;
 
-exports[`TextInput Input receives 'error' class when errorMessage prop is truthy 1`] = `
+exports[`TextInput Input receives 'error' class and aria-invalid when errorMessage prop is truthy 1`] = `
 <div
   className="input-container"
 >
   <input
     aria-describedby={undefined}
-    aria-required={undefined}
+    aria-invalid={true}
+    aria-required={false}
     className="error"
     id={undefined}
   />
@@ -117,13 +124,14 @@ exports[`TextInput Input receives 'error' class when errorMessage prop is truthy
 </div>
 `;
 
-exports[`TextInput Input receives 'error' class when errorMessage prop is truthy 2`] = `
+exports[`TextInput Input receives 'error' class and aria-invalid when errorMessage prop is truthy 2`] = `
 <div
   className="input-container"
 >
   <input
     aria-describedby={undefined}
-    aria-required={undefined}
+    aria-invalid={true}
+    aria-required={false}
     className="big and fat error"
     id={undefined}
   />
@@ -137,13 +145,28 @@ exports[`TextInput Input receives 'error' class when errorMessage prop is truthy
 </div>
 `;
 
-exports[`TextInput Input receives 'error' class when errorMessage prop is truthy 3`] = `
+exports[`TextInput Input receives 'error' class and aria-invalid when errorMessage prop is truthy 3`] = `
 <div
   className="input-container"
 >
   <input
     aria-describedby={undefined}
-    aria-required={undefined}
+    aria-invalid={false}
+    aria-required={false}
+    className={undefined}
+    id={undefined}
+  />
+</div>
+`;
+
+exports[`TextInput Input receives aria-required when required 1`] = `
+<div
+  className="input-container"
+>
+  <input
+    aria-describedby={undefined}
+    aria-invalid={false}
+    aria-required={true}
     className={undefined}
     id={undefined}
   />
@@ -156,7 +179,8 @@ exports[`TextInput Input receives props by default 1`] = `
 >
   <input
     aria-describedby={undefined}
-    aria-required={undefined}
+    aria-invalid={false}
+    aria-required={false}
     className="big and fat"
     data-key="input-key"
     id="my-input"
@@ -180,7 +204,8 @@ exports[`TextInput Label htmlFor populated by id prop 1`] = `
   </label>
   <input
     aria-describedby={undefined}
-    aria-required={undefined}
+    aria-invalid={false}
+    aria-required={false}
     className={undefined}
     id="first-name"
   />
@@ -198,7 +223,8 @@ exports[`TextInput Label label prop acts as child 1`] = `
   </label>
   <input
     aria-describedby={undefined}
-    aria-required={undefined}
+    aria-invalid={false}
+    aria-required={false}
     className={undefined}
     id={undefined}
   />
@@ -223,7 +249,8 @@ exports[`TextInput Label labelProps populate the label tag 1`] = `
   </label>
   <input
     aria-describedby={undefined}
-    aria-required={undefined}
+    aria-invalid={false}
+    aria-required={false}
     className={undefined}
     id={undefined}
   />
@@ -236,7 +263,8 @@ exports[`TextInput Underline id defaults to underlineProps.id 1`] = `
 >
   <input
     aria-describedby="descriptor"
-    aria-required={undefined}
+    aria-invalid={false}
+    aria-required={false}
     className={undefined}
     id={undefined}
   />
@@ -255,7 +283,8 @@ exports[`TextInput Underline id will accept ariaDescribedby prop as a fallback 1
 >
   <input
     aria-describedby={undefined}
-    aria-required={undefined}
+    aria-invalid={false}
+    aria-required={false}
     className={undefined}
     id={undefined}
   />
@@ -274,7 +303,8 @@ exports[`TextInput Underline underline acts as child prop 1`] = `
 >
   <input
     aria-describedby={undefined}
-    aria-required={undefined}
+    aria-invalid={false}
+    aria-required={false}
     className={undefined}
     id={undefined}
   />
@@ -293,7 +323,8 @@ exports[`TextInput Underline underlineProps populate the underline tag 1`] = `
 >
   <input
     aria-describedby={undefined}
-    aria-required={undefined}
+    aria-invalid={false}
+    aria-required={false}
     className={undefined}
     id={undefined}
   />
@@ -317,7 +348,8 @@ exports[`TextInput default 1`] = `
 >
   <input
     aria-describedby={undefined}
-    aria-required={undefined}
+    aria-invalid={false}
+    aria-required={false}
     className={undefined}
     id={undefined}
   />
