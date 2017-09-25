@@ -1,12 +1,11 @@
 import React from 'react';
 
-const withErrors = Component => class extends React.Component {
+export default class FormField extends React.Component {
   constructor() {
     super();
     this.state = {
       errorMessage: ''
     }
-    this._hideErrors = this._hideErrors.bind(this);
     this._displayErrors = this._displayErrors.bind(this);
   }
 
@@ -41,14 +40,11 @@ const withErrors = Component => class extends React.Component {
     this.setState({ errorMessage });
   }
 
-  _hideErrors() {
-    this.setState({ errorMessage: '' });
-  }
-
   render() {
-    const { hideErrors, displayErrors, validate, required, errors, ...props } = this.props;
-    return <Component displayErrors={this._displayErrors} hideErrors={this._hideErrors} {...props} {...this.state} />;
+    const { children } = this.props;
+    const { errorMessage } = this.state;
+    return (
+      children(errorMessage, this._displayErrors)
+    );
   }
 }
-
-export default withErrors;
