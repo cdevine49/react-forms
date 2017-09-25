@@ -6,6 +6,7 @@ exports[`TextInput ContainerProps className added to container tag's default cla
 >
   <input
     aria-describedby={undefined}
+    aria-required={undefined}
     className={undefined}
     id={undefined}
   />
@@ -24,6 +25,7 @@ exports[`TextInput ContainerProps populate the container tag 1`] = `
 >
   <input
     aria-describedby={undefined}
+    aria-required={undefined}
     className={undefined}
     id={undefined}
   />
@@ -36,6 +38,7 @@ exports[`TextInput Error errorMessage acts as child prop 1`] = `
 >
   <input
     aria-describedby={undefined}
+    aria-required={undefined}
     className="error"
     id={undefined}
   />
@@ -53,14 +56,14 @@ exports[`TextInput Error errorProps populate the error tag 1`] = `
   className="input-container"
 >
   <input
-    aria-describedby={undefined}
+    aria-describedby="error-tag"
+    aria-required={undefined}
     className="error"
     id={undefined}
   />
   <p
     className="error-message more classes"
     data-message="hi there"
-    id="error-tag"
     role="alert"
   >
     Uh oh
@@ -68,24 +71,26 @@ exports[`TextInput Error errorProps populate the error tag 1`] = `
 </div>
 `;
 
-exports[`TextInput Input aria-describedby defaults to underlineProps.id 1`] = `
+exports[`TextInput Input aria-describedby receives errorProps.id 1`] = `
 <div
   className="input-container"
 >
   <input
-    aria-describedby="descriptor"
+    aria-describedby="error-description"
+    aria-required={undefined}
     className={undefined}
     id={undefined}
   />
 </div>
 `;
 
-exports[`TextInput Input aria-describedby will accept ariaDescribedby prop as a fallback 1`] = `
+exports[`TextInput Input aria-describedby receives underlineProps.id 1`] = `
 <div
   className="input-container"
 >
   <input
-    aria-describedby="secondary"
+    aria-describedby="descriptor"
+    aria-required={undefined}
     className={undefined}
     id={undefined}
   />
@@ -98,6 +103,7 @@ exports[`TextInput Input receives 'error' class when errorMessage prop is truthy
 >
   <input
     aria-describedby={undefined}
+    aria-required={undefined}
     className="error"
     id={undefined}
   />
@@ -114,6 +120,7 @@ exports[`TextInput Input receives 'error' class when errorMessage prop is truthy
 >
   <input
     aria-describedby={undefined}
+    aria-required={undefined}
     className="big and fat error"
     id={undefined}
   />
@@ -132,6 +139,7 @@ exports[`TextInput Input receives 'error' class when errorMessage prop is truthy
 >
   <input
     aria-describedby={undefined}
+    aria-required={undefined}
     className={undefined}
     id={undefined}
   />
@@ -144,6 +152,7 @@ exports[`TextInput Input receives props by default 1`] = `
 >
   <input
     aria-describedby={undefined}
+    aria-required={undefined}
     className="big and fat"
     data-key="input-key"
     id="my-input"
@@ -167,6 +176,7 @@ exports[`TextInput Label htmlFor populated by id prop 1`] = `
   </label>
   <input
     aria-describedby={undefined}
+    aria-required={undefined}
     className={undefined}
     id="first-name"
   />
@@ -184,6 +194,7 @@ exports[`TextInput Label label prop acts as child 1`] = `
   </label>
   <input
     aria-describedby={undefined}
+    aria-required={undefined}
     className={undefined}
     id={undefined}
   />
@@ -208,6 +219,7 @@ exports[`TextInput Label labelProps populate the label tag 1`] = `
   </label>
   <input
     aria-describedby={undefined}
+    aria-required={undefined}
     className={undefined}
     id={undefined}
   />
@@ -220,6 +232,7 @@ exports[`TextInput Underline id defaults to underlineProps.id 1`] = `
 >
   <input
     aria-describedby="descriptor"
+    aria-required={undefined}
     className={undefined}
     id={undefined}
   />
@@ -237,13 +250,14 @@ exports[`TextInput Underline id will accept ariaDescribedby prop as a fallback 1
   className="input-container"
 >
   <input
-    aria-describedby="secondary"
+    aria-describedby={undefined}
+    aria-required={undefined}
     className={undefined}
     id={undefined}
   />
   <p
     className="underline"
-    id="secondary"
+    id={undefined}
   >
     Extra info
   </p>
@@ -256,6 +270,7 @@ exports[`TextInput Underline underline acts as child prop 1`] = `
 >
   <input
     aria-describedby={undefined}
+    aria-required={undefined}
     className={undefined}
     id={undefined}
   />
@@ -274,6 +289,7 @@ exports[`TextInput Underline underlineProps populate the underline tag 1`] = `
 >
   <input
     aria-describedby={undefined}
+    aria-required={undefined}
     className={undefined}
     id={undefined}
   />
@@ -297,6 +313,7 @@ exports[`TextInput default 1`] = `
 >
   <input
     aria-describedby={undefined}
+    aria-required={undefined}
     className={undefined}
     id={undefined}
   />

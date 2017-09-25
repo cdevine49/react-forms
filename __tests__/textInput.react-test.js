@@ -118,7 +118,7 @@ describe('TextInput', () => {
     });
 
     describe('aria-describedby', () => {
-      test('defaults to underlineProps.id', () => {
+      test('receives underlineProps.id', () => {
         const tree = renderer.create(
           <TextInput
             underlineProps={{
@@ -131,15 +131,15 @@ describe('TextInput', () => {
         expect(tree).toMatchSnapshot();
       });
 
-      test('will accept ariaDescribedby prop as a fallback', () => {
+      test('receives errorProps.id', () => {
         const tree = renderer.create(
           <TextInput
-            ariaDescribedby="secondary"
+            errorProps={{ id: "error-description" }}
             />
         ).toJSON();
 
         expect(tree).toMatchSnapshot();
-      });
+      })
     });
   });
 
