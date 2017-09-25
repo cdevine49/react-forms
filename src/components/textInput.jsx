@@ -13,27 +13,32 @@ const TextInput = ({
                       labelProps,
                       id,
                       className,
-                      errorProps,
+                      errorProps: {
+                        id: errorId,
+                        ...errorProps
+                      },
                       underline,
                       underlineProps: {
                         id: underlineId,
                         ...underlineProps
                       },
                       ariaDescribedby,
+                      required,
                       errorMessage,
                       ...props
                    }) => {
   return (
     <div className={ setClassName(['input-container', containerClass]) } { ...containerProps }>
-      <Label htmlFor={id} { ...labelProps }>{ label }</Label>
+      <Label htmlFor={ id } { ...labelProps }>{ label }</Label>
       <input
         id={ id }
         className={ setClassName([className, (errorMessage && 'error')]) }
-        aria-describedby={ underlineId || ariaDescribedby  }
+        aria-describedby={ setClassName([errorId, underlineId]) }
+        aria-required={ required }
         { ...props }
         />
-      <Error { ...errorProps }>{errorMessage}</Error>
-      <Underline id={ underlineId || ariaDescribedby  } { ...underlineProps }>{underline}</Underline>
+      <Error { ...errorProps }>{ errorMessage }</Error>
+      <Underline id={ underlineId } { ...underlineProps }>{ underline }</Underline>
     </div>
   );
 };
