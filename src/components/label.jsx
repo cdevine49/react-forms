@@ -1,8 +1,13 @@
 import React from 'react';
 
-const Label = ({children, ...props}) => {
+const Label = ({ children, required, ...props }) => {
   if (children) {
-    return ( <label {...props}>{children}</label> );
+    return (
+      <label { ...props }>
+        { children }
+        { required && <span className="required">*</span> }
+      </label>
+    );
   } else {
     return null;
   }

@@ -99,6 +99,7 @@ exports[`TextInput Input aria-describedby receives underlineProps.id 1`] = `
     aria-describedby="descriptor"
     aria-invalid={false}
     aria-required={false}
+    ariaDescribedby="secondary"
     className={undefined}
     id={undefined}
   />
@@ -265,6 +266,7 @@ exports[`TextInput Underline id defaults to underlineProps.id 1`] = `
     aria-describedby="descriptor"
     aria-invalid={false}
     aria-required={false}
+    ariaDescribedby="secondary"
     className={undefined}
     id={undefined}
   />
@@ -285,6 +287,7 @@ exports[`TextInput Underline id will accept ariaDescribedby prop as a fallback 1
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
+    ariaDescribedby="secondary"
     className={undefined}
     id={undefined}
   />
