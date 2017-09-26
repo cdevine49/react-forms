@@ -22,7 +22,6 @@ const TextInput = ({
                         id: underlineId,
                         ...underlineProps
                       },
-                      ariaDescribedby,
                       required,
                       errorMessage,
                       ...props
