@@ -10,6 +10,17 @@ exports[`Label accepts props 1`] = `
 </label>
 `;
 
+exports[`Label adds asterisk if required 1`] = `
+<label>
+  Required Field
+  <span
+    className="required"
+  >
+    *
+  </span>
+</label>
+`;
+
 exports[`Label does not render without child 1`] = `null`;
 
 exports[`Label renders with child 1`] = `

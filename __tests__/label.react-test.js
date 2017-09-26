@@ -20,6 +20,14 @@ describe("Label", () => {
     expect(tree).toMatchSnapshot();
   });
 
+  test("adds asterisk if required", () => {
+    const tree = renderer.create(
+      <Label required>Required Field</Label>
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
   test("accepts props", () => {
     const tree = renderer.create(
       <Label
