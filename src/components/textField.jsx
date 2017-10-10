@@ -1,39 +1,30 @@
 import React from 'react';
-import withErrors from './withErrors';
+import FormField from './formField';
+import TextInput from './TextInput';
 import Error from './error';
 import Label from './label';
 import Underline from './underline'
 import setClassName from '../helpers/setClassName';
 
-const TextField = ({
-                      containerProps: {
-                        className: containerClass,
-                        ...containerProps
-                      },
-                      label,
-                      labelProps,
-                      id, className,
-                      hideErrors,
-                      displayErrors,
-                      errorMessage,
-                      errorProps,
-                      underline,
-                      underlineProps,
-                      ...props
-                   }) => {
+const TextField = ({ displayErrors, errors, required, validate, value, ...props}) => {
   return (
-    <div className={ setClassName(['input-container', containerClass]) } { ...containerProps }>
-      <Label htmlFor={id} { ...labelProps }>{ label }</Label>
-      <input
-        id={ id }
-        className={ setClassName([className, (errorMessage && 'error')]) }
-        onFocus={hideErrors}
-        onBlur={displayErrors}
-        { ...props }
-        />
-      <Error { ...errorProps }>{errorMessage}</Error>
-      <Underline { ...underlineProps }>{underline}</Underline>
-    </div>
+    <FormField
+      displayErrors={ displayErrors }
+      errors={ errors }
+      required={ required }
+      validate={ validate }
+      value={ value }
+    >
+      { (errorMessage, displayErrors) => (
+        <TextInput
+          errorMessage={ errorMessage }
+          onBlur={ displayErrors }
+          required={ required }
+          value={ value }
+          { ...props }
+          />
+      ) }
+    </FormField>
   );
 }
 
@@ -47,4 +38,4 @@ TextField.defaultProps = {
   underlineProps: {}
 }
 
-export default withErrors(TextField);
+export default TextField;
