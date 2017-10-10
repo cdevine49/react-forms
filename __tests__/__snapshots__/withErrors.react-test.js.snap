@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`WithErrors renders the passed component as its root element 1`] = `
-<div
-  className="return element"
-  id="root"
-/>
-`;
