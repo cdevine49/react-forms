@@ -3,10 +3,10 @@ import FlagBox from './flagInput/flagbox';
 import Error from '../../error';
 import Label from '../../label';
 import Underline from '../../underline'
-import withErrors from '../../withErrors';
+import FormField from '../../formField';
 import setClassName from '../../../helpers/setClassName';
 
-class FlagField extends React.Component {
+export default class FlagField extends React.Component {
   constructor(){
   	super();
     this.onChangeCountry = this.onChangeCountry.bind(this);
@@ -27,10 +27,7 @@ class FlagField extends React.Component {
       inputContainerProps,
       label,
       labelProps,
-      errorMessage,
       errorProps,
-      displayErrors,
-      hideErrors,
       underline,
       underlineProps,
       id,
@@ -40,20 +37,23 @@ class FlagField extends React.Component {
       ...props
     } = this.props;
     return(
-      <div className={ setClassName(['input-container flag-container', fieldClass]) } { ...fieldProps }>
-        <Label htmlFor={ id } { ...labelProps }>{ label }</Label>
-        <div className="input-container flag-input-container" style={{position: 'relative'}} { ...inputContainerProps }>
-          <FlagBox countryIndex={countryIndex} countryInfoIndex={countryInfoIndex} onChange={this.onChangeCountry()} />
-          <input
-            id={id}
-            onFocus={hideErrors}
-            onBlur={displayErrors}
-            { ...props }
-            />
-        </div>
-        <Error { ...errorProps }>{errorMessage}</Error>
-        <Underline { ...underlineProps }>{underline}</Underline>
-      </div>
+      <FormField>
+        { (errorMessage, displayErrors) => (
+          <div className={ setClassName(['input-container flag-container', fieldClass]) } { ...fieldProps }>
+            <Label htmlFor={ id } { ...labelProps }>{ label }</Label>
+            <div className="input-container flag-input-container" style={{position: 'relative'}} { ...inputContainerProps }>
+              <FlagBox countryIndex={countryIndex} countryInfoIndex={countryInfoIndex} onChange={this.onChangeCountry()} />
+              <input
+                id={id}
+                onBlur={displayErrors}
+                { ...props }
+                />
+            </div>
+            <Error { ...errorProps }>{errorMessage}</Error>
+            <Underline { ...underlineProps }>{underline}</Underline>
+          </div>
+        ) }
+      </FormField>
     );
   }
 }
@@ -69,5 +69,3 @@ FlagField.defaultProps = {
   labelProps: {},
   underlineProps: {}
 }
-
-export default withErrors(FlagField);
