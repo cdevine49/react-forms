@@ -13,6 +13,8 @@ const TextInput = ({
                       labelProps,
                       id,
                       className,
+                      required,
+                      errorMessage,
                       errorProps: {
                         id: errorId,
                         ...errorProps
@@ -22,13 +24,11 @@ const TextInput = ({
                         id: underlineId,
                         ...underlineProps
                       },
-                      required,
-                      errorMessage,
                       ...props
                    }) => {
   return (
     <div className={ setClassName(['input-container', containerClass]) } { ...containerProps }>
-      <Label htmlFor={ id } { ...labelProps }>{ label }</Label>
+      <Label htmlFor={ id } required={ required } { ...labelProps }>{ label }</Label>
       <input
         id={ id }
         className={ setClassName([className, (errorMessage && 'error')]) }
