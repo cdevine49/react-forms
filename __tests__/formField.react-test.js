@@ -1,7 +1,29 @@
 import React from 'react';
 import FormField from '../src/components/formField'
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+
+test('errorMessage state starts as empty string', () => {
+  const child = jest.fn(() => null);
+  const wrapper = shallow(<FormField>{ child }</FormField>);
+  expect(wrapper.state().errorMessage).toBe('');
+});
+
+test('calls validate with errorMessage', () => {
+  const no = "Don't show up";
+  const errorMessage = 'Whoopsie';
+  const validate = jest.fn();
+  const child = jest.fn(() => null);
+  const wrapper = mount(
+    <FormField
+      errors={ [{ _handle: () => false, message: '' }, { _handle: () => true, message: errorMessage }] }
+      validate={ validate }
+    >{ child }</FormField>);
+  expect(validate).toHaveBeenCalled();
+  // because an error handler evaluates to true,
+  // there is an error (not yet set as state) and the opposite boolean value is passed to validate
+  expect(validate).toHaveBeenCalledWith(false);
+});
 
 describe('child', () => {
   test('renders as function', () => {
