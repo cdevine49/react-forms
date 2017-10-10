@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextInput ContainerProps className added to container tag's default classes 1`] = `
+exports[`TextInput aria-describedby accepts both error id and underline id 1`] = `
 <div
-  className="input-container classy react"
+  className="input-container"
 >
   <input
-    aria-describedby={undefined}
+    aria-describedby="error-id underline-id"
     aria-invalid={false}
     aria-required={false}
     className={undefined}
@@ -14,9 +14,23 @@ exports[`TextInput ContainerProps className added to container tag's default cla
 </div>
 `;
 
-exports[`TextInput ContainerProps populate the container tag 1`] = `
+exports[`TextInput className 1`] = `
 <div
   className="input-container"
+>
+  <input
+    aria-describedby={undefined}
+    aria-invalid={false}
+    aria-required={false}
+    className="big and fat"
+    id={undefined}
+  />
+</div>
+`;
+
+exports[`TextInput containerProps 1`] = `
+<div
+  className="input-container classy react"
   id="container"
   style={
     Object {
@@ -34,7 +48,21 @@ exports[`TextInput ContainerProps populate the container tag 1`] = `
 </div>
 `;
 
-exports[`TextInput Error errorMessage acts as child prop 1`] = `
+exports[`TextInput default 1`] = `
+<div
+  className="input-container"
+>
+  <input
+    aria-describedby={undefined}
+    aria-invalid={false}
+    aria-required={false}
+    className={undefined}
+    id={undefined}
+  />
+</div>
+`;
+
+exports[`TextInput errorMessage 1`] = `
 <div
   className="input-container"
 >
@@ -42,7 +70,7 @@ exports[`TextInput Error errorMessage acts as child prop 1`] = `
     aria-describedby={undefined}
     aria-invalid={true}
     aria-required={false}
-    className="error"
+    className="not overridden error"
     id={undefined}
   />
   <p
@@ -50,12 +78,12 @@ exports[`TextInput Error errorMessage acts as child prop 1`] = `
     id={undefined}
     role="alert"
   >
-    Uh oh
+    Ya dun goofed
   </p>
 </div>
 `;
 
-exports[`TextInput Error errorProps populate the error tag 1`] = `
+exports[`TextInput errorProps 1`] = `
 <div
   className="input-container"
 >
@@ -77,124 +105,7 @@ exports[`TextInput Error errorProps populate the error tag 1`] = `
 </div>
 `;
 
-exports[`TextInput Input aria-describedby receives errorProps.id 1`] = `
-<div
-  className="input-container"
->
-  <input
-    aria-describedby="error-description"
-    aria-invalid={false}
-    aria-required={false}
-    className={undefined}
-    id={undefined}
-  />
-</div>
-`;
-
-exports[`TextInput Input aria-describedby receives underlineProps.id 1`] = `
-<div
-  className="input-container"
->
-  <input
-    aria-describedby="descriptor"
-    aria-invalid={false}
-    aria-required={false}
-    ariaDescribedby="secondary"
-    className={undefined}
-    id={undefined}
-  />
-</div>
-`;
-
-exports[`TextInput Input receives 'error' class and aria-invalid when errorMessage prop is truthy 1`] = `
-<div
-  className="input-container"
->
-  <input
-    aria-describedby={undefined}
-    aria-invalid={true}
-    aria-required={false}
-    className="error"
-    id={undefined}
-  />
-  <p
-    className="error-message"
-    id={undefined}
-    role="alert"
-  />
-</div>
-`;
-
-exports[`TextInput Input receives 'error' class and aria-invalid when errorMessage prop is truthy 2`] = `
-<div
-  className="input-container"
->
-  <input
-    aria-describedby={undefined}
-    aria-invalid={true}
-    aria-required={false}
-    className="big and fat error"
-    id={undefined}
-  />
-  <p
-    className="error-message"
-    id={undefined}
-    role="alert"
-  >
-    Ya dun goofed
-  </p>
-</div>
-`;
-
-exports[`TextInput Input receives 'error' class and aria-invalid when errorMessage prop is truthy 3`] = `
-<div
-  className="input-container"
->
-  <input
-    aria-describedby={undefined}
-    aria-invalid={false}
-    aria-required={false}
-    className={undefined}
-    id={undefined}
-  />
-</div>
-`;
-
-exports[`TextInput Input receives aria-required when required 1`] = `
-<div
-  className="input-container"
->
-  <input
-    aria-describedby={undefined}
-    aria-invalid={false}
-    aria-required={true}
-    className={undefined}
-    id={undefined}
-  />
-</div>
-`;
-
-exports[`TextInput Input receives props by default 1`] = `
-<div
-  className="input-container"
->
-  <input
-    aria-describedby={undefined}
-    aria-invalid={false}
-    aria-required={false}
-    className="big and fat"
-    data-key="input-key"
-    id="my-input"
-    style={
-      Object {
-        "padding": "25px 15px",
-      }
-    }
-  />
-</div>
-`;
-
-exports[`TextInput Label htmlFor populated by id prop 1`] = `
+exports[`TextInput id 1`] = `
 <div
   className="input-container"
 >
@@ -213,14 +124,14 @@ exports[`TextInput Label htmlFor populated by id prop 1`] = `
 </div>
 `;
 
-exports[`TextInput Label label prop acts as child 1`] = `
+exports[`TextInput label 1`] = `
 <div
   className="input-container"
 >
   <label
     htmlFor={undefined}
   >
-    Text Input
+    Child/Text
   </label>
   <input
     aria-describedby={undefined}
@@ -232,12 +143,12 @@ exports[`TextInput Label label prop acts as child 1`] = `
 </div>
 `;
 
-exports[`TextInput Label labelProps populate the label tag 1`] = `
+exports[`TextInput labelProps 1`] = `
 <div
   className="input-container"
 >
   <label
-    className="last name label"
+    className="right large name"
     htmlFor={undefined}
     id="my-label"
     style={
@@ -258,28 +169,7 @@ exports[`TextInput Label labelProps populate the label tag 1`] = `
 </div>
 `;
 
-exports[`TextInput Underline id defaults to underlineProps.id 1`] = `
-<div
-  className="input-container"
->
-  <input
-    aria-describedby="descriptor"
-    aria-invalid={false}
-    aria-required={false}
-    ariaDescribedby="secondary"
-    className={undefined}
-    id={undefined}
-  />
-  <p
-    className="underline"
-    id="descriptor"
-  >
-    More info
-  </p>
-</div>
-`;
-
-exports[`TextInput Underline id will accept ariaDescribedby prop as a fallback 1`] = `
+exports[`TextInput other props 1`] = `
 <div
   className="input-container"
 >
@@ -287,20 +177,44 @@ exports[`TextInput Underline id will accept ariaDescribedby prop as a fallback 1
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    ariaDescribedby="secondary"
     className={undefined}
+    data-key="input-key"
     id={undefined}
+    onFocus={[Function]}
+    style={
+      Object {
+        "padding": "25px 15px",
+      }
+    }
   />
-  <p
-    className="underline"
-    id={undefined}
-  >
-    Extra info
-  </p>
 </div>
 `;
 
-exports[`TextInput Underline underline acts as child prop 1`] = `
+exports[`TextInput required 1`] = `
+<div
+  className="input-container"
+>
+  <label
+    htmlFor={undefined}
+  >
+    Gets an Asterisk
+    <span
+      className="required"
+    >
+      *
+    </span>
+  </label>
+  <input
+    aria-describedby={undefined}
+    aria-invalid={false}
+    aria-required={true}
+    className={undefined}
+    id={undefined}
+  />
+</div>
+`;
+
+exports[`TextInput underline 1`] = `
 <div
   className="input-container"
 >
@@ -320,12 +234,12 @@ exports[`TextInput Underline underline acts as child prop 1`] = `
 </div>
 `;
 
-exports[`TextInput Underline underlineProps populate the underline tag 1`] = `
+exports[`TextInput underlineProps 1`] = `
 <div
   className="input-container"
 >
   <input
-    aria-describedby={undefined}
+    aria-describedby="underline-tag"
     aria-invalid={false}
     aria-required={false}
     className={undefined}
@@ -333,7 +247,7 @@ exports[`TextInput Underline underlineProps populate the underline tag 1`] = `
   />
   <p
     className="underline help explain"
-    id={undefined}
+    id="underline-tag"
     style={
       Object {
         "background": "blue",
@@ -342,19 +256,5 @@ exports[`TextInput Underline underlineProps populate the underline tag 1`] = `
   >
     Fill this in because ...
   </p>
-</div>
-`;
-
-exports[`TextInput default 1`] = `
-<div
-  className="input-container"
->
-  <input
-    aria-describedby={undefined}
-    aria-invalid={false}
-    aria-required={false}
-    className={undefined}
-    id={undefined}
-  />
 </div>
 `;
