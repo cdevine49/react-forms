@@ -14,7 +14,9 @@ export default class FormField extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    !this.props.displayErrors && nextProps.displayErrors && this._displayErrors();
+    const { displayErrors, value } = this.props;
+    const { displayErrors: nextDisplayErrors, value: nextValue } = nextProps;
+    ((!displayErrors && nextDisplayErrors) || (value !== nextValue && this.state.errorMessage)) && this._displayErrors();
   }
 
   _getErrorMessage() {
