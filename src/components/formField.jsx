@@ -7,6 +7,7 @@ export default class FormField extends React.Component {
       errorMessage: ''
     }
     this._displayErrors = this._displayErrors.bind(this);
+    this._hideErrors = this._hideErrors.bind(this);
   }
 
   componentDidMount() {
@@ -42,11 +43,15 @@ export default class FormField extends React.Component {
     this.setState({ errorMessage });
   }
 
+  _hideErrors() {
+    this.setState({ errorMessage: '' });
+  }
+
   render() {
     const { children } = this.props;
     const { errorMessage } = this.state;
     return (
-      children(errorMessage, this._displayErrors)
+      children(errorMessage, this._displayErrors, this._hideErrors)
     );
   }
 }
