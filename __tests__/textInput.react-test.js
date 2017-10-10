@@ -159,6 +159,6 @@ describe('TextInput', () => {
       ).toJSON();
 
       expect(tree).toMatchSnapshot();
-    })
-  })
+    });
+  });
 });
