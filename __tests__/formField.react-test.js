@@ -10,7 +10,6 @@ test('errorMessage state starts as empty string', () => {
 });
 
 test('calls validate with errorMessage', () => {
-  const no = "Don't show up";
   const errorMessage = 'Whoopsie';
   const validate = jest.fn();
   const child = jest.fn(() => null);
@@ -18,11 +17,79 @@ test('calls validate with errorMessage', () => {
     <FormField
       errors={ [{ _handle: () => false, message: '' }, { _handle: () => true, message: errorMessage }] }
       validate={ validate }
-    >{ child }</FormField>);
+    >
+      { child }
+    </FormField>
+  );
   expect(validate).toHaveBeenCalled();
   // because an error handler evaluates to true,
   // there is an error (not yet set as state) and the opposite boolean value is passed to validate
   expect(validate).toHaveBeenCalledWith(false);
+});
+
+describe('displayErrors prop', () => {
+  const errorMessage = 'Whoopsie';
+  const child = jest.fn(() => null);
+  test('sets errorMessage state when prop was last falsey', () => {
+    const wrapper = shallow(
+      <FormField
+        displayErrors={false}
+        errors={ [{ _handle: () => true, message: errorMessage }] }
+      >
+        { child }
+      </FormField>
+    );
+    expect(wrapper.state().errorMessage).toBe('');
+    wrapper.setProps({ displayErrors: true });
+    expect(wrapper.state().errorMessage).toBe(errorMessage);
+  });
+
+  test('no effect when prop was last truthy', () => {
+    const wrapper = shallow(
+      <FormField
+        displayErrors={true}
+        errors={ [{ _handle: () => true, message: errorMessage }] }
+      >
+        { child }
+      </FormField>
+    );
+    wrapper.setState({ errorMessage: '' });
+    wrapper.setProps({ displayErrors: true });
+    expect(wrapper.state().errorMessage).toBe('');
+  });
+});
+
+describe('value prop changes', () => {
+  const errorMessage = 'Whoopsie';
+  const child = jest.fn(() => null);
+  test('no effect when errorMessage state is falsey', () => {
+    const wrapper = shallow(
+      <FormField
+        value="abcd"
+        errors={ [{ _handle: v => v === 'abcde', message: errorMessage }] }
+      >
+        { child }
+      </FormField>
+    );
+    expect(wrapper.state().errorMessage).toBe('');
+    wrapper.setProps({ value: 'abcde' });
+    expect(wrapper.state().errorMessage).toBe('');
+  });
+
+  test('sets errorMessage state when errorMessage state is truthy', () => {
+    const wrapper = mount(
+      <FormField
+        value="abcd"
+        errors={ [{ _handle: v => v !== 'abcde', message: errorMessage }] }
+      >
+        { child }
+      </FormField>
+    );
+    wrapper.setState({ errorMessage });
+    wrapper.setProps({ value: 'abcde' });
+    wrapper.update();
+    expect(wrapper.state().errorMessage).toBe('');
+  });
 });
 
 describe('child', () => {
