@@ -6,6 +6,7 @@ export default class FormField extends React.Component {
     this.state = {
       errorMessage: ''
     }
+    this.displayErrors = this.displayErrors.bind(this);
     this._displayErrors = this._displayErrors.bind(this);
     this._hideErrors = this._hideErrors.bind(this);
   }
@@ -17,11 +18,11 @@ export default class FormField extends React.Component {
   componentWillReceiveProps(nextProps) {
     const { displayErrors, value } = this.props;
     const { displayErrors: nextDisplayErrors, value: nextValue } = nextProps;
-    ((!displayErrors && nextDisplayErrors) || (value !== nextValue && this.state.errorMessage)) && this._displayErrors();
+    ((!displayErrors && nextDisplayErrors) || (value !== nextValue && this.state.errorMessage)) && this._displayErrors(nextValue);
   }
 
-  _getErrorMessage() {
-    const { errors, required, value } = this.props;
+  _getErrorMessage(value) {
+    const { errors, required } = this.props;
     let errorMessage = '';
     if (required && !value) {
       errorMessage = "You can't leave this empty";
@@ -34,11 +35,16 @@ export default class FormField extends React.Component {
         }
       }
     }
+
     return errorMessage;
   }
 
-  _displayErrors() {
-    const errorMessage = this._getErrorMessage();
+  displayErrors() {
+    this._displayErrors(this.props.value);
+  }
+
+  _displayErrors(value) {
+    const errorMessage = this._getErrorMessage(value);
     this.props.validate && this.props.validate(!errorMessage);
     this.setState({ errorMessage });
   }
@@ -51,7 +57,7 @@ export default class FormField extends React.Component {
     const { children } = this.props;
     const { errorMessage } = this.state;
     return (
-      children(errorMessage, this._displayErrors, this._hideErrors)
+      children(errorMessage, this.displayErrors, this._hideErrors)
     );
   }
 }
