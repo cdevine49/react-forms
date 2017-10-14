@@ -1,5 +1,5 @@
 import React from 'react';
-import Flag from '../../../../src/components/textFields/flagFields/shared/flag';
+import Flag from '../../../../lib/components/textFields/flagFields/shared/flag';
 import renderer from 'react-test-renderer';
 
 describe("Country", () => {

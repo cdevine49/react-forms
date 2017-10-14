@@ -1,5 +1,5 @@
 import React from 'react';
-import Label from '../src/components/label';
+import Label from '../lib/components/label';
 import renderer from 'react-test-renderer';
 
 describe("Label", () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import FormField from '../src/components/formField'
+import FormField from '../lib/components/formField'
 import renderer from 'react-test-renderer';
 import { shallow, mount } from 'enzyme';
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import Flagbox from '../../../../src/components/textFields/flagFields/flagInput/flagbox';
-import Countries from '../../../../src/components/textFields/flagFields/countries';
+import Flagbox from '../../../../lib/components/textFields/flagFields/flagInput/flagbox';
+import Countries from '../../../../lib/components/textFields/flagFields/countries';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 

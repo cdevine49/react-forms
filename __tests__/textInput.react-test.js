@@ -1,5 +1,5 @@
 import React from 'react';
-import TextInput from '../src/components/textInput';
+import TextInput from '../lib/components/textInput';
 import renderer from 'react-test-renderer';
 
 describe('TextInput', () => {

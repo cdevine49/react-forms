@@ -1,5 +1,5 @@
 import React from 'react';
-import Legend from '../src/components/legend';
+import Legend from '../lib/components/legend';
 import renderer from 'react-test-renderer';
 
 describe('Legend', () => {

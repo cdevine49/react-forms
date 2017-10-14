@@ -1,4 +1,4 @@
-import setClassName from '../../src/helpers/setClassName';
+import setClassName from '../../lib/helpers/setClassName';
 const dfault = "default";
 
 test('ignores false elements', () => {

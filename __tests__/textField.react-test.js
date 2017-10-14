@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '../src/components/textField';
+import Container from '../lib/components/textField';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 

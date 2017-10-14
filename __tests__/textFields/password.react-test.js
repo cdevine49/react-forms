@@ -1,5 +1,5 @@
 import React from 'react';
-import Password from '../../src/components/textFields/password';
+import Password from '../../lib/components/textFields/password';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 

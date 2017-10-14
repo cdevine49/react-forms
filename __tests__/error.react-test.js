@@ -1,5 +1,5 @@
 import React from 'react';
-import Error from '../src/components/error';
+import Error from '../lib/components/error';
 import renderer from 'react-test-renderer';
 
 describe("Errors", () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import FlagField from '../../../src/components/textFields/flagFields';
+import FlagField from '../../../lib/components/textFields/flagFields';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 

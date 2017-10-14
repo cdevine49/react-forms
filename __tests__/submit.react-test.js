@@ -1,5 +1,5 @@
 import React from 'react';
-import Submit from '../src/components/submit';
+import Submit from '../lib/components/submit';
 import renderer from 'react-test-renderer';
 
 describe("Submit", () => {
