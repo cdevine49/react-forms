@@ -49,7 +49,7 @@ a {
 input:focus, .focus {
   border-color: #4d90fe !important; }
 
-.error {
+input.error, .error {
   border-color: #dd4b39 !important; }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -66,6 +66,9 @@ input[type=number]::-webkit-outer-spin-button {
   flex-direction: column;
   width: 100%;
   margin-bottom: 15px; }
+
+.flag-container {
+  position: relative; }
 
 .input-container > label {
   margin-bottom: 3px; }
@@ -87,12 +90,6 @@ input[type=number]::-webkit-outer-spin-button {
 .input-container > input:hover {
   border: 1px solid #b9b9b9;
   border-top: 1px solid #a0a0a0; }
-
-.input-container > p {
-  min-height: 17px;
-  margin: 4px 0 2px;
-  font-size: 12px;
-  color: #767676; }
 
 .one-line > div > .input-container {
   flex: 1; }
@@ -127,14 +124,17 @@ fieldset > legend {
 
 .radio-button > .radio-label {
   font-weight: normal; }
+.flagbox-container {
+  border: 1px solid #ddd;
+  border-right: 0;
+  border-radius: 3px 0 0 3px; }
+
 .flagbox {
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  border: 1px solid #ddd;
-  border-right: 0;
-  border-radius: 3px 0 0 3px; }
+  height: 100%; }
 
 .flagbox:hover {
   background-color: #eee; }
@@ -155,7 +155,8 @@ fieldset > legend {
   align-items: stretch;
   background-color: #fff;
   width: 100%;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); }
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  margin-bottom: 0; }
 
 .input-container.flag-input-container > input {
   border-radius: 0 3px 3px 0;
@@ -166,6 +167,52 @@ fieldset > legend {
 
 .input-container.flag-input-container > input:hover {
   border: 1px solid #b9b9b9; }
+
+.input-container.flag-input-container > input:focus {
+  border: 1px solid; }
+.countries-container {
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.218s;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  z-index: 2; }
+
+.country-search {
+  padding: 6px 0 0 46px; }
+
+.countries-container > .separator {
+  border-top: 1px solid #ebebeb;
+  margin-top: 3px;
+  margin-bottom: 3px; }
+
+.countries {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0 0 6px;
+  position: relative; }
+
+.country > button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  padding: 6px 50px 0 25px;
+  font-size: 12px;
+  width: 100%; }
+
+.country:hover, .country:focus, .country.hover-style {
+  background-color: #eee;
+  border-color: #eee;
+  border-style: dotted;
+  border-width: 1px 0;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.country > button > .name {
+  color: #333;
+  margin: 0 7px 0 5px; }
 .react-form-submit {
   align-self: flex-start;
   padding: 6px 12px;
@@ -182,3 +229,8 @@ fieldset > legend {
 .error-message {
   margin-top: 6.5px;
   color: #dd4b39; }
+.underline {
+  min-height: 17px;
+  margin: 4px 0 2px;
+  font-size: 12px;
+  color: #767676; }

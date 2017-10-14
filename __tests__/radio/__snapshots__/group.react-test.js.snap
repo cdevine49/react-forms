@@ -128,6 +128,7 @@ exports[`RadioGroup Error accepts errorMessage prop as child 1`] = `
 >
   <p
     className="error-message radio-group-error"
+    role="alert"
   >
     Whoopsie
   </p>
@@ -141,6 +142,7 @@ exports[`RadioGroup Error accepts errorProps object as props 1`] = `
   <p
     className="error-message way to go buddy"
     id="ya-dun-goofed"
+    role="alert"
   >
     Uh Oh
   </p>

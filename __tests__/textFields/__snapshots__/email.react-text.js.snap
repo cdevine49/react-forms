@@ -10,11 +10,13 @@ exports[`Email Default has correct label 1`] = `
     Email
   </label>
   <input
+    aria-describedby={undefined}
+    aria-invalid={false}
+    aria-required={false}
     className={undefined}
     id={undefined}
     onBlur={[Function]}
     onChange={[Function]}
-    onFocus={[Function]}
     type="text"
     value=""
   />
