@@ -2,9 +2,11 @@
   "name": "react-forms",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "build/index.js",
   "scripts": {
-    "dev": "webpack -d; webpack-dev-server",
+    "build": "babel lib -d build",
+    "build:watch": "babel lib -w -d build",
+    "prepublish": "npm run build",
     "test": "jest"
   },
   "repository": {
@@ -18,28 +20,17 @@
     "url": "https://github.com/cdevine49/react-forms/issues"
   },
   "homepage": "https://github.com/cdevine49/react-forms#readme",
-  "dependencies": {
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.3"
-  },
-  "devDependencies": {
-    "babel-jest": "^20.0.3",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.0",
-    "enzyme": "^2.9.1",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "jest": "^20.0.4",
-    "node-sass": "^4.5.2",
-    "react-test-renderer": "^15.6.1",
-    "sass-loader": "^6.0.3",
-    "style-loader": "^0.16.1"
+    "enzyme": "^3.1.0",
+    "jest": "^21.2.1",
+    "react": "^16.0.0",
+    "react-test-renderer": "^16.0.0"
   }
 }
