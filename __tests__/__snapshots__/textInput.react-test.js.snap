@@ -686,6 +686,13 @@ exports[`TextInput underline 1`] = `
   border-color: #4d90fe;
 }
 
+.c2 {
+  min-height: 17px;
+  margin: 4px 0 2px;
+  font-size: 12px;
+  color: #767676;
+}
+
 <div
   className="c0"
 >
@@ -697,7 +704,7 @@ exports[`TextInput underline 1`] = `
     id={undefined}
   />
   <p
-    className="underline"
+    className="c2"
     id={undefined}
   >
     More explanation
@@ -742,6 +749,13 @@ exports[`TextInput underlineProps 1`] = `
   border-color: #4d90fe;
 }
 
+.c2 {
+  min-height: 17px;
+  margin: 4px 0 2px;
+  font-size: 12px;
+  color: #767676;
+}
+
 <div
   className="c0"
 >
@@ -753,7 +767,7 @@ exports[`TextInput underlineProps 1`] = `
     id={undefined}
   />
   <p
-    className="underline help explain"
+    className="help explain c2"
     id="underline-tag"
     style={
       Object {

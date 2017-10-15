@@ -205,11 +205,18 @@ exports[`RadioGroup Legend doesn't render without legend prop 1`] = `
 `;
 
 exports[`RadioGroup Underline accepts underline prop as child 1`] = `
+.c0 {
+  min-height: 17px;
+  margin: 4px 0 2px;
+  font-size: 12px;
+  color: #767676;
+}
+
 <fieldset
   className="radio-button-container"
 >
   <p
-    className="underline radio-group-underline"
+    className="radio-group-underline c0"
   >
     A bit of extra explanation
   </p>
@@ -217,11 +224,18 @@ exports[`RadioGroup Underline accepts underline prop as child 1`] = `
 `;
 
 exports[`RadioGroup Underline accepts underlineProps object as props 1`] = `
+.c0 {
+  min-height: 17px;
+  margin: 4px 0 2px;
+  font-size: 12px;
+  color: #767676;
+}
+
 <fieldset
   className="radio-button-container"
 >
   <p
-    className="underline i am here to help"
+    className="i am here to help c0"
     id="what-is-going-on"
   >
     More info
