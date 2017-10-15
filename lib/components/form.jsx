@@ -1,4 +1,5 @@
 import React from 'react';
+import StyledForm from '../elements/form';
 import setClassName from '../helpers/setClassName'
 
 export default class Form extends React.Component {
@@ -45,14 +46,13 @@ export default class Form extends React.Component {
   }
 
   render() {
-    const { className, defaultStyle, onSubmit, ...props } = this.props;
+    const { onSubmit, ...props } = this.props;
     return (
-      <form
-        className={setClassName(['react-form', className])}
+      <StyledForm
         onSubmit={this.handleSubmit}
         { ...props }>
         {this.renderChildren()}
-      </form>
+      </StyledForm>
     );
   }
 }
