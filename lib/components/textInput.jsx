@@ -1,5 +1,6 @@
 import React from 'react';
-import Input from '../elements/input'
+import Input from '../elements/input';
+import Container from '../elements/container';
 import Error from './error';
 import Label from './label';
 import Underline from './underline'
@@ -27,7 +28,7 @@ const TextInput = ({
                       ...props
                    }) => {
   return (
-    <div className={ setClassName(['input-container', containerClass]) } { ...containerProps }>
+    <Container className={ containerClass } { ...containerProps }>
       <Label htmlFor={ id } required={ required } { ...labelProps }>{ label }</Label>
       <Input
         id={ id }
@@ -39,7 +40,7 @@ const TextInput = ({
         />
       <Error id={ errorId } { ...errorProps }>{ errorMessage }</Error>
       <Underline id={ underlineId } { ...underlineProps }>{ underline }</Underline>
-    </div>
+    </Container>
   );
 };
 
