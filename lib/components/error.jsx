@@ -1,9 +1,9 @@
 import React from 'react';
-import setClassName from '../helpers/setClassName';
+import StyledError from '../elements/error'
 
-const Error = ({children, className, ...props}) => {
+const Error = ({ children, ...props }) => {
   if (children) {
-    return ( <p role="alert" className={setClassName(['error-message', className])} { ...props }>{children}</p> );
+    return ( <StyledError role="alert" { ...props }>{children}</StyledError> );
   } else {
     return null;
   }
