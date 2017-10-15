@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`accepts new props 1`] = `
+.c0 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  padding: 6px 12px;
+  line-height: 20px;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+  background-color: #6cc644;
+  background-image: linear-gradient(#91dd70,#55ae2e);
+  border: 1px solid #5aad35;
+  border-radius: 3px;
+}
+
+<button
+  className="classy submit c0"
+  id="submitId"
+  onFocus={[Function]}
+  type="submit"
+>
+  Submit
+</button>
+`;
+
+exports[`default children can be overridden 1`] = `
+.c0 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  padding: 6px 12px;
+  line-height: 20px;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+  background-color: #6cc644;
+  background-image: linear-gradient(#91dd70,#55ae2e);
+  border: 1px solid #5aad35;
+  border-radius: 3px;
+}
+
+<button
+  className="c0"
+  type="submit"
+>
+  New Child
+</button>
+`;
+
+exports[`renders with default props 1`] = `
+.c0 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  padding: 6px 12px;
+  line-height: 20px;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+  background-color: #6cc644;
+  background-image: linear-gradient(#91dd70,#55ae2e);
+  border: 1px solid #5aad35;
+  border-radius: 3px;
+}
+
+<button
+  className="c0"
+  type="submit"
+>
+  Submit
+</button>
+`;
