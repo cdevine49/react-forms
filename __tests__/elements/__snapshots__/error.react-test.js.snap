@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Errors accepts props 1`] = `
+exports[`accepts props 1`] = `
 .c0 {
   margin-top: 6.5px;
   color: #dd4b39;
@@ -15,9 +15,9 @@ exports[`Errors accepts props 1`] = `
 </p>
 `;
 
-exports[`Errors does not render without child 1`] = `null`;
+exports[`does not render without child 1`] = `null`;
 
-exports[`Errors renders with child 1`] = `
+exports[`renders with child 1`] = `
 .c0 {
   margin-top: 6.5px;
   color: #dd4b39;
