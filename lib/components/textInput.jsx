@@ -1,4 +1,5 @@
 import React from 'react';
+import Input from '../elements/input'
 import Error from './error';
 import Label from './label';
 import Underline from './underline'
@@ -12,7 +13,6 @@ const TextInput = ({
                       label,
                       labelProps,
                       id,
-                      className,
                       required,
                       errorMessage,
                       errorProps: {
@@ -29,9 +29,9 @@ const TextInput = ({
   return (
     <div className={ setClassName(['input-container', containerClass]) } { ...containerProps }>
       <Label htmlFor={ id } required={ required } { ...labelProps }>{ label }</Label>
-      <input
+      <Input
         id={ id }
-        className={ setClassName([className, (errorMessage && 'error')]) }
+        error={ !!errorMessage }
         aria-describedby={ setClassName([errorId, underlineId]) }
         aria-required={ !!required }
         aria-invalid={ !!errorMessage }
