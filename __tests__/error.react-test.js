@@ -1,5 +1,5 @@
 import React from 'react';
-import Error from '../lib/components/error';
+import Error from '../lib/elements/error';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 

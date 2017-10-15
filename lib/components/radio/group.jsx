@@ -1,7 +1,7 @@
 import React from 'react';
 import Legend from '../legend';
-import Error from '../error';
-import Underline from '../underline';
+import Error from '../../elements/error';
+import Underline from '../../elements/underline';
 import setClassName from '../../helpers/setClassName';
 
 const RadioGroup = (

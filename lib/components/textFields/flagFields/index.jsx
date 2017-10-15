@@ -1,8 +1,8 @@
 import React from 'react';
 import FlagBox from './flagInput/flagbox';
-import Error from '../../error';
+import Error from '../../../elements/error';
 import Label from '../../label';
-import Underline from '../../underline'
+import Underline from '../../../elements/underline'
 import FormField from '../../formField';
 import setClassName from '../../../helpers/setClassName';
 

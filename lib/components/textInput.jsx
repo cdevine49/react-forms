@@ -1,9 +1,9 @@
 import React from 'react';
 import Input from '../elements/input';
 import Container from '../elements/container';
-import Error from './error';
+import Error from '../elements/error';
 import Label from './label';
-import Underline from './underline'
+import Underline from '../elements/underline'
 import setClassName from '../helpers/setClassName';
 
 const TextInput = ({

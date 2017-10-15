@@ -1,9 +1,9 @@
 import React from 'react';
 import FormField from './formField';
 import TextInput from './TextInput';
-import Error from './error';
+import Error from '../elements/error';
 import Label from './label';
-import Underline from './underline'
+import Underline from '../elements/underline'
 import setClassName from '../helpers/setClassName';
 
 const TextField = ({ displayErrors, errors, required, validate, value, ...props}) => {

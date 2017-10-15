@@ -1,6 +1,7 @@
 import React from 'react';
 import StyledForm from '../elements/form';
 import setClassName from '../helpers/setClassName'
+import styled from 'styled-components';
 
 export default class Form extends React.Component {
   constructor() {
@@ -47,6 +48,8 @@ export default class Form extends React.Component {
 
   render() {
     const { onSubmit, ...props } = this.props;
+    // const s = styled;
+    // debugger
     return (
       <StyledForm
         onSubmit={this.handleSubmit}
