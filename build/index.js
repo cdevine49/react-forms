@@ -43,17 +43,6 @@ var _button2 = _interopRequireDefault(_button);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var application = require('./styles/application.scss');
-var form = require('./styles/form.scss');
-var input = require('./styles/inputs/textField.scss');
-var radio = require('./styles/inputs/radio.scss');
-var flagbox = require('./styles/inputs/flagbox.scss');
-var flagInput = require('./styles/inputs/flagInput.scss');
-var countries = require('./styles/inputs/countries.scss');
-var submit = require('./styles/submit.scss');
-var error = require('./styles/error.scss');
-var underline = require('./styles/underline.scss');
-
 exports.Form = _form2.default;
 exports.Submit = _submit2.default;
 exports.TextField = _textField2.default;
