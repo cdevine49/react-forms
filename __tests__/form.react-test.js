@@ -3,7 +3,7 @@ import Form from '../lib/components/form';
 import TextField from '../lib/components/textField';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
-// import 'jest-styled-components';
+import 'jest-styled-components';
 
 describe("Form", () => {
   describe("Default", () => {

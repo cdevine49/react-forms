@@ -2,6 +2,7 @@ import React from 'react';
 import Password from '../../lib/components/textFields/password';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
+import 'jest-styled-components';
 
 describe("Password", () => {
   describe("Default", () => {

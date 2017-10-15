@@ -1,6 +1,7 @@
 import React from 'react';
 import TextInput from '../lib/components/textInput';
 import renderer from 'react-test-renderer';
+import 'jest-styled-components';
 
 describe('TextInput', () => {
   test('default', () => {

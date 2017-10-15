@@ -35,6 +35,12 @@ exports[`RadioButton Default 1`] = `
 `;
 
 exports[`RadioButton Input Accepts props passed directly to component 1`] = `
+.c0 {
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
 <div
   className="radio-button"
   onClick={[Function]}
@@ -54,7 +60,7 @@ exports[`RadioButton Input Accepts props passed directly to component 1`] = `
     value="I am the value"
   />
   <label
-    className="radio-label sc-bdVaJa dYtKJN"
+    className="radio-label c0"
     htmlFor="my-id"
   >
     I am the value

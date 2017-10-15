@@ -1,36 +1,144 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextInput aria-describedby accepts both error id and underline id 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.c1 {
+  background: #FFFFFF;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 6px 8px;
+  color: #222;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 3px 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  outline: none;
+}
+
+.c1:hover {
+  border-color: #b9b9b9;
+  border-top-color: #a0a0a0;
+}
+
+.c1:focus {
+  border-color: #4d90fe;
+}
+
 <div
-  className="sc-bwzfXH gtUzlI"
+  className="c0"
 >
   <input
     aria-describedby="error-id underline-id"
     aria-invalid={false}
     aria-required={false}
-    className="sc-bdVaJa hqnjOU"
+    className="c1"
     id={undefined}
   />
 </div>
 `;
 
 exports[`TextInput className 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.c1 {
+  background: #FFFFFF;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 6px 8px;
+  color: #222;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 3px 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  outline: none;
+}
+
+.c1:hover {
+  border-color: #b9b9b9;
+  border-top-color: #a0a0a0;
+}
+
+.c1:focus {
+  border-color: #4d90fe;
+}
+
 <div
-  className="sc-bwzfXH gtUzlI"
+  className="c0"
 >
   <input
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className="big and fat sc-bdVaJa hqnjOU"
+    className="big and fat c1"
     id={undefined}
   />
 </div>
 `;
 
 exports[`TextInput containerProps 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.c1 {
+  background: #FFFFFF;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 6px 8px;
+  color: #222;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 3px 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  outline: none;
+}
+
+.c1:hover {
+  border-color: #b9b9b9;
+  border-top-color: #a0a0a0;
+}
+
+.c1:focus {
+  border-color: #4d90fe;
+}
+
 <div
-  className="classy react sc-bwzfXH gtUzlI"
+  className="classy react c0"
   id="container"
   style={
     Object {
@@ -42,35 +150,108 @@ exports[`TextInput containerProps 1`] = `
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className="sc-bdVaJa hqnjOU"
+    className="c1"
     id={undefined}
   />
 </div>
 `;
 
 exports[`TextInput default 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.c1 {
+  background: #FFFFFF;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 6px 8px;
+  color: #222;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 3px 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  outline: none;
+}
+
+.c1:hover {
+  border-color: #b9b9b9;
+  border-top-color: #a0a0a0;
+}
+
+.c1:focus {
+  border-color: #4d90fe;
+}
+
 <div
-  className="sc-bwzfXH gtUzlI"
+  className="c0"
 >
   <input
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className="sc-bdVaJa hqnjOU"
+    className="c1"
     id={undefined}
   />
 </div>
 `;
 
 exports[`TextInput errorMessage 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.c1 {
+  background: #FFFFFF;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 6px 8px;
+  color: #222;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 3px 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  outline: none;
+  border-color: #dd4b39;
+}
+
+.c1:hover {
+  border-color: #b9b9b9;
+  border-top-color: #a0a0a0;
+}
+
+.c1:focus {
+  border-color: #4d90fe;
+}
+
 <div
-  className="sc-bwzfXH gtUzlI"
+  className="c0"
 >
   <input
     aria-describedby={undefined}
     aria-invalid={true}
     aria-required={false}
-    className="not overridden sc-bdVaJa eTikgQ"
+    className="not overridden c1"
     id={undefined}
   />
   <p
@@ -84,14 +265,51 @@ exports[`TextInput errorMessage 1`] = `
 `;
 
 exports[`TextInput errorProps 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.c1 {
+  background: #FFFFFF;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 6px 8px;
+  color: #222;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 3px 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  outline: none;
+  border-color: #dd4b39;
+}
+
+.c1:hover {
+  border-color: #b9b9b9;
+  border-top-color: #a0a0a0;
+}
+
+.c1:focus {
+  border-color: #4d90fe;
+}
+
 <div
-  className="sc-bwzfXH gtUzlI"
+  className="c0"
 >
   <input
     aria-describedby="error-tag"
     aria-invalid={true}
     aria-required={false}
-    className="sc-bdVaJa eTikgQ"
+    className="c1"
     id={undefined}
   />
   <p
@@ -106,11 +324,53 @@ exports[`TextInput errorProps 1`] = `
 `;
 
 exports[`TextInput id 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.c2 {
+  background: #FFFFFF;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 6px 8px;
+  color: #222;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 3px 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  outline: none;
+}
+
+.c2:hover {
+  border-color: #b9b9b9;
+  border-top-color: #a0a0a0;
+}
+
+.c2:focus {
+  border-color: #4d90fe;
+}
+
+.c1 {
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
 <div
-  className="sc-bwzfXH gtUzlI"
+  className="c0"
 >
   <label
-    className="sc-htpNat eIVrOl"
+    className="c1"
     htmlFor="first-name"
   >
     First Name
@@ -119,18 +379,60 @@ exports[`TextInput id 1`] = `
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className="sc-bdVaJa hqnjOU"
+    className="c2"
     id="first-name"
   />
 </div>
 `;
 
 exports[`TextInput label 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.c2 {
+  background: #FFFFFF;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 6px 8px;
+  color: #222;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 3px 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  outline: none;
+}
+
+.c2:hover {
+  border-color: #b9b9b9;
+  border-top-color: #a0a0a0;
+}
+
+.c2:focus {
+  border-color: #4d90fe;
+}
+
+.c1 {
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
 <div
-  className="sc-bwzfXH gtUzlI"
+  className="c0"
 >
   <label
-    className="sc-htpNat eIVrOl"
+    className="c1"
     htmlFor={undefined}
   >
     Child/Text
@@ -139,18 +441,60 @@ exports[`TextInput label 1`] = `
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className="sc-bdVaJa hqnjOU"
+    className="c2"
     id={undefined}
   />
 </div>
 `;
 
 exports[`TextInput labelProps 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.c2 {
+  background: #FFFFFF;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 6px 8px;
+  color: #222;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 3px 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  outline: none;
+}
+
+.c2:hover {
+  border-color: #b9b9b9;
+  border-top-color: #a0a0a0;
+}
+
+.c2:focus {
+  border-color: #4d90fe;
+}
+
+.c1 {
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
 <div
-  className="sc-bwzfXH gtUzlI"
+  className="c0"
 >
   <label
-    className="right large name sc-htpNat eIVrOl"
+    className="right large name c1"
     htmlFor={undefined}
     id="my-label"
     style={
@@ -165,21 +509,57 @@ exports[`TextInput labelProps 1`] = `
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className="sc-bdVaJa hqnjOU"
+    className="c2"
     id={undefined}
   />
 </div>
 `;
 
 exports[`TextInput other props 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.c1 {
+  background: #FFFFFF;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 6px 8px;
+  color: #222;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 3px 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  outline: none;
+}
+
+.c1:hover {
+  border-color: #b9b9b9;
+  border-top-color: #a0a0a0;
+}
+
+.c1:focus {
+  border-color: #4d90fe;
+}
+
 <div
-  className="sc-bwzfXH gtUzlI"
+  className="c0"
 >
   <input
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className="sc-bdVaJa hqnjOU"
+    className="c1"
     data-key="input-key"
     id={undefined}
     onFocus={[Function]}
@@ -193,16 +573,58 @@ exports[`TextInput other props 1`] = `
 `;
 
 exports[`TextInput required 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.c2 {
+  background: #FFFFFF;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 6px 8px;
+  color: #222;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 3px 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  outline: none;
+}
+
+.c2:hover {
+  border-color: #b9b9b9;
+  border-top-color: #a0a0a0;
+}
+
+.c2:focus {
+  border-color: #4d90fe;
+}
+
+.c1 {
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
 <div
-  className="sc-bwzfXH gtUzlI"
+  className="c0"
 >
   <label
-    className="sc-htpNat eIVrOl"
+    className="c1"
     htmlFor={undefined}
   >
     Gets an Asterisk
     <span
-      className="sc-bxivhb lcNDmV"
+      className=""
     >
       *
     </span>
@@ -211,21 +633,57 @@ exports[`TextInput required 1`] = `
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={true}
-    className="sc-bdVaJa hqnjOU"
+    className="c2"
     id={undefined}
   />
 </div>
 `;
 
 exports[`TextInput underline 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.c1 {
+  background: #FFFFFF;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 6px 8px;
+  color: #222;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 3px 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  outline: none;
+}
+
+.c1:hover {
+  border-color: #b9b9b9;
+  border-top-color: #a0a0a0;
+}
+
+.c1:focus {
+  border-color: #4d90fe;
+}
+
 <div
-  className="sc-bwzfXH gtUzlI"
+  className="c0"
 >
   <input
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className="sc-bdVaJa hqnjOU"
+    className="c1"
     id={undefined}
   />
   <p
@@ -238,14 +696,50 @@ exports[`TextInput underline 1`] = `
 `;
 
 exports[`TextInput underlineProps 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.c1 {
+  background: #FFFFFF;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 6px 8px;
+  color: #222;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 3px 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  outline: none;
+}
+
+.c1:hover {
+  border-color: #b9b9b9;
+  border-top-color: #a0a0a0;
+}
+
+.c1:focus {
+  border-color: #4d90fe;
+}
+
 <div
-  className="sc-bwzfXH gtUzlI"
+  className="c0"
 >
   <input
     aria-describedby="underline-tag"
     aria-invalid={false}
     aria-required={false}
-    className="sc-bdVaJa hqnjOU"
+    className="c1"
     id={undefined}
   />
   <p

@@ -2,6 +2,8 @@ import React from 'react';
 import RadioButton from '../../lib/components/radio/button';
 import renderer from 'react-test-renderer';
 import { shallow, mount } from 'enzyme';
+import 'jest-styled-components';
+
 console.warn = () => {}
 describe('RadioButton', () => {
   test('Default', () => {

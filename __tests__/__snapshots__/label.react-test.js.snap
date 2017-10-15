@@ -1,8 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Label accepts props 1`] = `
+.c0 {
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
 <label
-  className="label-class test sc-bdVaJa dYtKJN"
+  className="label-class test c0"
   htmlFor="htmlFor"
   id="labelId"
 >
@@ -11,12 +17,18 @@ exports[`Label accepts props 1`] = `
 `;
 
 exports[`Label adds asterisk if required 1`] = `
+.c0 {
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
 <label
-  className="sc-bdVaJa dYtKJN"
+  className="c0"
 >
   Required Field
   <span
-    className="sc-bwzfXH hcmPLH"
+    className=""
   >
     *
   </span>
@@ -26,8 +38,14 @@ exports[`Label adds asterisk if required 1`] = `
 exports[`Label does not render without child 1`] = `null`;
 
 exports[`Label renders with child 1`] = `
+.c0 {
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
 <label
-  className="sc-bdVaJa dYtKJN"
+  className="c0"
 >
   Test Label
 </label>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Label from '../lib/components/label';
 import renderer from 'react-test-renderer';
+import 'jest-styled-components';
 
 describe("Label", () => {
   test("does not render without child", () => {

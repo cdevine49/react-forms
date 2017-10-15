@@ -2,6 +2,7 @@ import React from 'react';
 import Email from '../../lib/components/textFields/email';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
+import 'jest-styled-components';
 
 describe("Email", () => {
   describe("Default", () => {
