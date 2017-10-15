@@ -123,11 +123,16 @@ exports[`RadioGroup Default 1`] = `
 `;
 
 exports[`RadioGroup Error accepts errorMessage prop as child 1`] = `
+.c0 {
+  margin-top: 6.5px;
+  color: #dd4b39;
+}
+
 <fieldset
   className="radio-button-container"
 >
   <p
-    className="error-message radio-group-error"
+    className="radio-group-error c0"
     role="alert"
   >
     Whoopsie
@@ -136,11 +141,16 @@ exports[`RadioGroup Error accepts errorMessage prop as child 1`] = `
 `;
 
 exports[`RadioGroup Error accepts errorProps object as props 1`] = `
+.c0 {
+  margin-top: 6.5px;
+  color: #dd4b39;
+}
+
 <fieldset
   className="radio-button-container"
 >
   <p
-    className="error-message way to go buddy"
+    className="way to go buddy c0"
     id="ya-dun-goofed"
     role="alert"
   >

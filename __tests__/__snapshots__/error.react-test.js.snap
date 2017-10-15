@@ -1,8 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Errors accepts props 1`] = `
+.c0 {
+  margin-top: 6.5px;
+  color: #dd4b39;
+}
+
 <p
-  className="error-message error-class test"
+  className="error-class test c0"
   id="errorId"
   role="alert"
 >
@@ -13,8 +18,13 @@ exports[`Errors accepts props 1`] = `
 exports[`Errors does not render without child 1`] = `null`;
 
 exports[`Errors renders with child 1`] = `
+.c0 {
+  margin-top: 6.5px;
+  color: #dd4b39;
+}
+
 <p
-  className="error-message"
+  className="c0"
   role="alert"
 >
   Test Error

@@ -2,6 +2,7 @@ import React from 'react';
 import RadioGroup from '../../lib/components/radio/group';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
+import 'jest-styled-components';
 
 describe('RadioGroup', () => {
   test('Default', () => {

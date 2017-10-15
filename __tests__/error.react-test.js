@@ -1,6 +1,7 @@
 import React from 'react';
 import Error from '../lib/components/error';
 import renderer from 'react-test-renderer';
+import 'jest-styled-components';
 
 describe("Errors", () => {
   test("does not render without child", () => {
