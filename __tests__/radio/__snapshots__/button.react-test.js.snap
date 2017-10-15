@@ -54,7 +54,7 @@ exports[`RadioButton Input Accepts props passed directly to component 1`] = `
     value="I am the value"
   />
   <label
-    className="radio-label"
+    className="radio-label sc-bdVaJa dYtKJN"
     htmlFor="my-id"
   >
     I am the value

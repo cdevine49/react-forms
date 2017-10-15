@@ -2,9 +2,10 @@
 
 exports[`Email Default has correct label 1`] = `
 <div
-  className="input-container"
+  className="sc-bwzfXH gtUzlI"
 >
   <label
+    className="sc-htpNat eIVrOl"
     htmlFor={undefined}
   >
     Email
@@ -13,7 +14,7 @@ exports[`Email Default has correct label 1`] = `
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className={undefined}
+    className="sc-bdVaJa hqnjOU"
     id={undefined}
     onBlur={[Function]}
     onChange={[Function]}

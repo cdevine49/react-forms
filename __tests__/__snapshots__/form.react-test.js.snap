@@ -2,7 +2,7 @@
 
 exports[`Form Default renders with default props 1`] = `
 <form
-  className="react-form"
+  className="sc-bdVaJa eBTtZO"
   noValidate={true}
   onSubmit={[Function]}
 />
@@ -10,7 +10,7 @@ exports[`Form Default renders with default props 1`] = `
 
 exports[`Form accepts props 1`] = `
 <form
-  className="react-form new-class"
+  className="new-class sc-bdVaJa eBTtZO"
   id="formId"
   noValidate={false}
   onSubmit={[Function]}

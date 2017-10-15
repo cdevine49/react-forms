@@ -2,13 +2,13 @@
 
 exports[`TextInput aria-describedby accepts both error id and underline id 1`] = `
 <div
-  className="input-container"
+  className="sc-bwzfXH gtUzlI"
 >
   <input
     aria-describedby="error-id underline-id"
     aria-invalid={false}
     aria-required={false}
-    className={undefined}
+    className="sc-bdVaJa hqnjOU"
     id={undefined}
   />
 </div>
@@ -16,13 +16,13 @@ exports[`TextInput aria-describedby accepts both error id and underline id 1`] =
 
 exports[`TextInput className 1`] = `
 <div
-  className="input-container"
+  className="sc-bwzfXH gtUzlI"
 >
   <input
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className="big and fat"
+    className="big and fat sc-bdVaJa hqnjOU"
     id={undefined}
   />
 </div>
@@ -30,7 +30,7 @@ exports[`TextInput className 1`] = `
 
 exports[`TextInput containerProps 1`] = `
 <div
-  className="input-container classy react"
+  className="classy react sc-bwzfXH gtUzlI"
   id="container"
   style={
     Object {
@@ -42,7 +42,7 @@ exports[`TextInput containerProps 1`] = `
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className={undefined}
+    className="sc-bdVaJa hqnjOU"
     id={undefined}
   />
 </div>
@@ -50,13 +50,13 @@ exports[`TextInput containerProps 1`] = `
 
 exports[`TextInput default 1`] = `
 <div
-  className="input-container"
+  className="sc-bwzfXH gtUzlI"
 >
   <input
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className={undefined}
+    className="sc-bdVaJa hqnjOU"
     id={undefined}
   />
 </div>
@@ -64,13 +64,13 @@ exports[`TextInput default 1`] = `
 
 exports[`TextInput errorMessage 1`] = `
 <div
-  className="input-container"
+  className="sc-bwzfXH gtUzlI"
 >
   <input
     aria-describedby={undefined}
     aria-invalid={true}
     aria-required={false}
-    className="not overridden error"
+    className="not overridden sc-bdVaJa eTikgQ"
     id={undefined}
   />
   <p
@@ -85,13 +85,13 @@ exports[`TextInput errorMessage 1`] = `
 
 exports[`TextInput errorProps 1`] = `
 <div
-  className="input-container"
+  className="sc-bwzfXH gtUzlI"
 >
   <input
     aria-describedby="error-tag"
     aria-invalid={true}
     aria-required={false}
-    className="error"
+    className="sc-bdVaJa eTikgQ"
     id={undefined}
   />
   <p
@@ -107,9 +107,10 @@ exports[`TextInput errorProps 1`] = `
 
 exports[`TextInput id 1`] = `
 <div
-  className="input-container"
+  className="sc-bwzfXH gtUzlI"
 >
   <label
+    className="sc-htpNat eIVrOl"
     htmlFor="first-name"
   >
     First Name
@@ -118,7 +119,7 @@ exports[`TextInput id 1`] = `
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className={undefined}
+    className="sc-bdVaJa hqnjOU"
     id="first-name"
   />
 </div>
@@ -126,9 +127,10 @@ exports[`TextInput id 1`] = `
 
 exports[`TextInput label 1`] = `
 <div
-  className="input-container"
+  className="sc-bwzfXH gtUzlI"
 >
   <label
+    className="sc-htpNat eIVrOl"
     htmlFor={undefined}
   >
     Child/Text
@@ -137,7 +139,7 @@ exports[`TextInput label 1`] = `
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className={undefined}
+    className="sc-bdVaJa hqnjOU"
     id={undefined}
   />
 </div>
@@ -145,10 +147,10 @@ exports[`TextInput label 1`] = `
 
 exports[`TextInput labelProps 1`] = `
 <div
-  className="input-container"
+  className="sc-bwzfXH gtUzlI"
 >
   <label
-    className="right large name"
+    className="right large name sc-htpNat eIVrOl"
     htmlFor={undefined}
     id="my-label"
     style={
@@ -163,7 +165,7 @@ exports[`TextInput labelProps 1`] = `
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className={undefined}
+    className="sc-bdVaJa hqnjOU"
     id={undefined}
   />
 </div>
@@ -171,13 +173,13 @@ exports[`TextInput labelProps 1`] = `
 
 exports[`TextInput other props 1`] = `
 <div
-  className="input-container"
+  className="sc-bwzfXH gtUzlI"
 >
   <input
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className={undefined}
+    className="sc-bdVaJa hqnjOU"
     data-key="input-key"
     id={undefined}
     onFocus={[Function]}
@@ -192,14 +194,15 @@ exports[`TextInput other props 1`] = `
 
 exports[`TextInput required 1`] = `
 <div
-  className="input-container"
+  className="sc-bwzfXH gtUzlI"
 >
   <label
+    className="sc-htpNat eIVrOl"
     htmlFor={undefined}
   >
     Gets an Asterisk
     <span
-      className="required"
+      className="sc-bxivhb lcNDmV"
     >
       *
     </span>
@@ -208,7 +211,7 @@ exports[`TextInput required 1`] = `
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={true}
-    className={undefined}
+    className="sc-bdVaJa hqnjOU"
     id={undefined}
   />
 </div>
@@ -216,13 +219,13 @@ exports[`TextInput required 1`] = `
 
 exports[`TextInput underline 1`] = `
 <div
-  className="input-container"
+  className="sc-bwzfXH gtUzlI"
 >
   <input
     aria-describedby={undefined}
     aria-invalid={false}
     aria-required={false}
-    className={undefined}
+    className="sc-bdVaJa hqnjOU"
     id={undefined}
   />
   <p
@@ -236,13 +239,13 @@ exports[`TextInput underline 1`] = `
 
 exports[`TextInput underlineProps 1`] = `
 <div
-  className="input-container"
+  className="sc-bwzfXH gtUzlI"
 >
   <input
     aria-describedby="underline-tag"
     aria-invalid={false}
     aria-required={false}
-    className={undefined}
+    className="sc-bdVaJa hqnjOU"
     id={undefined}
   />
   <p

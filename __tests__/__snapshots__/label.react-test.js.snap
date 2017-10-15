@@ -2,7 +2,7 @@
 
 exports[`Label accepts props 1`] = `
 <label
-  className="label-class test"
+  className="label-class test sc-bdVaJa dYtKJN"
   htmlFor="htmlFor"
   id="labelId"
 >
@@ -11,10 +11,12 @@ exports[`Label accepts props 1`] = `
 `;
 
 exports[`Label adds asterisk if required 1`] = `
-<label>
+<label
+  className="sc-bdVaJa dYtKJN"
+>
   Required Field
   <span
-    className="required"
+    className="sc-bwzfXH hcmPLH"
   >
     *
   </span>
@@ -24,7 +26,9 @@ exports[`Label adds asterisk if required 1`] = `
 exports[`Label does not render without child 1`] = `null`;
 
 exports[`Label renders with child 1`] = `
-<label>
+<label
+  className="sc-bdVaJa dYtKJN"
+>
   Test Label
 </label>
 `;
