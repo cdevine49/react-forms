@@ -6,13 +6,13 @@ import Label from './label';
 import Underline from '../elements/underline'
 import setClassName from '../helpers/setClassName';
 
-const TextField = ({ displayErrors, errors, required, validate, value, ...props}) => {
+const TextField = ({ displayErrors, errors, required, isValid, value, ...props}) => {
   return (
     <FormField
       displayErrors={ displayErrors }
       errors={ errors }
       required={ required }
-      validate={ validate }
+      isValid={ isValid }
       value={ value }
     >
       { (errorMessage, displayErrors) => (

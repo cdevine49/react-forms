@@ -12,7 +12,7 @@ export default class FormField extends React.Component {
   }
 
   componentDidMount() {
-    this.props.validate && this.props.validate(!this._getErrorMessage());
+    this.props.isValid && this.props.isValid(!this._getErrorMessage());
   }
 
   componentWillReceiveProps(nextProps) {
@@ -45,7 +45,7 @@ export default class FormField extends React.Component {
 
   _displayErrors(value) {
     const errorMessage = this._getErrorMessage(value);
-    this.props.validate && this.props.validate(!errorMessage);
+    this.props.isValid && this.props.isValid(!errorMessage);
     this.setState({ errorMessage });
   }
 

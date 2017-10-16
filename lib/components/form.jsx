@@ -22,7 +22,7 @@ export default class FormValidator extends React.Component {
 
   mapChildren(child, idx) {
     if (child.props.required || (child.props.errors && child.props.errors.length > 0)) {
-      return React.cloneElement(child, { displayErrors: this.state.displayErrors, validate: this.validate(idx) });
+      return React.cloneElement(child, { displayErrors: this.state.displayErrors, isValid: this.validate(idx) });
     } else {
       return child;
     }
@@ -43,6 +43,7 @@ export default class FormValidator extends React.Component {
       that.setState(prevState => {
         const submittable = that.state.submittable.slice();
         submittable[idx] = bool;
+        console.log(submittable);
         return { submittable };
       });
     }
