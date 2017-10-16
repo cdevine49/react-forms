@@ -1,6 +1,5 @@
 import React from 'react';
 import Form from '../../lib/elements/form';
-// import TextField from '../lib/components/textField';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
