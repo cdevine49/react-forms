@@ -40,9 +40,11 @@ export default class FormValidator extends React.Component {
   validate(idx) {
     var that = this;
     return function(bool) {
-      const submittable = that.state.submittable;
-      submittable[idx] = bool
-      that.setState(submittable)
+      that.setState(prevState => {
+        const submittable = that.state.submittable.slice();
+        submittable[idx] = bool;
+        return { submittable };
+      });
     }
   }
 
