@@ -1,9 +1,9 @@
 import React from 'react';
-import StyledForm from '../elements/form';
+import Form from '../elements/form';
 import setClassName from '../helpers/setClassName'
 import styled from 'styled-components';
 
-export default class Form extends React.Component {
+export default class FormValidator extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -11,12 +11,12 @@ export default class Form extends React.Component {
       submittable: []
     }
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.renderChildren = this.renderChildren.bind(this);
+    this.fields = this.fields.bind(this);
     this.mapChildren = this.mapChildren.bind(this);
     this.validate = this.validate.bind(this);
   }
 
-  renderChildren() {
+  fields() {
     return React.Children.map(this.props.children, this.mapChildren)
   }
 
@@ -48,19 +48,17 @@ export default class Form extends React.Component {
 
   render() {
     const { onSubmit, ...props } = this.props;
-    // const s = styled;
-    // debugger
     return (
-      <StyledForm
+      <Form
         onSubmit={this.handleSubmit}
         { ...props }>
-        {this.renderChildren()}
-      </StyledForm>
+        {this.fields()}
+      </Form>
     );
   }
 }
 
-Form.defaultProps = {
+FormValidator.defaultProps = {
   noValidate: true,
   onSubmit: function(){}
 }
