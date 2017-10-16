@@ -1,26 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Form Default renders with default props 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 400px;
-  padding: 20px;
-}
-
-<form
-  className="c0"
-  noValidate={true}
-  onSubmit={[Function]}
-/>
-`;
-
-exports[`Form accepts props 1`] = `
+exports[`accepts props 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -36,7 +16,26 @@ exports[`Form accepts props 1`] = `
 <form
   className="new-class c0"
   id="formId"
-  noValidate={false}
+  noValidate={true}
+  onSubmit={[Function]}
+/>
+`;
+
+exports[`renders with default props 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 400px;
+  padding: 20px;
+}
+
+<form
+  className="c0"
   onSubmit={[Function]}
 />
 `;

@@ -6,29 +6,6 @@ import { mount } from 'enzyme';
 import 'jest-styled-components';
 
 describe("Form", () => {
-  describe("Default", () => {
-    test("renders with default props", () => {
-      const tree = renderer.create(
-        <Form
-          />
-      ).toJSON();
-
-      expect(tree).toMatchSnapshot();
-    });
-  });
-
-  test("accepts props", () => {
-    const tree = renderer.create(
-      <Form
-        id="formId"
-        className="new-class"
-        noValidate={false}
-        />
-    ).toJSON();
-
-    expect(tree).toMatchSnapshot();
-  });
-
   describe("Submission", () => {
     let onSubmit;
     const form = mount(

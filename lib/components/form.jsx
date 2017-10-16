@@ -59,6 +59,5 @@ export default class FormValidator extends React.Component {
 }
 
 FormValidator.defaultProps = {
-  noValidate: true,
-  onSubmit: function(){}
+  noValidate: true
 }
